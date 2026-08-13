@@ -4,35 +4,27 @@
 
 :root {
   --background: #FFFFFF;
-  --foreground: #181818; /* Dark Charcoal */
+  --foreground: #0F172A; /* Slate-900 */
   
-  --background-dark: #181818; /* Dark Charcoal background */
-  --foreground-dark: #FFFFFF;
+  --background-dark: #030712; /* Space black */
+  --foreground-dark: #F9FAFB;
   
-  --primary: #0066FF; /* Electric Blue - Action */
+  --primary: #4F46E5; /* Indigo-600 */
   --primary-foreground: #FFFFFF;
   
-  --secondary: #1E1E1E; /* Dark Charcoal Light */
-  --secondary-foreground: #FFFFFF;
+  --secondary: #0F172A;
+  --secondary-foreground: #F9FAFB;
   
-  --accent: #E2FD52; /* Electric Lime - Highlight */
-  --accent-lime: #E2FD52;
-  --accent-lime-hover: #DCF738;
-  --accent-orange: #FF3B00; /* Vibrant Orange */
-  --accent-orange-hover: #FC4000;
-  --accent-blue: #0066FF; /* Electric Blue */
-  --accent-blue-hover: #0A5CFF;
-  --accent-lavender: #C2B2E9; /* Lavender */
-  --accent-lavender-hover: #B5A5E5;
+  --accent: #8B5CF6; /* High-tech violet */
+  --accent-pink: #EC4899; /* Bright pink highlight */
+  --accent-gold: #D97706; /* Collegiate Gold */
   
-  --border: #EAEAEA; /* Cool Gray - Utility */
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --cool-gray: #EAEAEA;
-  --cool-gray-hover: #D9D9D9;
+  --border: #E2E8F0; /* Slate-200 */
+  --border-dark: rgba(255, 255, 255, 0.08);
   
-  --font-display: "Neue Haas Grotesk", "Helvetica Now", "Helvetica Neue", "Helvetica", "Inter", sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
-  --font-mono: "SF Pro Display", "PP Neue Montreal", "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
   
   --ease-out-custom: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in-out-custom: cubic-bezier(0.76, 0, 0.24, 1);
@@ -52,19 +44,11 @@
   --color-secondary-foreground: var(--secondary-foreground);
   
   --color-accent: var(--accent);
-  --color-accent-lime: var(--accent-lime);
-  --color-accent-lime-hover: var(--accent-lime-hover);
-  --color-accent-orange: var(--accent-orange);
-  --color-accent-orange-hover: var(--accent-orange-hover);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-blue-hover: var(--accent-blue-hover);
-  --color-accent-lavender: var(--accent-lavender);
-  --color-accent-lavender-hover: var(--accent-lavender-hover);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-gold: var(--accent-gold);
   
   --color-border: var(--border);
   --color-border-dark: var(--border-dark);
-  --color-cool-gray: var(--cool-gray);
-  --color-cool-gray-hover: var(--cool-gray-hover);
   
   --font-sans: var(--font-body);
   --font-serif: var(--font-display);

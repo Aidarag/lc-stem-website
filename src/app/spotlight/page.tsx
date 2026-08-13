@@ -332,7 +332,7 @@ export default function SpotlightPage() {
             Student Spotlight
           </h1>
           <p className="mx-auto max-w-xl font-sans text-sm text-slate-500 md:text-base leading-relaxed">
-            Discover outstanding peers in the LC STEM student community—celebrating their internships, certifications, and research successes.
+            Discover outstanding STEM students at Livingstone College—celebrating their internships, certifications, and research successes.
           </p>
         </div>
       </section>

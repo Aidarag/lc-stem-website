@@ -101,7 +101,7 @@ export const academicPrograms: AcademicProgram[] = [
   },
   {
     name: 'Business',
-    overview: 'Bridging technical acumen with management strategy, the Business concentration within the LC STEM community prepares students for quantitative management, operations management, logistics, and data-driven corporate leadership.',
+    overview: 'Bridging technical acumen with management strategy, the Business concentration within the STEM department prepares students for quantitative management, operations management, logistics, and data-driven corporate leadership.',
     careers: ['Business Intelligence Analyst', 'Operations Manager', 'Financial Analyst', 'Supply Chain Strategist', 'STEM Entrepreneur'],
     skills: ['Financial Analysis', 'Supply Chain Optimization', 'Market Data Analysis', 'Risk Management', 'Operations Strategy'],
     highlights: [
@@ -119,13 +119,13 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2027,
     photo: '/images/student-showcase/student1.jpeg',
-    bio: 'Marcus is a passionate developer dedicated to building secure, accessible web technologies. After joining the LC STEM community, he co-founded the student developer club and has served as lead mentor for incoming freshmen. His research focuses on blockchain architectures for digital credentialing.',
-    leadership: ['Co-Founder of Student Developer Alliance', 'LC STEM Peer Tutor', 'Resident Advisor'],
+    bio: 'Marcus is a passionate developer dedicated to building secure, accessible web technologies. After joining the Livingstone STEM department, he co-founded the student developer club and has served as lead mentor for incoming freshmen. His research focuses on blockchain architectures for digital credentialing.',
+    leadership: ['Co-Founder of Student Developer Alliance', 'STEM Department Tutor', 'Resident Advisor'],
     internships: ['Microsoft (Software Engineering Intern)', 'Vercel (Frontend Dev Intern)'],
-    awards: ['LC STEM Scholar of the Year (2025)', 'First Place, Black Enterprise Hackathon'],
+    awards: ['Livingstone STEM Scholar of the Year (2025)', 'First Place, Black Enterprise Hackathon'],
     certifications: ['AWS Cloud Practitioner', 'CompTIA Security+'],
     achievements: [
-      'Built and deployed the LC STEM Dev Alliance student portal.',
+      'Built and deployed the Livingstone STEM Dev Alliance student portal.',
       'Presented research paper on decentralized ledger security at the National Black Data Processing Associates (BDPA) conference.'
     ],
     featured: true
@@ -177,7 +177,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     certifications: ['Lean Six Sigma Yellow Belt', 'Agile Scrum Master (ASM)'],
     achievements: [
       'Redesigned the logistics flow for a local food pantry, boosting distribution capacity by 22% during peak holidays.',
-      'Won the LC Business Pitch Competition with a zero-waste packaging model.'
+      'Won the Livingstone College Business Pitch Competition with a zero-waste packaging model.'
     ],
     featured: false
   },
@@ -207,7 +207,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     bio: 'Gabriella focuses on environmental science and cellular botany. She conducts field studies along regional river basins to measure microplastic concentrations. Gabriella is an advocate for eco-conscious urban developments.',
     leadership: ['Eco-STEM Club President', 'Salisbury River Watch Volunteer Lead'],
     internships: ['US Environmental Protection Agency (EPA Research Fellow)'],
-    awards: ['Udall Scholar nominee', 'LC Green Innovation Grant recipient'],
+    awards: ['Udall Scholar nominee', 'Livingstone Green Innovation Grant recipient'],
     certifications: ['Water Quality Assessor certificate'],
     achievements: [
       'Mapped and cataloged microplastic accumulation sites across a 15-mile stretch of the Yadkin River basin.',
@@ -241,7 +241,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     bio: 'Sophia is a quantitative business student specializing in market analytics. She works with local Salisbury small businesses to implement data-driven pricing models and digital marketing funnels.',
     leadership: ['STEM Women in Leadership Secretary', 'TMCF Campus Ambassador'],
     internships: ['Target Corporate (Quantitative Retail Intern)', 'PwC (Audit & Analytics Intern)'],
-    awards: ['LC Leadership Scholar', 'Salisbury Business Council Scholarship'],
+    awards: ['Livingstone Leadership Scholar', 'Salisbury Business Council Scholarship'],
     certifications: ['Tableau Desktop Specialist', 'Google Analytics Expert Certificate'],
     achievements: [
       'Consulted for 3 local minority-owned businesses, resulting in a 35% average increase in online conversions.',
@@ -255,7 +255,7 @@ export const studentProjects: StudentProject[] = [
   {
     id: '1',
     title: 'BlueBear Smart Transit App',
-    description: 'A comprehensive campus navigation and bus tracking application designed specifically for the campus community. The system integrates real-time GPS telemetry from campus shuttles and provides route optimizations, ride booking for evening security escorts, and live delay notifications.',
+    description: 'A comprehensive campus navigation and bus tracking application designed specifically for Livingstone College. The system integrates real-time GPS telemetry from campus shuttles and provides route optimizations, ride booking for evening security escorts, and live delay notifications.',
     technologies: ['Next.js', 'React Native', 'Node.js', 'MongoDB', 'Mapbox API', 'WebSockets'],
     team: ['Marcus Vance (CIS)', 'Devin Carter (CIS)', 'Sophia Ross (Business)'],
     outcomes: 'Successfully piloted with 250+ active students during the spring semester. Reduced shuttle wait times by an average of 4.2 minutes and increased evening escort scheduling efficiency by 30%.',
@@ -294,7 +294,7 @@ export const competitions: Competition[] = [
     id: '1',
     title: 'CIAA STEM Hackathon',
     subtitle: 'Celebrating Regional Development Excellence',
-    description: 'The LC STEM team went head-to-head with 12 universities in a 36-hour sprint to build AI-driven solutions addressing clean energy bottlenecks. Our team designed a community solar share platform using Next.js and predictive load modeling.',
+    description: 'The Livingstone College STEM team went head-to-head with 12 universities in a 36-hour sprint to build AI-driven solutions addressing clean energy bottlenecks. Our team designed a community solar share platform using Next.js and predictive load modeling.',
     date: 'February 2026',
     award: '1st Place Overall Champion',
     students: ['Marcus Vance', 'Devin Carter', 'Sophia Ross'],
@@ -314,7 +314,7 @@ export const competitions: Competition[] = [
     id: '3',
     title: 'Carolinas Data Science Bowl',
     subtitle: 'Solving Urban Planning Bottlenecks',
-    description: 'LC Mathematics students developed a predictive model to map food deserts in Salisbury and outline optimal community garden sites based on census income, transit, and soil quality parameters.',
+    description: 'Livingstone Mathematics students developed a predictive model to map food deserts in Salisbury and outline optimal community garden sites based on census income, transit, and soil quality parameters.',
     date: 'April 2026',
     award: 'Best Social Impact Solution Award',
     students: ['Tariq Simmons', 'Kevin Zhao'],
@@ -325,10 +325,10 @@ export const competitions: Competition[] = [
 export const newsItems: NewsItem[] = [
   {
     id: '1',
-    title: 'LC STEM Students Win Big at Microsoft Hackathon',
+    title: 'Livingstone College STEM Students Win Big at Microsoft Hackathon',
     date: 'April 15, 2026',
     summary: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon by designing a next-gen disaster communications router.',
-    content: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon in Charlotte, North Carolina. Facing competition from over twenty prominent HBCUs, the LC STEM team built "NetBeacon", a hardware-software solution enabling emergency communication during power grid failure.\n\nThe team, led by Marcus Vance, utilized low-power Bluetooth mesh networks and Next.js to deploy a lightweight routing dashboard. In addition to a $10,000 cash prize, Microsoft offered full-time internship placements to all three team members.',
+    content: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon in Charlotte, North Carolina. Facing competition from over twenty prominent HBCUs, the Livingstone team built "NetBeacon", a hardware-software solution enabling emergency communication during power grid failure.\n\nThe team, led by Marcus Vance, utilized low-power Bluetooth mesh networks and Next.js to deploy a lightweight routing dashboard. In addition to a $10,000 cash prize, Microsoft offered full-time internship placements to all three team members.',
     category: 'Competition',
     image: '/images/student-showcase/student1.jpeg'
   },
@@ -337,7 +337,7 @@ export const newsItems: NewsItem[] = [
     title: 'Senior Biology Major Aaliyah Jones Awarded Prestigious NSF Fellowship',
     date: 'March 20, 2026',
     summary: 'Aaliyah Jones has been selected for the National Science Foundation Graduate Research Fellowship to support her MD-PhD studies in cancer genetics.',
-    content: 'Senior Biology major Aaliyah Jones has been selected for the National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP). This highly competitive award provides a three-year annual stipend of $37,000 along with tuition allowances to support graduate studies at any accredited US institution.\n\nAaliyah, who has co-authored multiple publications in molecular biology, plans to enroll in a dual MD-PhD program to study genetics and oncology. "Our undergraduate research groups gave me the keys to explore complex biological hypotheses," said Aaliyah.',
+    content: 'Senior Biology major Aaliyah Jones has been selected for the National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP). This highly competitive award provides a three-year annual stipend of $37,000 along with tuition allowances to support graduate studies at any accredited US institution.\n\nAaliyah, who has co-authored multiple publications in molecular biology, plans to enroll in a dual MD-PhD program to study genetics and oncology. "Livingstone\'s undergraduate research labs gave me the keys to explore complex biological hypotheses," said Aaliyah.',
     category: 'Milestone',
     image: '/images/student-showcase/student2.jpeg'
   },
@@ -345,8 +345,8 @@ export const newsItems: NewsItem[] = [
     id: '3',
     title: 'Summer Internship Placements Break Department Records',
     date: 'May 2, 2026',
-    summary: 'LC STEM student community reports that 88% of upperclassmen have secured summer internships at top-tier firms including Google, Microsoft, and Novartis.',
-    content: 'The LC STEM student community is proud to announce a record-breaking year for student placement. As of May, 88% of junior and senior majors have secured technical summer internships at leading companies and national research labs.\n\nStudents will be working in roles ranging from Software Engineering to Actuarial Risk Analysis and Oncology Research. "Our focus on hands-on project building and professional certification prep is directly translating into high-demand internship offers," stated Dr. Sarah Jenkins, Community Mentor.',
+    summary: 'Livingstone College STEM department reports that 88% of upperclassmen have secured summer internships at top-tier firms including Google, Microsoft, and Novartis.',
+    content: 'The Livingstone College STEM Department is proud to announce a record-breaking year for student placement. As of May, 88% of junior and senior majors have secured technical summer internships at leading companies and national research labs.\n\nStudents will be working in roles ranging from Software Engineering to Actuarial Risk Analysis and Oncology Research. "Our focus on hands-on project building and professional certification prep is directly translating into high-demand internship offers," stated Dr. Sarah Jenkins, Department Chair.',
     category: 'Internship',
     image: '/images/student-showcase/student8.jpeg'
   }
@@ -367,13 +367,13 @@ export const upcomingEvents: EventItem[] = [
     title: 'STEM Career Networking Dinner',
     date: 'September 28, 2026',
     time: '6:00 PM - 8:30 PM',
-    location: 'Student Center Ballroom',
+    location: 'Livingstone Student Center Ballroom',
     description: 'An exclusive networking event connecting STEM students with corporate recruiters from Google, FedEx, Novartis, and Duke Energy. Business professional attire required.',
     category: 'Networking'
   },
   {
     id: '3',
-    title: 'Annual LC STEM Hackathon',
+    title: 'Annual Livingstone Hackathon',
     date: 'October 16-17, 2026',
     time: '9:00 AM (Friday) - 6:00 PM (Saturday)',
     location: 'STEM Innovation Center',

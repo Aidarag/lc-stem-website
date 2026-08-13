@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
             
             <p className="font-sans text-xs leading-relaxed text-slate-400">
-              Showcasing student success and engineering the innovators of tomorrow within the LC STEM student community in Salisbury, NC.
+              Showcasing student success and engineering the innovators of tomorrow at Livingstone College, Salisbury, NC.
             </p>
             
             <div className="flex gap-2">
@@ -128,9 +128,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/5 pt-8 text-center font-mono text-[10px] text-slate-500">
-          <p>© {new Date().getFullYear()} LC STEM Student Community. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Livingstone College STEM Department. All rights reserved.</p>
           <p className="mt-1.5">
-            Designed for next-generation research excellence by the student community. Salisbury, North Carolina.
+            Designed for next-generation research excellence. Salisbury, North Carolina.
           </p>
         </div>
       </div>
