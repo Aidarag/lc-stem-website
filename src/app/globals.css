@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection */
 ::selection {
-  background-color: rgba(139, 92, 246, 0.3);
+  background-color: rgba(168, 85, 247, 0.3);
   color: inherit;
 }
 
@@ -211,3 +211,105 @@ h1, h2, h3, h4, h5, h6 {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* EuVerse Dark Hero Styles */
+.hero-obsidian-bg {
+  background-color: #0B051D;
+  background-image: 
+    radial-gradient(circle at 15% 30%, rgba(168, 85, 247, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(236, 72, 153, 0.18), transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(99, 102, 241, 0.15), transparent 60%);
+}
+
+.text-gradient-purple-pink {
+  background: linear-gradient(135deg, #EC4899 0%, #A855F7 50%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-violet-glow {
+  background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tilted-grid-container {
+  transform: perspective(1000px) rotateX(12deg) rotateY(-18deg) rotateZ(10deg) scale(0.95);
+  transform-style: preserve-3d;
+}
+
+@media (max-width: 1024px) {
+  .tilted-grid-container {
+    transform: perspective(1000px) rotateX(8deg) rotateY(-10deg) rotateZ(5deg) scale(0.9);
+  }
+}
+
+.glass-card-dark {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 30px 0 rgba(168, 85, 247, 0.15);
+}
+
+.glass-pill-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+/* High Contrast Electric Lime #e3fc51 Gradients */
+.btn-gradient-lime {
+  background: linear-gradient(135deg, #e3fc51 0%, #a8f013 100%);
+  color: #0B051D;
+  font-weight: 800;
+  box-shadow: 0 10px 25px -5px rgba(227, 252, 81, 0.35);
+  transition: all 200ms var(--ease-out-custom);
+}
+
+.btn-gradient-lime:hover {
+  background: linear-gradient(135deg, #ebff6e 0%, #b8fc20 100%);
+  box-shadow: 0 14px 30px -4px rgba(227, 252, 81, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-gradient-lime:active {
+  transform: scale(0.97);
+}
+
+.text-gradient-lime {
+  background: linear-gradient(135deg, #e3fc51 0%, #a8f013 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-gradient-lime {
+  background: linear-gradient(135deg, rgba(227, 252, 81, 0.16) 0%, rgba(168, 240, 19, 0.1) 100%);
+  border: 1px solid rgba(227, 252, 81, 0.4);
+  color: #e3fc51;
+}
+
+/* Dual Color Purple + Lime Harmony Utilities */
+.badge-purple-lime {
+  background-color: #7E22CE;
+  color: #e3fc51;
+  border: 1px solid rgba(227, 252, 81, 0.4);
+  font-weight: 700;
+}
+
+.badge-lime-purple {
+  background: linear-gradient(135deg, #e3fc51 0%, #a8f013 100%);
+  color: #0B051D;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(168, 240, 19, 0.35);
+}
+
+.card-purple-lime-hover {
+  transition: all 300ms var(--ease-out-custom);
+}
+
+.card-purple-lime-hover:hover {
+  border-color: #C084FC;
+  box-shadow: 0 14px 35px -8px rgba(147, 51, 234, 0.18), 0 4px 15px -2px rgba(227, 252, 81, 0.25);
+}
+

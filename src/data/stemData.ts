@@ -35,6 +35,9 @@ export interface Competition {
   award: string;
   students: string[];
   image: string;
+  topics?: string[];
+  outcomes?: string;
+  link?: string;
 }
 
 export interface NewsItem {
@@ -298,7 +301,10 @@ export const competitions: Competition[] = [
     date: 'February 2026',
     award: '1st Place Overall Champion',
     students: ['Marcus Vance', 'Devin Carter', 'Sophia Ross'],
-    image: '/images/student-showcase/student1.jpeg'
+    image: '/images/student-showcase/student1.jpeg',
+    topics: ['AI Load Modeling', 'Next.js', 'Clean Energy', 'Predictive Analytics'],
+    outcomes: 'Secured 1st Place out of 12 regional university teams in a 36-hour sprint, developing a prototype community solar sharing platform.',
+    link: 'https://ciaa.com/hackathon'
   },
   {
     id: '2',
@@ -308,7 +314,10 @@ export const competitions: Competition[] = [
     date: 'November 2025',
     award: 'Outstanding Undergraduate Presentation Award',
     students: ['Aaliyah Jones'],
-    image: '/images/student-showcase/student2.jpeg'
+    image: '/images/student-showcase/student2.jpeg',
+    topics: ['Gene Editing', 'Oncology', 'Cellular Biology', 'Targeted Delivery'],
+    outcomes: 'Awarded Outstanding Undergraduate Presentation honors among 50+ national research papers; co-authored publication featured in Journal of Student Research.',
+    link: 'https://symposium.premed-research.org'
   },
   {
     id: '3',
@@ -318,7 +327,10 @@ export const competitions: Competition[] = [
     date: 'April 2026',
     award: 'Best Social Impact Solution Award',
     students: ['Tariq Simmons', 'Kevin Zhao'],
-    image: '/images/student-showcase/student3.jpeg'
+    image: '/images/student-showcase/student3.jpeg',
+    topics: ['Data Modeling', 'GIS Analysis', 'Python', 'Urban Planning'],
+    outcomes: 'Recognized with the Best Social Impact Solution Award. Proposed garden sites are currently under review with the Salisbury City Council.',
+    link: 'https://datasciencebowl.org'
   }
 ];
 

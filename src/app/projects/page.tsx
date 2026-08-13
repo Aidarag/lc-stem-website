@@ -44,9 +44,9 @@ export default function AchievementsPage() {
         award: c.award,
         team: c.students,
         isProject: false,
-        technologies: undefined,
-        outcomes: undefined,
-        demoUrl: undefined,
+        technologies: c.topics,
+        outcomes: c.outcomes,
+        demoUrl: c.link,
         githubUrl: undefined,
       };
     }),
@@ -76,26 +76,28 @@ export default function AchievementsPage() {
     : filteredAchievements;
 
   return (
-    <div className="w-full bg-[#FFFFFF] pb-24 font-sans text-foreground">
-      {/* 01 — Hero */}
-      <section className="border-b border-cool-gray bg-[#FAF9F6] py-20 text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0 grid-pattern opacity-40" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 space-y-4">
-          <div className="eyebrow-pill">
-            <Trophy className="h-3.5 w-3.5 text-accent-orange fill-accent-orange/10" /> Department Milestones
+    <div className="w-full bg-[#FAF9F6] pb-24 font-sans text-foreground">
+      {/* 01 — Dark Obsidian Hero */}
+      <section className="relative hero-obsidian-bg border-b border-white/10 pt-32 pb-20 md:pt-40 md:pb-28 text-white text-center overflow-hidden">
+        <div className="absolute top-10 left-1/4 w-96 h-96 rounded-full bg-purple-600/15 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-5 right-1/4 w-96 h-96 rounded-full bg-pink-600/10 blur-[120px] pointer-events-none" />
+        <div className="absolute inset-0 z-0 grid-pattern-dark opacity-30 pointer-events-none" />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 space-y-6">
+          <div className="inline-flex items-center gap-2 rounded-full glass-pill-badge px-4 py-2 text-xs sm:text-sm text-purple-200">
+            <Trophy className="h-4 w-4 text-purple-400" /> Department Milestones
           </div>
-          <h1 className="font-serif text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
-            Achievements
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white uppercase leading-none">
+            Achievements &amp; <span className="text-gradient-purple-pink">Projects</span>
           </h1>
-          <p className="mx-auto max-w-xl font-sans text-sm text-foreground/70 leading-relaxed">
-            Discover outstanding student developments, hackathon victories, and clinical academic awards celebrated by the LC STEM student community.
+          <p className="mx-auto max-w-2xl font-sans text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-normal">
+            Discover outstanding student developments, hackathon victories, and academic awards celebrated by the LC STEM student community.
           </p>
         </div>
       </section>
 
       {/* 02 — Filters & Search */}
       <section className="mx-auto max-w-6xl px-6 pt-12">
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between border border-cool-gray bg-white p-4 rounded-2xl shadow-sm">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between border border-gray-200/90 bg-white p-5 rounded-2xl shadow-sm">
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-2 w-full md:w-auto">
             {(['All', 'Projects', 'Hackathon', 'Honors'] as FilterType[]).map((filter) => {
@@ -104,10 +106,10 @@ export default function AchievementsPage() {
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`cursor-pointer px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all border ${
+                  className={`cursor-pointer px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all border ${
                     isActive
-                      ? 'bg-accent text-foreground border-accent-lime-hover/30 shadow-sm font-bold'
-                      : 'bg-white border-cool-gray text-[#181818]/70 hover:text-foreground hover:border-foreground/30'
+                      ? 'bg-purple-600 text-white border-purple-500 shadow-sm'
+                      : 'bg-white border-gray-200 text-gray-600 hover:text-gray-900 hover:border-purple-300'
                   }`}
                 >
                   {filter === 'All' ? 'All Achievements' : filter === 'Hackathon' ? 'Hackathons' : filter}
@@ -118,13 +120,13 @@ export default function AchievementsPage() {
 
           {/* Search Box */}
           <div className="relative w-full md:w-80">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground/40" />
+            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <input
               type="text"
               placeholder="Search achievements..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-xl border border-cool-gray pl-10 pr-4 py-2 text-xs bg-[#FAF9F6] focus:outline-none focus:border-primary transition-colors text-foreground placeholder:text-foreground/45"
+              className="w-full rounded-full border border-gray-200 pl-10 pr-4 py-2.5 text-sm bg-gray-50 focus:outline-none focus:border-purple-400 focus:bg-white transition-colors text-gray-900 placeholder:text-gray-400"
             />
           </div>
         </div>
@@ -133,15 +135,16 @@ export default function AchievementsPage() {
       {/* 03 — Large Featured Achievement */}
       {showFeaturedHeader && (
         <section className="mx-auto max-w-6xl px-6 pt-12">
-          <div className="space-y-4 mb-6">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-accent-orange font-bold flex items-center gap-1.5">
-              <Star className="h-3.5 w-3.5 fill-accent-orange" /> Highlight Achievement
-            </span>
+          <div className="flex items-center justify-between border-b border-gray-200/80 pb-4 mb-8">
+            <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-gray-900 flex items-center gap-2.5">
+              <Star className="h-6 w-6 text-purple-600" /> Highlight Achievement
+            </h2>
+            <span className="font-mono text-xs font-semibold text-gray-500 uppercase tracking-wider">Featured</span>
           </div>
           
-          <ScrollReveal className="premium-card-light rounded-2xl grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-md border-cool-gray bg-white">
+          <ScrollReveal className="bg-white border border-gray-200/90 rounded-3xl grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-xl hover:shadow-2xl hover:border-purple-300 transition-all duration-300">
             {/* Achievement Image Left */}
-            <div className="relative min-h-[300px] lg:col-span-6 border-b lg:border-b-0 lg:border-r border-cool-gray bg-[#FAF9F6]">
+            <div className="relative min-h-[320px] lg:col-span-6 border-b lg:border-b-0 lg:border-r border-gray-100 overflow-hidden">
               <Image
                 src={featuredAchievement.image}
                 alt={featuredAchievement.title}
@@ -150,8 +153,9 @@ export default function AchievementsPage() {
                 sizes="(max-w-1024px) 100vw, 50vw"
                 priority
               />
-              <div className="absolute top-4 left-4 border border-accent-orange-hover/20 bg-accent-orange text-white px-3 py-1 rounded-md font-mono text-[9px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
-                <Trophy className="h-3 w-3" /> {featuredAchievement.award || 'Featured Victory'}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                <Trophy className="h-3.5 w-3.5" /> {featuredAchievement.award || 'Featured Victory'}
               </div>
             </div>
 
@@ -159,33 +163,33 @@ export default function AchievementsPage() {
             <div className="p-8 lg:p-12 lg:col-span-6 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div>
-                  <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#181818]/50">
+                  <span className="font-mono text-xs font-semibold text-gray-500">
                     {featuredAchievement.date || 'Active Project'}
                   </span>
-                  <h2 className="font-serif text-3xl font-extrabold text-foreground mt-1 leading-tight">
+                  <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-gray-900 mt-1 leading-tight">
                     {featuredAchievement.title}
                   </h2>
-                  <p className="font-mono text-xs uppercase tracking-wider text-primary font-bold mt-1.5">
+                  <p className="font-mono text-xs uppercase tracking-wider text-purple-600 font-bold mt-2">
                     {featuredAchievement.subtitle}
                   </p>
                 </div>
 
-                <p className="font-sans text-xs md:text-sm leading-relaxed text-foreground/70">
+                <p className="font-sans text-sm sm:text-base leading-relaxed text-gray-600">
                   {featuredAchievement.description}
                 </p>
 
                 {/* Competitors/Students */}
-                <div className="border-t border-cool-gray pt-6 space-y-1">
-                  <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-foreground flex items-center gap-1.5">
-                    <Users className="h-3.5 w-3.5 text-primary" /> Key Contributors
+                <div className="border-t border-gray-100 pt-5 space-y-1.5">
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-gray-900 flex items-center gap-1.5">
+                    <Users className="h-4 w-4 text-purple-600" /> Key Contributors
                   </span>
-                  <p className="font-sans text-xs text-foreground/70">{featuredAchievement.team.join(', ')}</p>
+                  <p className="font-sans text-sm text-gray-600">{featuredAchievement.team.join(', ')}</p>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-cool-gray">
-                <span className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-primary hover:text-accent-blue-hover">
-                  Official Award Recipient <Award className="ml-1.5 h-4 w-4" />
+              <div className="pt-5 border-t border-gray-100">
+                <span className="btn-gradient-lime inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider cursor-default">
+                  <Award className="h-4 w-4" /> Official Award Recipient
                 </span>
               </div>
             </div>
@@ -196,116 +200,132 @@ export default function AchievementsPage() {
       {/* 04 — Achievement Grid */}
       <section className="mx-auto max-w-6xl px-6 py-12">
         {showFeaturedHeader && (
-          <h3 className="font-serif text-xl font-bold mb-6 text-foreground">More Achievements</h3>
+          <div className="flex items-center justify-between border-b border-gray-200/80 pb-4 mb-8">
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-gray-900">More Achievements</h3>
+            <span className="font-mono text-xs font-semibold text-gray-500 uppercase tracking-wider">{gridAchievements.length} Results</span>
+          </div>
         )}
 
         {gridAchievements.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {gridAchievements.map((achievement, index) => (
               <ScrollReveal
                 key={achievement.id}
                 delay={index * 0.05}
-                className="premium-card-light bg-white rounded-2xl border border-cool-gray flex flex-col justify-between overflow-hidden shadow-sm hover:-translate-y-1 hover:border-foreground/20 cursor-pointer"
+                className="group bg-white rounded-3xl border border-gray-200/90 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-2xl hover:border-purple-300 transition-all duration-300 h-full"
               >
-                <div>
-                  {/* Card Image */}
-                  <div className="relative h-[220px] w-full border-b border-cool-gray bg-[#FAF9F6]">
-                    <Image
-                      src={achievement.image}
-                      alt={achievement.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-w-768px) 100vw, 40vw"
-                    />
-                    
-                    {/* Badge */}
-                    <div className="absolute top-4 left-4 border border-cool-gray bg-white/95 px-3 py-1 rounded-md font-mono text-[9px] font-bold uppercase tracking-wider text-foreground shadow-sm flex items-center gap-1">
-                      {achievement.isProject ? (
-                        <>
-                          <Code className="h-3 w-3 text-primary" /> Project
-                        </>
-                      ) : achievement.type === 'Hackathon' ? (
-                        <>
-                          <Trophy className="h-3 w-3 text-accent-orange" /> Hackathon Win
-                        </>
-                      ) : (
-                        <>
-                          <Award className="h-3 w-3 text-accent-lavender-hover" /> Honor
-                        </>
+                {/* Main Card Content */}
+                <div className="flex-1 flex flex-col justify-between">
+                  <div>
+                    {/* Card Image */}
+                    <div className="relative h-[240px] w-full overflow-hidden">
+                      <Image
+                        src={achievement.image}
+                        alt={achievement.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-w-768px) 100vw, 40vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      
+                      {/* Badge top-left */}
+                      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider text-gray-800 shadow-md flex items-center gap-1.5 border border-white/40">
+                        {achievement.isProject ? (
+                          <><Code className="h-3.5 w-3.5 text-purple-600" /> Project</>
+                        ) : achievement.type === 'Hackathon' ? (
+                          <><Trophy className="h-3.5 w-3.5 text-amber-500" /> Hackathon Win</>
+                        ) : (
+                          <><Award className="h-3.5 w-3.5 text-purple-600" /> Honor</>
+                        )}
+                      </div>
+
+                      {achievement.award && (
+                        <div className="absolute bottom-4 left-4 max-w-[85%] bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-3.5 py-1.5 rounded-full font-mono text-xs font-bold shadow-md flex items-center gap-1.5 border border-purple-400/30">
+                          <Award className="h-3.5 w-3.5 shrink-0" />
+                          <span className="truncate">{achievement.award}</span>
+                        </div>
                       )}
                     </div>
 
-                    {achievement.award && (
-                      <div className="absolute bottom-4 left-4 border border-transparent bg-accent-orange text-white px-2.5 py-0.5 rounded-md font-mono text-[9px] font-bold shadow-sm">
-                        {achievement.award}
+                    {/* Card Info Body */}
+                    <div className="p-7 space-y-5">
+                      <div>
+                        {achievement.date && (
+                          <span className="font-mono text-xs font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md inline-flex items-center gap-1.5 mb-2.5 border border-purple-100">
+                            <Calendar className="h-3.5 w-3.5 text-purple-600" /> {achievement.date}
+                          </span>
+                        )}
+                        <h3 className="font-serif text-2xl font-extrabold text-gray-900 leading-snug group-hover:text-purple-700 transition-colors">
+                          {achievement.title}
+                        </h3>
+                        {achievement.subtitle && (
+                          <p className="font-mono text-xs font-bold uppercase tracking-wider text-purple-600 mt-1.5">
+                            {achievement.subtitle}
+                          </p>
+                        )}
                       </div>
-                    )}
+
+                      <p className="font-sans text-sm sm:text-base leading-relaxed text-gray-600">
+                        {achievement.description}
+                      </p>
+
+                      {/* Tech / Topic Badges */}
+                      {achievement.technologies && achievement.technologies.length > 0 && (
+                        <div className="space-y-1.5 pt-1">
+                          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-gray-400 block">
+                            {achievement.isProject ? 'Technologies Used' : 'Focus Areas & Topics'}
+                          </span>
+                          <div className="flex flex-wrap gap-1.5 font-mono text-xs">
+                            {achievement.technologies.map((tech) => (
+                              <span
+                                key={tech}
+                                className="border border-purple-200/80 bg-purple-50/70 px-3 py-1 rounded-full text-purple-700 font-semibold transition-colors hover:bg-purple-100/80"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Outcomes & Impact */}
+                      {achievement.outcomes && (
+                        <div className="bg-gradient-to-br from-slate-50 to-gray-50/80 border border-gray-200/90 p-4 rounded-2xl space-y-1.5 shadow-inner">
+                          <span className="font-mono text-xs font-bold uppercase tracking-wider text-gray-900 flex items-center gap-1.5">
+                            {achievement.isProject ? (
+                              <ClipboardCheck className="h-4 w-4 text-purple-600" />
+                            ) : (
+                              <Trophy className="h-4 w-4 text-amber-500" />
+                            )}
+                            {achievement.isProject ? 'Outcomes & Deployment' : 'Impact & Recognition'}
+                          </span>
+                          <p className="font-sans text-sm text-gray-600 leading-relaxed">{achievement.outcomes}</p>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  {/* Card Info */}
-                  <div className="p-6 md:p-8 space-y-4">
-                    <div>
-                      {achievement.date && (
-                        <span className="font-mono text-[9px] font-bold text-foreground/45 flex items-center gap-1.5 mb-1">
-                          <Calendar className="h-3 w-3" /> {achievement.date}
-                        </span>
-                      )}
-                      <h3 className="font-serif text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors">
-                        {achievement.title}
-                      </h3>
-                      {achievement.subtitle && (
-                        <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-primary mt-1">
-                          {achievement.subtitle}
-                        </p>
-                      )}
-                    </div>
-
-                    <p className="font-sans text-xs leading-relaxed text-foreground/70">
-                      {achievement.description}
-                    </p>
-
-                    {/* Tech Badges (for Projects) */}
-                    {achievement.technologies && (
-                      <div className="flex flex-wrap gap-1.5 font-mono text-[9px] pt-1">
-                        {achievement.technologies.map((tech) => (
-                          <span key={tech} className="border border-cool-gray bg-[#FAF9F6] px-2 py-0.5 rounded-md text-foreground/60">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Outcomes (for Projects) */}
-                    {achievement.outcomes && (
-                      <div className="bg-[#FAF9F6] border border-cool-gray p-4 rounded-xl space-y-1">
-                        <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-foreground flex items-center gap-1">
-                          <ClipboardCheck className="h-3.5 w-3.5 text-primary" /> Outcomes
-                        </span>
-                        <p className="font-sans text-xs text-foreground/70">{achievement.outcomes}</p>
-                      </div>
-                    )}
-
-                    {/* Team Members */}
-                    <div className="border-t border-cool-gray pt-4 space-y-1">
-                      <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-foreground flex items-center gap-1.5">
-                        <Users className="h-3.5 w-3.5 text-primary" /> Team
-                      </span>
-                      <p className="font-sans text-xs text-foreground/70">{achievement.team.join(', ')}</p>
-                    </div>
+                  {/* Team Members Section */}
+                  <div className="px-7 pb-5 pt-3 border-t border-gray-100 mt-auto">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-gray-900 flex items-center gap-1.5 mb-1">
+                      <Users className="h-4 w-4 text-purple-600" /> Key Contributors
+                    </span>
+                    <p className="font-sans text-sm text-gray-600 font-medium">{achievement.team.join(', ')}</p>
                   </div>
                 </div>
 
-                {/* Card Links */}
-                {(achievement.demoUrl || achievement.githubUrl) && (
-                  <div className="px-6 pb-6 md:px-8 md:pb-8 flex gap-4">
+                {/* Card Action Footer */}
+                <div className="px-7 py-4 bg-gray-50/70 border-t border-gray-100 flex items-center justify-between">
+                  <div className="flex items-center gap-4">
                     {achievement.demoUrl && (
                       <a
                         href={achievement.demoUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-primary hover:text-accent-blue-hover group"
+                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
                       >
-                        Visit Site <ExternalLink className="ml-1 h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        {achievement.isProject ? 'Visit Site' : 'View Presentation'}{' '}
+                        <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}
                     {achievement.githubUrl && (
@@ -313,22 +333,26 @@ export default function AchievementsPage() {
                         href={achievement.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-primary hover:text-accent-blue-hover group"
+                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
                       >
-                        GitHub <ExternalLink className="ml-1 h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        GitHub{' '}
+                        <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}
                   </div>
-                )}
+                  <span className="font-mono text-[10px] font-semibold text-gray-400 uppercase tracking-widest">
+                    LC STEM {achievement.type}
+                  </span>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         ) : (
-          <div className="border border-cool-gray bg-white p-16 text-center rounded-2xl shadow-sm max-w-xl mx-auto">
-            <Code className="mx-auto h-12 w-12 text-foreground/20 animate-pulse" />
-            <h3 className="font-serif text-xl font-bold text-foreground mt-4">No Achievements Found</h3>
-            <p className="font-sans text-xs text-foreground/60 mt-2">
-              We couldn't find any achievements or projects matching "{searchQuery}" under the category "{activeFilter}". Try adjusting your filters.
+          <div className="border border-gray-200 bg-white p-16 text-center rounded-3xl shadow-sm max-w-xl mx-auto">
+            <Code className="mx-auto h-12 w-12 text-gray-300 animate-pulse" />
+            <h3 className="font-serif text-xl font-bold text-gray-900 mt-4">No Achievements Found</h3>
+            <p className="font-sans text-sm text-gray-500 mt-2">
+              We couldn't find any achievements matching your search. Try adjusting your filters.
             </p>
           </div>
         )}
