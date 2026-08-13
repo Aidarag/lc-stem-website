@@ -35,7 +35,7 @@ export default function AchievementsPage() {
       const isHackathon = c.title.toLowerCase().includes('hackathon') || c.title.toLowerCase().includes('bowl');
       return {
         id: `comp-${c.id}`,
-        type: (isHackathon ? 'Hackathon' : 'Honors') as const,
+        type: (isHackathon ? 'Hackathon' : 'Honors') as FilterType,
         title: c.title,
         subtitle: c.subtitle,
         description: c.description,
