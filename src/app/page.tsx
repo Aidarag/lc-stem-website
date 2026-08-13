@@ -85,8 +85,8 @@ export default function Home() {
                   onClick={() => setSelectedStudentVideo({
                     name: "Marcus Vance",
                     major: "Computer Information Systems",
-                    project: "AI-Powered Decentralized Credentialing Platform",
-                    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    project: "Campus Transit & Route Optimization System",
+                    videoUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
                   })}
                   className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge hover:bg-white/20 text-white px-7 py-4 text-sm sm:text-base font-bold tracking-wide transition-all hover:scale-105 active:scale-95"
                 >
@@ -867,64 +867,58 @@ export default function Home() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xl p-4 sm:p-6"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              initial={{ scale: 0.95, opacity: 0, y: 16 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              exit={{ scale: 0.95, opacity: 0, y: 16 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-white/20 bg-[#0B051D] shadow-2xl"
+              className="relative w-full max-w-4xl overflow-hidden rounded-3xl border border-gray-800 bg-[#0A0518] shadow-2xl"
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+              <div className="flex items-center justify-between border-b border-gray-800/80 bg-[#0F0826] px-6 py-4">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-600/30 text-purple-300">
-                    <Play className="h-4 w-4 fill-purple-300" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-purple-600/30 text-purple-300 border border-purple-500/30">
+                    <Play className="h-4 w-4 fill-purple-300 ml-0.5" />
                   </div>
                   <div>
                     <h3 className="font-serif text-base font-bold text-white">
                       {selectedStudentVideo.name}
                     </h3>
-                    <p className="font-mono text-[10px] text-purple-300 flex items-center gap-1 mt-0.5">
-                      <GraduationCap className="h-3 w-3 text-purple-300 inline" /> {selectedStudentVideo.major} • {selectedStudentVideo.project}
+                    <p className="font-mono text-xs text-purple-300 flex items-center gap-1.5 mt-0.5">
+                      <GraduationCap className="h-3.5 w-3.5 text-purple-300 inline" /> {selectedStudentVideo.major} • <span className="text-gray-200 font-semibold">{selectedStudentVideo.project}</span>
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setSelectedStudentVideo(null)}
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white hover:bg-white/20 transition-colors cursor-pointer"
+                  aria-label="Close video player"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-5 w-5" />
                 </button>
               </div>
 
-              {/* Video Player Frame / Container */}
+              {/* Real Video Player Frame (Responsive Iframe) */}
               <div className="relative aspect-video w-full bg-black">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-600 text-white shadow-xl shadow-purple-600/40 mb-4 animate-pulse">
-                    <Play className="h-8 w-8 ml-1 fill-white" />
-                  </div>
-                  <h4 className="font-serif text-xl font-bold text-white mb-2">
-                    {selectedStudentVideo.project}
-                  </h4>
-                  <p className="max-w-md font-sans text-xs text-gray-300 mb-6">
-                    Watch {selectedStudentVideo.name}'s research demonstration and technical presentation co-authored with Livingstone College STEM faculty.
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-600/30 border border-purple-400/40 px-4 py-1.5 font-mono text-[10px] text-purple-200 uppercase tracking-widest">
-                    <Activity className="h-3 w-3 text-pink-400" /> Demo Video Telemetry Active
-                  </span>
-                </div>
+                <iframe
+                  src={selectedStudentVideo.videoUrl || "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"}
+                  title={`${selectedStudentVideo.name} - ${selectedStudentVideo.project}`}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
               </div>
 
               {/* Modal Footer */}
-              <div className="flex items-center justify-between border-t border-white/10 bg-white/5 px-6 py-4">
-                <span className="font-mono text-[10px] text-gray-400">
-                  Livingstone College STEM Student Showcase
+              <div className="flex items-center justify-between border-t border-gray-800/80 bg-[#0F0826] px-6 py-4 text-xs font-sans">
+                <span className="font-mono text-gray-400">
+                  Livingstone College STEM Student Research Showcase
                 </span>
                 <Link
                   href="/spotlight"
                   onClick={() => setSelectedStudentVideo(null)}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-purple-300 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 font-bold text-purple-300 hover:text-white transition-colors"
                 >
-                  Full Student Profile <ArrowRight className="h-3.5 w-3.5" />
+                  Full Student Profile <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </motion.div>
