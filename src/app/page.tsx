@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, Code, Award, Calendar, BookOpen, ExternalLink, 
-  ShieldCheck, Trophy, Sparkles, Binary, Atom, TrendingUp, Send, Users, ClipboardCheck, X, Play,
+  ShieldCheck, Trophy, Activity, Binary, Atom, TrendingUp, Send, Users, ClipboardCheck, X, Play,
   Plus, Minus, GraduationCap, Globe
 } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -90,7 +90,7 @@ export default function Home() {
                   })}
                   className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge hover:bg-white/20 text-white px-7 py-4 text-sm sm:text-base font-bold tracking-wide transition-all hover:scale-105 active:scale-95"
                 >
-                  Watch Preview <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-purple-900 text-xs font-bold">▶</span>
+                  Watch Preview <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-purple-900"><Play className="h-3 w-3 fill-purple-900 ml-0.5" /></span>
                 </button>
               </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         {/* Play Icon Badge */}
                         <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white group-hover:bg-purple-600 transition-colors">
-                          <span className="text-xs font-bold">▶</span>
+                          <Play className="h-3.5 w-3.5 fill-current ml-0.5" />
                         </div>
                         {/* Info Overlay */}
                         <div className="absolute bottom-3 left-3 right-3">
@@ -199,7 +199,7 @@ export default function Home() {
                         <Image src={student.img} alt={student.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white group-hover:bg-pink-600 transition-colors">
-                          <span className="text-xs font-bold">▶</span>
+                          <Play className="h-3.5 w-3.5 fill-current ml-0.5" />
                         </div>
                         <div className="absolute bottom-3 left-3 right-3">
                           <p className="font-sans text-sm font-bold text-white flex items-center gap-1">
@@ -241,7 +241,7 @@ export default function Home() {
                         <Image src={student.img} alt={student.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white group-hover:bg-indigo-600 transition-colors">
-                          <span className="text-xs font-bold">▶</span>
+                          <Play className="h-3.5 w-3.5 fill-current ml-0.5" />
                         </div>
                         <div className="absolute bottom-3 left-3 right-3">
                           <p className="font-sans text-sm font-bold text-white flex items-center gap-1">
@@ -909,7 +909,7 @@ export default function Home() {
                     Watch {selectedStudentVideo.name}'s research demonstration and technical presentation co-authored with Livingstone College STEM faculty.
                   </p>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-600/30 border border-purple-400/40 px-4 py-1.5 font-mono text-[10px] text-purple-200 uppercase tracking-widest">
-                    <Sparkles className="h-3 w-3 text-pink-400" /> Demo Video Telemetry Active
+                    <Activity className="h-3 w-3 text-pink-400" /> Demo Video Telemetry Active
                   </span>
                 </div>
               </div>

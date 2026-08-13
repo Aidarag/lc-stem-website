@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { 
-  Users, Code, BookOpen, Trophy, Sparkles, Binary, Atom, 
+  Users, Code, BookOpen, Trophy, Target, Binary, Atom, 
   TrendingUp, ArrowRight, Star, Heart, Laptop, CheckCircle2, ShieldCheck, Award
 } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0 grid-pattern-dark opacity-30 pointer-events-none" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full glass-pill-badge px-4 py-2 text-xs sm:text-sm text-purple-200">
-            <Sparkles className="h-4 w-4 text-purple-400" /> Student Community &amp; Incubator
+            <Users className="h-4 w-4 text-purple-400" /> Student Community &amp; Incubator
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white uppercase leading-none">
             About <span className="text-gradient-purple-pink">LC STEM</span>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-8 pt-5 border-t border-gray-100 bg-gradient-to-br from-slate-50 to-gray-50/80 border border-gray-200/90 p-4 rounded-2xl space-y-1">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-purple-700 flex items-center gap-1.5">
-                <Sparkles className="h-4 w-4 text-purple-600" /> Key Impact Focus
+                <Target className="h-4 w-4 text-purple-600" /> Key Impact Focus
               </span>
               <p className="font-sans text-sm text-gray-600">Preparing students for enterprise software engineering roles and accredited MD-PhD fellowships.</p>
             </div>

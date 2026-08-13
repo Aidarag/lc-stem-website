@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Mail, Phone, MapPin, Clock, Send, ShieldAlert, Sparkles, Star, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, ShieldAlert, Star, CheckCircle2, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 function ContactFormContent() {
@@ -48,7 +48,7 @@ function ContactFormContent() {
           <div className="space-y-2 border-b border-gray-100 pb-5">
             {studentParam && (
               <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 border border-purple-200 px-3.5 py-1 text-xs font-bold text-purple-800 mb-2">
-                <Sparkles className="h-3.5 w-3.5 text-purple-600" /> Connecting with {studentParam}
+                <Send className="h-3.5 w-3.5 text-purple-600" /> Connecting with {studentParam}
               </div>
             )}
             <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-gray-900 flex items-center gap-3">
@@ -200,7 +200,7 @@ function ContactFormContent() {
               <span className="btn-gradient-lime font-mono text-xs font-extrabold uppercase tracking-wider text-[#0B051D] px-3.5 py-1 rounded-full shadow-sm">
                 Lab Tours
               </span>
-              <Sparkles className="h-5 w-5 text-[#e3fc51]" />
+              <MapPin className="h-5 w-5 text-[#e3fc51]" />
             </div>
             
             <h3 className="font-serif text-2xl font-extrabold text-white pt-1">
@@ -229,7 +229,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0 grid-pattern-dark opacity-30 pointer-events-none" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full glass-pill-badge px-4 py-2 text-xs sm:text-sm text-purple-200">
-            <Sparkles className="h-4 w-4 text-[#e3fc51]" /> Admissions &amp; Connect
+            <Mail className="h-4 w-4 text-[#e3fc51]" /> Admissions &amp; Connect
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white uppercase leading-none">
             Contact <span className="text-gradient-purple-pink">LC STEM</span>

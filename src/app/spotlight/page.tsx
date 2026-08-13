@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, X, Award, Briefcase, GraduationCap, Code, Compass, ArrowRight, Star, Sparkles, CheckCircle2, Trophy, Mail, Send } from 'lucide-react';
+import { Search, Filter, X, Award, Briefcase, GraduationCap, Code, Compass, ArrowRight, Star, BookOpen, CheckCircle2, Trophy, Mail, Send } from 'lucide-react';
 import { studentSpotlights, StudentSpotlight } from '@/data/stemData';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -135,7 +135,7 @@ function SpotlightContent() {
                   {/* Spotlight badge */}
                   {student.featured && (
                     <span className="absolute top-4 left-4 inline-flex items-center gap-1 bg-purple-600 text-white px-3 py-1 rounded-full font-mono text-xs font-bold uppercase tracking-wider shadow-md">
-                      <Sparkles className="h-3.5 w-3.5" /> Spotlight
+                      <Star className="h-3.5 w-3.5 fill-current" /> Spotlight
                     </span>
                   )}
 
@@ -232,7 +232,7 @@ function SpotlightContent() {
                   </span>
                   {activeStudent.featured && (
                     <span className="btn-gradient-lime font-mono text-xs font-extrabold uppercase tracking-wider text-[#0B051D] px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1">
-                      <Sparkles className="h-3.5 w-3.5" /> Spotlight
+                      <Star className="h-3.5 w-3.5 fill-current" /> Spotlight
                     </span>
                   )}
                 </div>
@@ -265,7 +265,7 @@ function SpotlightContent() {
                 {/* Biography */}
                 <div className="space-y-2">
                   <h3 className="font-mono text-xs font-extrabold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
-                    <Sparkles className="h-4 w-4 text-purple-600" /> Biography
+                    <BookOpen className="h-4 w-4 text-purple-600" /> Biography
                   </h3>
                   <p className="font-sans text-sm sm:text-base leading-relaxed text-gray-700 font-normal">
                     {activeStudent.bio}

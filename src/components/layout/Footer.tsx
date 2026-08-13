@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Send, Sparkles, ArrowUpRight, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, ArrowUpRight, Heart, Lock, ArrowUp, Compass, GraduationCap } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   const handleSubscribe = (e: React.FormEvent) => {
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="mb-16 rounded-3xl border border-white/15 bg-white/5 backdrop-blur-md p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
           <div className="space-y-3 text-center md:text-left">
             <div className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge px-4 py-1.5 text-xs sm:text-sm text-purple-200">
-              <Sparkles className="h-4 w-4 text-purple-400" /> Livingstone College STEM Hub
+              <GraduationCap className="h-4 w-4 text-purple-400" /> Livingstone College STEM Hub
             </div>
             <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
               Empowering Next-Gen Technical Talent
@@ -55,14 +56,7 @@ export default function Footer() {
           
           {/* Col 1: Branding & Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="group inline-flex items-center gap-3">
-              <span className="font-mono text-sm font-bold uppercase tracking-wider text-white border border-purple-500/50 bg-purple-600/30 px-3 py-1 rounded-xl shadow-md">
-                L.C.
-              </span>
-              <span className="font-serif text-3xl font-extrabold tracking-tight text-white transition-colors group-hover:text-purple-300">
-                STEM <span className="font-mono text-sm font-semibold text-purple-400">Hub</span>
-              </span>
-            </Link>
+            <Logo variant="dark" size="lg" />
             
             <p className="font-sans text-sm sm:text-base leading-relaxed text-slate-300 pr-2">
               Showcasing student success and engineering the innovators of tomorrow within the LC STEM student community in Salisbury, NC.
@@ -93,7 +87,7 @@ export default function Footer() {
           {/* Col 2: Quick Links (3 cols) */}
           <div className="lg:col-span-3 space-y-5">
             <h4 className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-400 flex items-center gap-2">
-              <Sparkles className="h-4 w-4" /> Navigation
+              <Compass className="h-4 w-4" /> Navigation
             </h4>
             <ul className="grid grid-cols-2 gap-3 font-sans text-sm sm:text-base text-slate-300 font-medium">
               {[
@@ -165,8 +159,8 @@ export default function Footer() {
                   <Send className="h-4 w-4 text-[#0B051D]" />
                 </button>
               </div>
-              <span className="font-mono text-xs text-slate-400 block pl-2">
-                🔒 No spam. Unsubscribe anytime.
+              <span className="font-mono text-xs text-slate-400 flex items-center pl-2">
+                <Lock className="h-3 w-3 inline mr-1 text-slate-400" /> No spam. Unsubscribe anytime.
               </span>
             </form>
           </div>
@@ -185,7 +179,7 @@ export default function Footer() {
               onClick={scrollToTop}
               className="text-purple-400 hover:text-purple-300 transition-colors cursor-pointer font-bold inline-flex items-center gap-1.5"
             >
-              Back to Top ↑
+              Back to Top <ArrowUp className="h-3.5 w-3.5 ml-0.5" />
             </button>
           </div>
         </div>

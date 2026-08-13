@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
+import Logo from '@/components/ui/Logo';
+
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
@@ -24,14 +26,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="font-mono text-xs font-bold uppercase tracking-wider text-white bg-purple-600 border border-purple-500 px-2.5 py-1 rounded-lg shadow-sm">
-            L.C.
-          </span>
-          <span className="font-serif text-xl font-extrabold tracking-tight text-gray-900 transition-colors group-hover:text-purple-600">
-            STEM <span className="font-mono text-xs font-semibold text-purple-600">Hub</span>
-          </span>
-        </Link>
+        <Logo variant="light" size="md" />
 
         {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center gap-1 bg-gray-100/90 p-1.5 rounded-full border border-gray-200/90 shadow-inner">

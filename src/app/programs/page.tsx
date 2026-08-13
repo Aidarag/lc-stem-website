@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Briefcase, Sparkles, ArrowRight, Star, CheckCircle2 } from 'lucide-react';
+import { Code, Briefcase, Award, ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { academicPrograms, AcademicProgram } from '@/data/stemData';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -79,7 +79,7 @@ export default function ProgramsPage() {
               {/* Track Highlights */}
               <div className="bg-white rounded-3xl border border-gray-200/90 p-7 md:p-9 space-y-6 shadow-xl hover:border-purple-200 transition-all duration-300">
                 <h3 className="font-serif text-xl font-extrabold text-gray-900 flex items-center gap-2.5">
-                  <Sparkles className="h-5 w-5 text-purple-600" /> Track Highlights
+                  <Award className="h-5 w-5 text-purple-600" /> Track Highlights
                 </h3>
                 <ul className="space-y-4">
                   {program.highlights.map((highlight, index) => (

@@ -3,6 +3,12 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : 'https://lc-stem.website';
+
 export const metadata: Metadata = {
   title: {
     default: 'LC STEM Showcase | Livingstone College',
@@ -11,11 +17,11 @@ export const metadata: Metadata = {
   description: 'Explore Livingstone College STEM student portfolios, independent lab research, hackathon medals, and academic concentrations in CIS, Biology, Mathematics, and Business.',
   keywords: ['LC STEM', 'Livingstone College STEM', 'Computer Information Systems', 'Biology Pre-Med', 'Mathematics Data Science', 'HBCU STEM', 'Undergraduate Research', 'Student Hackathon Portfolio'],
   authors: [{ name: 'Livingstone College STEM Department' }],
-  metadataBase: new URL('https://lc-stem.website'),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: 'LC STEM Showcase | Livingstone College',
     description: 'Empowering student technical innovation, NIH oncology lab research, and championship hackathon achievements at Livingstone College STEM.',
-    url: 'https://lc-stem.website',
+    url: siteUrl,
     siteName: 'Livingstone College STEM Showcase',
     images: [
       {
@@ -23,6 +29,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Livingstone College STEM Showcase - Social Link Preview',
+        type: 'image/jpeg',
       },
     ],
     locale: 'en_US',
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'LC STEM Showcase | Livingstone College',
-    description: 'Empowering student technical innovation, NIH oncology lab research, and championship hackathon achievements.',
+    description: 'Empowering student technical innovation, NIH oncology lab research, and championship hackathon achievements at Livingstone College STEM.',
     images: ['/og-image.jpg'],
   },
   icons: {
@@ -40,7 +47,7 @@ export const metadata: Metadata = {
       { url: '/favicon.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
 };
