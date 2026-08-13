@@ -5,12 +5,12 @@ import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Livingstone College STEM Showcase',
-    template: '%s | Livingstone College STEM',
+    default: 'LC STEM Showcase',
+    template: '%s | LC STEM',
   },
-  description: 'Welcome to the official Livingstone College STEM Showcase. Celebrate the achievements, research, hackathons, and innovations of students and faculty at Livingstone College.',
-  keywords: ['Livingstone College', 'STEM', 'Computer Information Systems', 'Biology', 'Mathematics', 'HBCU STEM', 'Undergraduate Research'],
-  authors: [{ name: 'Livingstone College STEM Department' }],
+  description: 'Welcome to the LC STEM Showcase, a student-led digital portfolio celebrating the technical achievements, research, hackathons, and innovations of the LC STEM student community.',
+  keywords: ['LC STEM', 'STEM', 'Computer Information Systems', 'Biology', 'Mathematics', 'HBCU STEM', 'Undergraduate Research', 'Student Portfolio'],
+  authors: [{ name: 'LC STEM Student Community' }],
   metadataBase: new URL('https://lc-stem.website'),
 };
 

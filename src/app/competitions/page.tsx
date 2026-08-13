@@ -32,10 +32,10 @@ export default function CompetitionsPage() {
           </div>
           <div className="space-y-2">
             <h2 className="font-serif text-2xl font-bold text-slate-900 flex items-center gap-2">
-              The Trophy Cabinet <span className="font-mono text-[9px] font-bold text-accent border border-accent/20 px-1.5 py-0.5 rounded-md bg-amber-50">Department Records</span>
+              The Trophy Cabinet <span className="font-mono text-[9px] font-bold text-accent border border-accent/20 px-1.5 py-0.5 rounded-md bg-amber-50">Community Records</span>
             </h2>
             <p className="font-sans text-xs md:text-sm leading-relaxed text-slate-500">
-              Over the past three academic years, Livingstone College STEM students have earned over **$25,000** in competitive scholarship awards and placed first in three regional hackathons. Our undergraduate research presentations have co-authored reviews featured in prominent national medical symposiums.
+              Over the past three academic years, LC STEM student teams have earned over **$25,000** in competitive scholarship awards and placed first in three regional hackathons. Our undergraduate research presentations have co-authored reviews featured in prominent national medical symposiums.
             </p>
           </div>
         </ScrollReveal>
