@@ -43,7 +43,7 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
         isDark ? 'text-white' : 'text-gray-900'
       }`}>
         <span className="font-extrabold transition-colors group-hover:text-purple-600">
-          Livingstone
+          LC
         </span>
         <span className="font-bold text-purple-600">
           STEM
