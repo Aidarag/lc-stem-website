@@ -3,11 +3,21 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ? process.env.NEXT_PUBLIC_SITE_URL
-  : process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'https://lc-stem.website';
+const getSiteUrl = () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.replace(/\/$/, '')}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL.replace(/\/$/, '')}`;
+  }
+  return 'https://lc-stem.website';
+};
+
+const siteUrl = getSiteUrl();
+const ogImageUrl = `${siteUrl}/og-image.jpg`;
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +35,8 @@ export const metadata: Metadata = {
     siteName: 'Livingstone College STEM Showcase',
     images: [
       {
-        url: '/og-image.jpg',
+        url: ogImageUrl,
+        secureUrl: ogImageUrl,
         width: 1200,
         height: 630,
         alt: 'Livingstone College STEM Showcase - Social Link Preview',
@@ -39,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LC STEM Showcase | Livingstone College',
     description: 'Empowering student technical innovation, NIH oncology lab research, and championship hackathon achievements at Livingstone College STEM.',
-    images: ['/og-image.jpg'],
+    images: [ogImageUrl],
   },
   icons: {
     icon: [
@@ -59,6 +70,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
+      <head>
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:secure_url" content={ogImageUrl} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground font-sans">
         <Navbar />
         <main className="flex-grow">{children}</main>
