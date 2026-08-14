@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Livingstone College STEM Showcase
 
-## Getting Started
+A premium, modern, and interactive digital showcase for the Livingstone College STEM Department (L.C. STEM). Designed to highlight academic program tracks, showcase outstanding students, celebrate competitive student achievements (projects, hackathons, honors), and provide an interactive communications channel for prospective applicants.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Key Features
+
+*   **Academic Tracks Directory**: Interactive layouts detailing the four specialized STEM concentrations: Biology, Computer Information Systems (CIS), Business, and Mathematics.
+*   **Featured Students Directory**: Highlighting outstanding STEM students, their bios, internships (at firms like Microsoft, Google, Novartis), certifications, and academic accomplishments, with quick major-based filtering.
+*   **Unified Achievements Log**: Consolidated registry of student projects, regional hackathon victories (e.g. CIAA STEM Hackathon, Microsoft HBCU Hackathon), and academic research awards.
+*   **Department News & Events Feed**: Live calendar of upcoming workshops, seminars, networking dinners, and chronological department announcements.
+*   **Admissions & Connect Portal**: Interactive form for inquiries paired with a simulated **STEM Response Desk Console** to manage student interest.
+
+---
+
+## 🛠️ Technology Stack
+
+The project is built on Next.js (App Router) using a modern utility-first stylesheet approach and physics-based animations:
+
+*   **Framework**: [Next.js](https://nextjs.org/) `16.3.0` (App Router architecture)
+*   **UI Engine**: [React](https://react.dev/) `19.2.8`
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) `^4.0.0` (utilizing `@import` CSS module imports & theme configuration)
+*   **Animations**: [Framer Motion](https://www.framer.com/motion/) `^13.1.0` (physics-based spring transitions and stagger lists)
+*   **Icons**: [Lucide React](https://lucide.dev/) `^1.31.0` (unified SVG icons)
+*   **Language**: [TypeScript](https://www.typescriptlang.org/) `^5.0.0`
+
+---
+
+## 📂 Project Structure & Directory Layout
+
+The application isolates page routes, reusable components, static databases, and design tokens using the layout below:
+
+```
+├── public/                 # Static assets (images, branding logos)
+├── design-system/          # Design tokens and specifications
+│   └── livingstone-college-stem
+│       └── MASTER.md       # Master design token files & rules
+├── src/
+│   ├── app/                # Next.js App Router Page components
+│   │   ├── about/          # Mission, Vision, and department context
+│   │   ├── competitions/   # Academic awards and hackathons showcase page
+│   │   ├── contact/        # Contact form and response simulator console
+│   │   ├── news-events/    # Live news feed & events calendar page
+│   │   ├── programs/       # Program concentrations layouts
+│   │   ├── spotlight/      # Student profiles directory
+│   │   ├── globals.css     # Global styles & Tailwind v4 theme mapping
+│   │   ├── layout.tsx      # Root HTML scaffolding & providers
+│   │   └── page.tsx        # Homepage / Landing page
+│   ├── components/
+│   │   ├── layout/         # Persistent structural elements (Navbar, Footer)
+│   │   └── ui/             # Reusable UI widgets (BentoGrid, StatCounter, ScrollReveal)
+│   └── data/
+│       └── stemData.ts     # Static database containing students, projects, and achievements
+├── package.json
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗃️ Data Schema & Models
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All database-like information is statically typed and declared within [stemData.ts](file:///Users/im/Desktop/Projects%20IDE/LC-Stem.website/src/data/stemData.ts) for simple admin-driven changes:
 
-## Learn More
+### Academic Concentrations Schema
+```typescript
+export interface AcademicProgram {
+  name: 'Computer Information Systems' | 'Mathematics' | 'Biology' | 'Business';
+  overview: string;
+  careers: string[];
+  skills: string[];
+  highlights: string[];
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Student Spotlight Profiles
+```typescript
+export interface StudentSpotlight {
+  id: string;
+  name: string;
+  major: 'Computer Information Systems' | 'Mathematics' | 'Biology' | 'Business';
+  gradYear: number;
+  photo: string;
+  bio: string;
+  leadership: string[];
+  internships: string[];
+  awards: string[];
+  certifications: string[];
+  achievements: string[];
+  featured: boolean;
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Projects & Competitions Schemas
+```typescript
+export interface StudentProject {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  team: string[];
+  outcomes: string;
+  demoUrl?: string;
+  githubUrl?: string;
+  image: string;
+  featured: boolean;
+}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export interface Competition {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  date: string;
+  award: string;
+  students: string[];
+  image: string;
+  topics?: string[];
+  outcomes?: string;
+  link?: string;
+}
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Visual System & Typography
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed around an academic, clean, and high-contrast dark-mode friendly theme:
+*   **Primary Palette**: Charcoal `#181818`, Pure White `#FFFFFF`, Slate `#0F172A`
+*   **Accents**: Electric Lime `#E2FD52`, Vibrant Orange `#FF3B00`, Electric Blue `#0066FF`, Lavender `#C2B2E9`
+*   **Typography**:
+    *   *Headings & Heros*: Neue Haas Grotesk / Helvetica Now
+    *   *Body & Interfaces*: Inter
+    *   *Metadata & Labels*: PP Neue Montreal / SF Pro Display
+*   **Interactive Core Classes**:
+    *   `.premium-btn`: Handles scale transitions (`scale(0.97)`) on click active state.
+    *   `.premium-card-light` / `.premium-card-dark`: Hover translation overlays for interactive cards.
+    *   `.grid-pattern` / `.grid-pattern-dark`: Custom background grid canvas overlays.
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+
+*   Node.js (v18.x or later)
+*   npm or pnpm / yarn
+
+### Installation & Run
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Aidarag/public.stemwebsite.git
+    cd public.stemwebsite
+    ```
+
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+### Building for Production
+
+To create a production-optimized build of the project:
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 👥 Contributors & Administration
+
+This project is maintained by the **Livingstone College STEM Department**. Salisbury, North Carolina.
