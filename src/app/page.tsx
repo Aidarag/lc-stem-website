@@ -76,7 +76,7 @@ export default function Home() {
               {/* CTAs */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
-                  href="/programs"
+                  href="/programs/computer-information-systems"
                   className="btn-gradient-lime inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-sm sm:text-base font-extrabold tracking-wide shadow-xl transition-all cursor-pointer"
                 >
                   View Programs <ArrowRight className="h-5 w-5 stroke-[2.5]" />
@@ -342,7 +342,7 @@ export default function Home() {
                 desc: 'Software development, database management, and cloud architecture modeling.',
                 accent: 'border-l-indigo-500',
                 color: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/20',
-                href: '/programs?track=CIS',
+                href: '/programs/computer-information-systems',
                 icon: <Code className="h-7 w-7" />,
               },
               {
@@ -350,7 +350,7 @@ export default function Home() {
                 desc: 'Molecular assays, cellular genetics regulation, pre-med networks, and field ecology.',
                 accent: 'border-l-purple-500',
                 color: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
-                href: '/programs?track=Biology',
+                href: '/programs/biology',
                 icon: <Atom className="h-7 w-7" />,
               },
               {
@@ -358,7 +358,7 @@ export default function Home() {
                 desc: 'Operations management analysis, supply chain logistics, and quantitative modeling.',
                 accent: 'border-l-pink-500',
                 color: 'text-pink-400 bg-pink-500/10 border-pink-500/20',
-                href: '/programs?track=Business',
+                href: '/programs/business',
                 icon: <TrendingUp className="h-7 w-7" />,
               },
               {
@@ -366,7 +366,7 @@ export default function Home() {
                 desc: 'Algorithmic logic, predictive data science, statistical math models, and cryptography.',
                 accent: 'border-l-violet-400',
                 color: 'text-violet-300 bg-violet-500/10 border-violet-500/20',
-                href: '/programs?track=Mathematics',
+                href: '/programs/mathematics',
                 icon: <Binary className="h-7 w-7" />,
               },
             ].map((program) => (
@@ -615,7 +615,7 @@ export default function Home() {
               </p>
               <div>
                 <Link
-                  href="/programs"
+                  href="/programs/computer-information-systems"
                   className="btn-gradient-lime inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-sm sm:text-base font-extrabold tracking-wide shadow-xl transition-all cursor-pointer"
                 >
                   Explore Programs <ArrowRight className="h-5 w-5 stroke-[2.5]" />
@@ -726,7 +726,7 @@ export default function Home() {
             {/* CTA Button */}
             <div>
               <Link
-                href="/programs"
+                href="/programs/computer-information-systems"
                 className="btn-gradient-lime inline-flex items-center gap-2.5 rounded-full px-9 py-4 text-sm sm:text-base font-extrabold tracking-wide shadow-xl transition-all cursor-pointer"
               >
                 Explore Programs <ArrowRight className="h-5 w-5 stroke-[2.5]" />
