@@ -33,32 +33,6 @@ export default function ProgramsLayout({ children }: { children: React.ReactNode
         </div>
       </section>
 
-      {/* Program Tabs */}
-      <section className="mx-auto max-w-7xl px-6 pt-12 md:pt-16">
-        <div className="flex flex-wrap gap-2.5 justify-center md:justify-start pb-8 border-b border-gray-200/80">
-          {academicPrograms.map((p) => {
-            const href = `/programs/${p.slug}`;
-            const isActive = pathname === href;
-            return (
-              <Link
-                key={p.slug}
-                href={href}
-                className={`relative rounded-full border px-6 py-3 font-mono text-xs font-bold tracking-wide transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? 'border-purple-500 bg-purple-600 text-white shadow-lg shadow-purple-600/25'
-                    : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 hover:border-purple-300'
-                }`}
-              >
-                {isActive && (
-                  <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-lime-400 shadow-sm" />
-                )}
-                {p.name}
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Program Details View */}
       <section className="mx-auto max-w-7xl px-6 pt-10">
         <AnimatePresence mode="wait">
