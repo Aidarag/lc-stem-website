@@ -62,6 +62,7 @@ export interface EventItem {
 
 export interface AcademicProgram {
   name: 'Computer Information Systems' | 'Mathematics' | 'Biology' | 'Business';
+  slug: 'computer-information-systems' | 'mathematics' | 'biology' | 'business';
   overview: string;
   careers: string[];
   skills: string[];
@@ -71,6 +72,7 @@ export interface AcademicProgram {
 export const academicPrograms: AcademicProgram[] = [
   {
     name: 'Computer Information Systems',
+    slug: 'computer-information-systems',
     overview: 'The Computer Information Systems (CIS) program equips students with the technical expertise and business acumen needed to design, develop, and manage complex information systems. From software engineering to cybersecurity, students learn to build solutions for modern enterprises.',
     careers: ['Software Engineer', 'Cybersecurity Analyst', 'Database Administrator', 'IT Project Manager', 'Systems Analyst'],
     skills: ['Python & Java Development', 'Web & Mobile Engineering', 'Database Management (SQL)', 'Network Security Systems', 'Agile Product Methodologies'],
@@ -82,6 +84,7 @@ export const academicPrograms: AcademicProgram[] = [
   },
   {
     name: 'Mathematics',
+    slug: 'mathematics',
     overview: 'The Mathematics program cultivates critical thinking, analytical reasoning, and rigorous problem-solving skills. Students explore theoretical structures and applied mathematics, preparing them for careers in data science, actuarial modeling, finance, and cryptography.',
     careers: ['Data Scientist', 'Actuary', 'Quantitative Analyst', 'Operations Researcher', 'Cryptographer'],
     skills: ['Statistical Modeling', 'Linear Algebra & Calculus', 'Data Visualization (R/Python)', 'Predictive Analytics', 'Algorithmic Logic'],
@@ -93,6 +96,7 @@ export const academicPrograms: AcademicProgram[] = [
   },
   {
     name: 'Biology',
+    slug: 'biology',
     overview: 'The Biology program offers a comprehensive study of living systems, from cellular biology to global ecosystems. Combining laboratory research, field studies, and experimental science, this program prepares students for medical school, veterinary fields, and biotechnology careers.',
     careers: ['Medical Practitioner', 'Biotechnologist', 'Environmental Scientist', 'Pharmacologist', 'Clinical Researcher'],
     skills: ['Laboratory Assays & PCR', 'Genetic Sequence Analysis', 'Field Sampling & Ecology', 'Biomedical Ethics', 'Experimental Design'],
@@ -104,6 +108,7 @@ export const academicPrograms: AcademicProgram[] = [
   },
   {
     name: 'Business',
+    slug: 'business',
     overview: 'Bridging technical acumen with management strategy, the Business concentration within the LC STEM community prepares students for quantitative management, operations management, logistics, and data-driven corporate leadership.',
     careers: ['Business Intelligence Analyst', 'Operations Manager', 'Financial Analyst', 'Supply Chain Strategist', 'STEM Entrepreneur'],
     skills: ['Financial Analysis', 'Supply Chain Optimization', 'Market Data Analysis', 'Risk Management', 'Operations Strategy'],
