@@ -4,6 +4,7 @@ import { Code, Briefcase, Award, CheckCircle2 } from 'lucide-react';
 import { academicPrograms } from '@/data/stemData';
 import BiologyStudentSuccessSection from '@/components/programs/BiologyStudentSuccessSection';
 import BusinessStudentSuccessSection from '@/components/programs/BusinessStudentSuccessSection';
+import CISStudentSuccessSection from '@/components/programs/CISStudentSuccessSection';
 import MathStudentSuccessSection from '@/components/programs/MathStudentSuccessSection';
 
 export const dynamicParams = false;
@@ -93,6 +94,12 @@ export default async function SubjectPage({ params }: SubjectPageProps) {
           </div>
         </div>
       </div>
+
+      {program.slug === 'computer-information-systems' && (
+        <div className="lg:col-span-12">
+          <CISStudentSuccessSection />
+        </div>
+      )}
 
       {program.slug === 'biology' && (
         <div className="lg:col-span-12">
