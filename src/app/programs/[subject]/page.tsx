@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Code, Briefcase, Award, CheckCircle2 } from 'lucide-react';
 import { academicPrograms } from '@/data/stemData';
+import BiologyStudentSuccessSection from '@/components/programs/BiologyStudentSuccessSection';
+import BusinessStudentSuccessSection from '@/components/programs/BusinessStudentSuccessSection';
 
 export const dynamicParams = false;
 
@@ -90,6 +92,18 @@ export default async function SubjectPage({ params }: SubjectPageProps) {
           </div>
         </div>
       </div>
+
+      {program.slug === 'biology' && (
+        <div className="lg:col-span-12">
+          <BiologyStudentSuccessSection />
+        </div>
+      )}
+
+      {program.slug === 'business' && (
+        <div className="lg:col-span-12">
+          <BusinessStudentSuccessSection />
+        </div>
+      )}
     </>
   );
 }
