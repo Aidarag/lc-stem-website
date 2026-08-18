@@ -4,6 +4,7 @@ import { Code, Briefcase, Award, CheckCircle2 } from 'lucide-react';
 import { academicPrograms } from '@/data/stemData';
 import BiologyStudentSuccessSection from '@/components/programs/BiologyStudentSuccessSection';
 import BusinessStudentSuccessSection from '@/components/programs/BusinessStudentSuccessSection';
+import MathStudentSuccessSection from '@/components/programs/MathStudentSuccessSection';
 
 export const dynamicParams = false;
 
@@ -102,6 +103,12 @@ export default async function SubjectPage({ params }: SubjectPageProps) {
       {program.slug === 'business' && (
         <div className="lg:col-span-12">
           <BusinessStudentSuccessSection />
+        </div>
+      )}
+
+      {program.slug === 'mathematics' && (
+        <div className="lg:col-span-12">
+          <MathStudentSuccessSection />
         </div>
       )}
     </>

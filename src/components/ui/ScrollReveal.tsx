@@ -45,6 +45,7 @@ export default function ScrollReveal({
 
   return (
     <motion.div
+      suppressHydrationWarning
       initial={initial}
       whileInView={animate}
       viewport={{ once: true, margin: '-40px' }}
