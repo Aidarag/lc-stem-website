@@ -21,9 +21,9 @@ const students = [
     organizations: ['TIAA'],
     description:
       'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
-    image: '/images/cis-student-success/micah-colding-tiaa-profile.jpeg',
-    imageAlt: 'Professional portrait of Micah Colding wearing a suit and striped tie',
-    imagePosition: '50% 55%',
+    image: null,
+    imageAlt: '',
+    imagePosition: '50% 50%',
     tags: ['Cybersecurity', 'Fraud Management', 'Financial Services'],
     icon: ShieldCheck,
   },
@@ -33,9 +33,9 @@ const students = [
     organizations: ['NCDOT'],
     description:
       'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
-    image: '/images/cis-student-success/yves-kwawu-ncdot-profile.jpeg',
-    imageAlt: 'Portrait of Yves Kwawu wearing glasses and a cream polo shirt outdoors',
-    imagePosition: '50% 35%',
+    image: null,
+    imageAlt: '',
+    imagePosition: '50% 50%',
     tags: ['Information Technology', 'Government Technology', 'Technical Support'],
     icon: Laptop,
   },
@@ -101,14 +101,16 @@ export default function CISStudentSuccessSection() {
                 }`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                  <Image
-                    src={student.image}
-                    alt={student.imageAlt}
-                    fill
-                    style={{ objectPosition: student.imagePosition }}
-                    className="object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none"
-                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
-                  />
+                  {student.image && (
+                    <Image
+                      src={student.image}
+                      alt={student.imageAlt}
+                      fill
+                      style={{ objectPosition: student.imagePosition }}
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
+                    />
+                  )}
                 </div>
 
                 <div className="p-6">
