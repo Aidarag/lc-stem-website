@@ -76,11 +76,13 @@ export default function CompetitionsPage() {
               }`}>
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 font-mono text-xs text-gray-500">
-                      <span className="text-purple-600 font-semibold flex items-center gap-1.5">
-                        <Calendar className="h-4 w-4" /> {comp.date}
-                      </span>
-                    </div>
+                    {comp.date && (
+                      <div className="flex items-center gap-2 font-mono text-xs text-gray-500">
+                        <span className="text-purple-600 font-semibold flex items-center gap-1.5">
+                          <Calendar className="h-4 w-4" /> {comp.date}
+                        </span>
+                      </div>
+                    )}
                     <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-gray-900 leading-snug group-hover:text-purple-700 transition-colors">{comp.title}</h3>
                     <p className="font-mono text-xs uppercase tracking-wider text-purple-600 font-bold">{comp.subtitle}</p>
                   </div>

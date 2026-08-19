@@ -35,7 +35,7 @@ export default function AchievementsPage() {
       const isHackathon = c.title.toLowerCase().includes('hackathon') || c.title.toLowerCase().includes('bowl');
       return {
         id: `comp-${c.id}`,
-        type: (isHackathon ? 'Hackathon' : 'Honors') as FilterType,
+        type: (c.category ?? (isHackathon ? 'Hackathon' : 'Honors')) as FilterType,
         title: c.title,
         subtitle: c.subtitle,
         description: c.description,
@@ -66,8 +66,8 @@ export default function AchievementsPage() {
     return matchesCategory && matchesSearch;
   });
 
-  // Pick the CIAA STEM Hackathon as the Large Featured Achievement
-  const featuredAchievement = achievementsList.find((a) => a.id === 'comp-1') || achievementsList[0];
+  // Pick the MS-CC Hackathon first place win as the Large Featured Achievement
+  const featuredAchievement = achievementsList.find((a) => a.id === 'comp-4') || achievementsList[0];
 
   // The remaining achievements to show in the list
   const showFeaturedHeader = activeFilter === 'All' && searchQuery === '';
@@ -164,7 +164,7 @@ export default function AchievementsPage() {
               <div className="space-y-4">
                 <div>
                   <span className="font-mono text-xs font-semibold text-gray-500">
-                    {featuredAchievement.date || 'Active Project'}
+                    {featuredAchievement.date || (featuredAchievement.isProject ? 'Active Project' : null)}
                   </span>
                   <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-gray-900 mt-1 leading-tight">
                     {featuredAchievement.title}

@@ -31,13 +31,14 @@ export interface Competition {
   title: string;
   subtitle: string;
   description: string;
-  date: string;
+  date?: string;
   award: string;
   students: string[];
   image: string;
   topics?: string[];
   outcomes?: string;
   link?: string;
+  category?: 'Hackathon' | 'Honors';
 }
 
 export interface NewsItem {
@@ -336,6 +337,32 @@ export const competitions: Competition[] = [
     topics: ['Data Modeling', 'GIS Analysis', 'Python', 'Urban Planning'],
     outcomes: 'Recognized with the Best Social Impact Solution Award. Proposed garden sites are currently under review with the Salisbury City Council.',
     link: 'https://datasciencebowl.org'
+  },
+  {
+    id: '4',
+    title: 'Sensor Spoofing Detection for PurpleAir Air Quality Networks',
+    subtitle: 'First Place, MS-CC Hackathon at West Virginia State University',
+    description: 'A Python based trust and stress scoring model that uses statistical deviation analysis to detect spoofed sensors in PurpleAir air quality networks. Awarded first place at the MS-CC Hackathon at West Virginia State University.',
+    date: 'April 2026',
+    award: '1st Place Winner',
+    students: ['Cephas Osei Bonsu', 'Prosper Nasangma', 'Amos Abdulai', 'Michael Atayi'],
+    image: '/images/achievements/ms-cc-hackathon-2026-team.jpeg',
+    topics: ['Python', 'Statistical Deviation Analysis', 'Cyber Physical Systems Security', 'Anomaly Detection', 'IoT Sensor Networks'],
+    outcomes: 'Placed first in the cyber physical systems security track at the MS-CC Hackathon, hosted by the Minority Serving Cyberinfrastructure Consortium at West Virginia State University.',
+    category: 'Hackathon'
+  },
+  {
+    id: '5',
+    title: 'Bringing the Clinic to the House',
+    subtitle: 'Selected from 106 HBCU Teams, 2026 Mastercard Data Challenge',
+    description: 'A data driven healthcare access solution for Robeson County, North Carolina, developed for the 2026 Mastercard Data Challenge after our team was selected from a field of 106 HBCU applicants.',
+    date: '2026',
+    award: 'Selected from 106 HBCU Teams',
+    students: ['Robert Osei', 'Amos Abdulai', 'Aida Garbia', 'Swetaskhi Nanda'],
+    image: '/images/achievements/mastercard-data-challenge-2026-team.jpeg',
+    topics: ['Healthcare Access', 'Data Analysis', 'Robeson County, NC', 'Community Health'],
+    outcomes: 'Produced for the 2026 Mastercard Data Challenge, hosted by the AUC Data Science Initiative, where the Livingstone College team was one of those selected from 106 competing HBCU teams.',
+    category: 'Honors'
   }
 ];
 
