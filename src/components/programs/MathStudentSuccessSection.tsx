@@ -16,6 +16,17 @@ const students = [
     imageAlt: 'Portrait of Sally Adenutsi',
     tags: ['STEM Mentorship', 'Global Leadership', 'Youth Advocacy', 'Academic Enrichment'],
   },
+  {
+    name: 'Francis Suapim',
+    role: 'Undergraduate Researcher',
+    organization: 'Advanced Computing Student Collaborative (ACSC) — Chaminade University of Honolulu',
+    details: 'Research program · Honolulu, Hawaii',
+    description:
+      'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on "Structural Vulnerability Among Micro, Small, and Medium Enterprises in Ghana," using data analysis and visualization to examine business vulnerability, and concluded the program by presenting his findings in a final presentation.',
+    image: '/images/math-student-success/francis-suapim-profile.png',
+    imageAlt: 'Portrait of Francis Suapim',
+    tags: ['Data Science', 'AI for Societal Impact', 'Research Presentation', 'Data Analysis & Visualization'],
+  },
 ] as const;
 
 export default function MathStudentSuccessSection() {
@@ -38,11 +49,11 @@ export default function MathStudentSuccessSection() {
           </p>
         </div>
 
-        <div className="mt-9 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-9 grid grid-cols-1 gap-6 md:grid-cols-2">
           {students.map((student) => (
             <article
               key={student.name}
-              className="group overflow-hidden rounded-2xl border border-purple-100 bg-purple-50/40 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg motion-reduce:transform-none md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)] xl:col-span-1 xl:w-auto"
+              className="group overflow-hidden rounded-2xl border border-purple-100 bg-purple-50/40 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg motion-reduce:transform-none"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <Image
@@ -63,10 +74,25 @@ export default function MathStudentSuccessSection() {
                     <h3 className="font-serif text-2xl font-extrabold leading-tight text-gray-900">
                       {student.name}
                     </h3>
+                    {'role' in student && student.role && (
+                      <p className="mt-1 text-sm font-bold leading-snug text-purple-800">
+                        {student.role}
+                      </p>
+                    )}
+                    {'organization' in student && student.organization && (
+                      <p className="mt-1 text-sm font-semibold leading-snug text-gray-700">
+                        {student.organization}
+                      </p>
+                    )}
                   </div>
                 </div>
 
-                <p className="mt-5 font-sans text-sm leading-relaxed text-gray-600">
+                {'details' in student && student.details && (
+                  <p className="mt-5 font-mono text-xs font-bold uppercase tracking-wide text-purple-700">
+                    {student.details}
+                  </p>
+                )}
+                <p className="mt-4 font-sans text-sm leading-relaxed text-gray-600">
                   {student.description}
                 </p>
 

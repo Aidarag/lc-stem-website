@@ -73,7 +73,7 @@ export default function RootLayout({
         <meta name="twitter:image" content={ogImageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
-      <body className="flex min-h-full flex-col bg-background text-foreground font-sans">
+      <body suppressHydrationWarning className="flex min-h-full flex-col bg-background text-foreground font-sans">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

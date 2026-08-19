@@ -42,6 +42,28 @@ const students = [
     imageAlt: 'Portrait of Darryl Fisher wearing a blue shirt and patterned blazer',
     tags: ['Product Safety', 'Laboratory Operations', 'Industry Experience', 'Professional Development'],
   },
+  {
+    name: 'Naomi Nuhamin Bullo',
+    role: 'Research Fellow & Registered Behavioral Technician',
+    organization: 'Davidson College · Atrium Health · Above and Beyond',
+    details: '2025–2026 · Research and Clinical Experience',
+    description:
+      'Naomi Nuhamin Bullo built a diverse portfolio of biology-related experience across research and clinical settings. She served as a Davidson College Research Fellow and an Atrium Health Summer Intern, gaining hands-on exposure to biomedical research and healthcare operations. She further expanded her skills as a Registered Behavioral Technician at Above and Beyond, applying scientific knowledge in applied behavioral health.',
+    image: '/images/biology-student-success/naomi-nuhamin-bullo-profile.jpeg',
+    imageAlt: 'Portrait of Naomi Nuhamin Bullo',
+    tags: ['Biomedical Research', 'Healthcare', 'Behavioral Health', 'Research Fellow', 'Clinical Experience'],
+  },
+  {
+    name: 'Patricia Naigaga',
+    role: 'Pharmacy Technician Intern',
+    organization: 'Walgreens',
+    details: 'Pharmacy Operations Experience',
+    description:
+      'Patricia Naigaga completed a Pharmacy Technician Internship at Walgreens, gaining hands-on experience in pharmaceutical dispensing, prescription processing, inventory management, and patient care coordination. She developed a strong foundation in pharmacy operations, regulatory compliance, and the collaborative skills essential to delivering safe and effective medication therapy in a fast-paced retail healthcare environment.',
+    image: '/images/biology-student-success/patricia-naigaga-profile.jpeg',
+    imageAlt: 'Portrait of Patricia Naigaga',
+    tags: ['Pharmaceutical Dispensing', 'Patient Care', 'Pharmacy Operations', 'Healthcare Internship', 'Regulatory Compliance'],
+  },
 ] as const;
 
 export default function BiologyStudentSuccessSection() {

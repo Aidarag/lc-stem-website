@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 interface ScrollRevealProps {
@@ -23,9 +23,15 @@ export default function ScrollReveal({
   className = '',
 }: ScrollRevealProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
 
-  // If user prefers reduced motion, disable transforms (scale & offset) and only transition opacity
-  const initial = shouldReduceMotion
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const reduceMotion = mounted && shouldReduceMotion;
+
+  const initial = reduceMotion
     ? { opacity: 0 }
     : {
         opacity: 0,
@@ -34,7 +40,7 @@ export default function ScrollReveal({
         scale: scale,
       };
 
-  const animate = shouldReduceMotion
+  const animate = reduceMotion
     ? { opacity: 1 }
     : {
         opacity: 1,
@@ -45,14 +51,13 @@ export default function ScrollReveal({
 
   return (
     <motion.div
-      suppressHydrationWarning
       initial={initial}
       whileInView={animate}
       viewport={{ once: true, margin: '-40px' }}
       transition={{
         duration: duration,
         delay: delay,
-        ease: [0.23, 1, 0.32, 1], // Custom strong ease-out cubic bezier
+        ease: [0.23, 1, 0.32, 1],
       }}
       className={className}
     >
