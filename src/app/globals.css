@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Playball&family=Satisfy&family=Caveat:wght@400;700&display=swap');
 
 @import "tailwindcss";
 
@@ -33,6 +33,7 @@
   --font-display: "Neue Haas Grotesk", "Helvetica Now", "Helvetica Neue", "Helvetica", "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "SF Pro Display", "PP Neue Montreal", "JetBrains Mono", monospace;
+  --font-script: "Satisfy", "Playball", "Caveat", cursive;
   
   --ease-out-custom: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in-out-custom: cubic-bezier(0.76, 0, 0.24, 1);
@@ -69,6 +70,7 @@
   --font-sans: var(--font-body);
   --font-serif: var(--font-display);
   --font-mono: var(--font-mono);
+  --font-script: var(--font-script);
 }
 
 /* Base Styles */

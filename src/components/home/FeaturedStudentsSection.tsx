@@ -49,6 +49,7 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
                     alt={student.name}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: student.photoPosition || 'center' }}
                     sizes="(max-w-768px) 100vw, 30vw"
                   />
                   <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">

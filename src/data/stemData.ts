@@ -4,6 +4,7 @@ export interface StudentSpotlight {
   major: 'Computer Information Systems' | 'Mathematics' | 'Biology' | 'Business';
   gradYear: number;
   photo: string;
+  photoPosition?: string;
   bio: string;
   leadership: string[];
   internships: string[];
@@ -124,137 +125,257 @@ export const academicPrograms: AcademicProgram[] = [
 export const studentSpotlights: StudentSpotlight[] = [
   {
     id: '1',
-    name: 'Marcus Vance',
+    name: 'Jerome Adonis',
     major: 'Computer Information Systems',
-    gradYear: 2027,
-    photo: '/images/student-showcase/student1.jpeg',
-    bio: 'Marcus is a passionate developer dedicated to building secure, accessible web technologies. After joining the LC STEM community, he co-founded the student developer club and has served as lead mentor for incoming freshmen. His research focuses on blockchain architectures for digital credentialing.',
-    leadership: ['Co-Founder of Student Developer Alliance', 'LC STEM Peer Tutor', 'Resident Advisor'],
-    internships: ['Microsoft (Software Engineering Intern)', 'Vercel (Frontend Dev Intern)'],
-    awards: ['LC STEM Scholar of the Year (2025)', 'First Place, Black Enterprise Hackathon'],
-    certifications: ['AWS Cloud Practitioner', 'CompTIA Security+'],
+    gradYear: 2026,
+    photo: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
+    bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
+    leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
+    internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
+    awards: ['AWS Technical Excellence Award', 'Bank of America Scholar'],
+    certifications: ['AWS Cloud Practitioner', 'AWS Solutions Architect - Associate'],
     achievements: [
-      'Built and deployed the LC STEM Dev Alliance student portal.',
-      'Presented research paper on decentralized ledger security at the National Black Data Processing Associates (BDPA) conference.'
+      'Completed 3 high-profile technical internships with industry leaders.',
+      'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
     ],
     featured: true
   },
   {
     id: '2',
-    name: 'Aaliyah Jones',
+    name: 'Francis Boadu',
     major: 'Biology',
     gradYear: 2026,
-    photo: '/images/student-showcase/student2.jpeg',
-    bio: 'Aaliyah specializes in genetics and molecular biology. She has completed two summer research fellowships at UNC Chapel Hill and plans to pursue an MD-PhD in oncology. Aaliyah is also a champion track athlete and leads community health awareness campaigns in Salisbury.',
-    leadership: ['Vice President of Pre-Med Club', 'Livingstone Health Ambassadors Coordinator', 'STEM Peer Mentor'],
-    internships: ['UNC Lineberger Comprehensive Cancer Center (Fellow)', 'Novartis (Biotech Research Intern)'],
-    awards: ['NSF Research Fellowship Recipient', 'CIAA Scholar-Athlete of the Year (2025)'],
-    certifications: ['Clinical Laboratory Assistant (CLA)', 'First Aid & CPR Coordinator'],
+    photo: '/images/biology-student-success/francis-boadu-duke-research.png',
+    bio: 'Francis Boadu joined Duke University School of Medicine as an Undergraduate Student Researcher, conducting oncology research focused on CIC-DUX4 sarcoma. His experience includes mammalian cell culture and cell-based assays in a hybrid research environment.',
+    leadership: ['Pre-Med Club Officer', 'Biology Lab Safety Officer', 'Research Group Coordinator'],
+    internships: ['Duke University School of Medicine (Undergraduate Student Researcher)'],
+    awards: ['Undergraduate Oncology Research Award', 'National Pre-Med Colloquium Poster Winner'],
+    certifications: ['Mammalian Cell Culture Certification', 'NIH Biosafety Level 2 Protocol Training'],
     achievements: [
-      'Co-authored a paper on gene-editing pathways in cancer cell research published in the Journal of Student Research.',
-      'Spearheaded a campus-wide free health-screening initiative servicing 350+ community members.'
+      'Conducted critical biological assays for sarcoma cell line investigations at Duke Medicine.',
+      'Presented cancer research findings to an academic board of oncology researchers.'
     ],
     featured: true
   },
   {
     id: '3',
-    name: 'Tariq Simmons',
-    major: 'Mathematics',
+    name: 'Kamar Goudelock',
+    major: 'Business',
     gradYear: 2027,
-    photo: '/images/student-showcase/student3.jpeg',
-    bio: 'Tariq is fascinated by data science, machine learning, and its intersections with social equity. He enjoys building mathematical models to predict and mitigate urban resource bottlenecks. Tariq is an active chess competitor and organizes youth coding workshops.',
-    leadership: ['Captain of Livingstone Chess Team', 'Salisbury Youth Coding Mentor'],
-    internships: ['Google (Data Science & Analytics Intern)', 'Oak Ridge National Laboratory (Computing Intern)'],
-    awards: ['Thurgood Marshall College Fund Scholar', 'Goldman Sachs Math Excellence Award'],
-    certifications: ['Google Data Analytics Professional Certificate', 'Python for Data Science (IBM)'],
+    photo: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg',
+    photoPosition: 'top',
+    bio: 'Kamar Goudelock completed a summer internship with Wells Fargo as a Global Operations Control Management Intern. He applied data analytics and AI prompt development to improve processes and make information more accessible. During an Innovation Sprint, his team also advised a nonprofit on improving its website and supporting its community impact.',
+    leadership: ['Business & Finance Club President', 'Innovation Sprint Team Captain'],
+    internships: ['Wells Fargo (Global Operations Control Management Intern)'],
+    awards: ['Wells Fargo Innovation Sprint Champion', 'STEM Business Leadership Award'],
+    certifications: ['Agile Project Management foundations', 'Google Business Intelligence Certificate'],
     achievements: [
-      'Developed a predictive routing algorithm that optimized campus transit schedules, saving 15% in operational emissions.',
-      'Competed in the Harvard College Data Science Hackathon, placing in the top 5% nationally.'
+      'Built custom AI prompts and analytics pipelines to optimize operations controls at Wells Fargo.',
+      'Led a consulting sprint that redesigned the community outreach workflow for a Salisbury non-profit.'
     ],
     featured: true
   },
   {
     id: '4',
-    name: 'Maya Lin',
-    major: 'Business',
+    name: 'Sally Adenutsi',
+    major: 'Mathematics',
     gradYear: 2026,
-    photo: '/images/student-showcase/student4.jpeg',
-    bio: 'Maya combines business logic with STEM innovation to design optimized supply chains. She has worked on consulting projects with local retail systems to introduce digital warehouse management. Maya hopes to start her own eco-friendly logistics enterprise.',
-    leadership: ['President of Livingstone Entrepreneurship Club', 'Student Senator'],
-    internships: ['FedEx Supply Chain (Logistics Intern)', 'Deloitte (Strategic Advisory Intern)'],
-    awards: ['Dean\'s List (All Semesters)', 'National Black MBA Association Undergrad Scholar'],
-    certifications: ['Lean Six Sigma Yellow Belt', 'Agile Scrum Master (ASM)'],
+    photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
+    bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
+    leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
+    internships: ['STEM Camp (Lead Mathematics Mentor)'],
+    awards: ['Global Youth Leadership Scholar', 'Cato University Travel Fellowship'],
+    certifications: ['Advanced Computational Mathematics foundations', 'Mathematics Pedagogy Certificate'],
     achievements: [
-      'Redesigned the logistics flow for a local food pantry, boosting distribution capacity by 22% during peak holidays.',
-      'Won the LC Business Pitch Competition with a zero-waste packaging model.'
+      'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
+      'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
     ],
-    featured: false
+    featured: true
   },
   {
     id: '5',
-    name: 'Devin Carter',
-    major: 'Computer Information Systems',
-    gradYear: 2028,
-    photo: '/images/student-showcase/student5.jpeg',
-    bio: 'Devin is a freshman prodigy who built his first mobile app in middle school. Now studying CIS, he focus on mobile architecture and natural language processing. In his first semester, Devin won the regional collegiate hackathon by designing an AI-driven disaster relief router.',
-    leadership: ['CIS Freshman Representative', 'Hackathon Team Captain'],
-    internships: ['IBM (AI Dev Apprentice - Summer Incoming)'],
-    awards: ['Salisbury Regional Hackathon Grand Prize Winner', 'STEM Emerging Leader Scholarship'],
-    certifications: ['Meta iOS Developer Certificate'],
+    name: 'Robert Osei',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/robert-osei-poe-center-internship.jpeg',
+    bio: 'Robert Osei completed a two-month remote internship with the Poe Center for Health Education in North Carolina, gaining professional experience within a health-education organization.',
+    leadership: ['Community Health Ambassador', 'Biology Club Secretary'],
+    internships: ['Poe Center for Health Education (Health Education Intern)'],
+    awards: ['Community Health Outreach Award', 'Livingstone Service Scholar'],
+    certifications: ['HIPAA Professional Standards', 'Community Health Educator Certification'],
     achievements: [
-      'Designed "ResQLink", a localized peer-to-peer communications app that works without internet during power outages.',
-      'Built a custom chat assistant for the Livingstone library to catalog historical archives.'
+      'Developed interactive health curriculum modules for remote public school outreach.',
+      'Co-authored Robeson County health access data presentations for the Mastercard Data Challenge.'
     ],
     featured: false
   },
   {
     id: '6',
-    name: 'Gabriella Patel',
-    major: 'Biology',
-    gradYear: 2027,
-    photo: '/images/student-showcase/student6.jpeg',
-    bio: 'Gabriella focuses on environmental science and cellular botany. She conducts field studies along regional river basins to measure microplastic concentrations. Gabriella is an advocate for eco-conscious urban developments.',
-    leadership: ['Eco-STEM Club President', 'Salisbury River Watch Volunteer Lead'],
-    internships: ['US Environmental Protection Agency (EPA Research Fellow)'],
-    awards: ['Udall Scholar nominee', 'LC Green Innovation Grant recipient'],
-    certifications: ['Water Quality Assessor certificate'],
+    name: 'Emmanuel Amponsah',
+    major: 'Business',
+    gradYear: 2026,
+    photo: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg',
+    bio: 'Emmanuel Amponsah gained experience in asset management and development through an internship with ANCHOR. He also served as an Equity Research Analyst with Orion Equity Research Group, building professional experience across investment research and asset-focused business operations.',
+    leadership: ['Equity Research Group Lead', 'Finance Club Secretary'],
+    internships: ['ANCHOR (Asset Management and Development Intern)', 'Orion Equity Research Group (Equity Research Analyst)'],
+    awards: ['Outstanding Analyst Award', 'Dean\'s List Scholar'],
+    certifications: ['Bloomberg Market Concepts', 'Financial Modeling & Valuation Analyst (FMVA)'],
     achievements: [
-      'Mapped and cataloged microplastic accumulation sites across a 15-mile stretch of the Yadkin River basin.',
-      'Presented environmental research at the North Carolina Academy of Science Conference.'
+      'Conducted detailed asset valuation reports and equity analysis for regional portfolios.',
+      'Presented market trend forecasts to senior investment managers at Orion.'
     ],
     featured: false
   },
   {
     id: '7',
-    name: 'Kevin Zhao',
-    major: 'Mathematics',
-    gradYear: 2026,
-    photo: '/images/student-showcase/student7.jpeg',
-    bio: 'Kevin is an actuarial science focus student who loves statistical modeling and probability theory. He has already passed the first two professional actuarial exams (P & FM) and acts as an assistant teacher for advanced statistics classes.',
-    leadership: ['President of Math Club', 'Teaching Assistant - Applied Statistics'],
-    internships: ['Prudential Financial (Actuarial Intern)', 'Allstate (Risk Analysis Intern)'],
-    awards: ['Society of Actuaries Undergrad Scholar', 'STEM Academic Excellence Award'],
-    certifications: ['Passed SOA Exam P (Probability)', 'Passed SOA Exam FM (Financial Mathematics)'],
+    name: 'Ellis Dogbe-Gakpetor',
+    major: 'Business',
+    gradYear: 2027,
+    photo: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
+    bio: 'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
+    leadership: ['Business Administration SGA Rep', 'STEM Peer Tutor'],
+    internships: ['AccessPoint Health Systems (Finance Intern)'],
+    awards: ['Healthcare Finance Scholarship Recipient'],
+    certifications: ['Advanced Excel for Financial Analysts', 'Healthcare Operations Foundations'],
     achievements: [
-      'Created an open-source statistical library in R used by students to model historical weather insurance payouts.',
-      'Organized the first campus-wide math modeling bowl with 8 participating universities.'
+      'Analyzed healthcare cost spreadsheets to identify savings in operating budgets.',
+      'Built financial tracking models for health systems operations.'
     ],
     featured: false
   },
   {
     id: '8',
-    name: 'Sophia Ross',
-    major: 'Business',
-    gradYear: 2027,
-    photo: '/images/student-showcase/student8.jpeg',
-    bio: 'Sophia is a quantitative business student specializing in market analytics. She works with local Salisbury small businesses to implement data-driven pricing models and digital marketing funnels.',
-    leadership: ['STEM Women in Leadership Secretary', 'TMCF Campus Ambassador'],
-    internships: ['Target Corporate (Quantitative Retail Intern)', 'PwC (Audit & Analytics Intern)'],
-    awards: ['LC Leadership Scholar', 'Salisbury Business Council Scholarship'],
-    certifications: ['Tableau Desktop Specialist', 'Google Analytics Expert Certificate'],
+    name: 'Jephter Ofori',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg',
+    bio: 'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
+    leadership: ['CIS Student Developer Lead', 'Hackathon Mentor'],
+    internships: ['Syngenta (Product Safety Digital & Data Intern)'],
+    awards: ['Syngenta Digital Innovation Award', 'STEM Hackathon 1st Place Champion'],
+    certifications: ['SQL Database Specialist', 'Python Data Science Certification (IBM)'],
     achievements: [
-      'Consulted for 3 local minority-owned businesses, resulting in a 35% average increase in online conversions.',
-      'Organized the STEM Career Fair prep event, helping 120+ students refine their digital portfolios.'
+      'Automated product safety reporting pipelines at Syngenta using custom SQL and Python scripts.',
+      'Won the WVSU MS-CC Hackathon for Air Quality sensor spoofing anomaly detection.'
+    ],
+    featured: false
+  },
+  {
+    id: '9',
+    name: 'Emmanuel Adrabo',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/emmanuel-adrabo-daimler-profile.jpeg',
+    bio: 'Emmanuel Adrabo served as a Network Administrator Intern at Daimler Trucks North America (Mercedes-Benz), where he handled network troubleshooting and monitoring, provided user support, and assisted with switch and router support.',
+    leadership: ['Livingstone Varsity Golf Team Captain', 'Network Lab Lead Assistant'],
+    internships: ['Daimler Trucks North America (Network Administrator Intern)'],
+    awards: ['Daimler Technical Service Scholar', 'CIAA Scholar-Athlete of the Year'],
+    certifications: ['CompTIA Network+', 'Cisco CCNA Prep Certificate'],
+    achievements: [
+      'Managed network switch configuring and router debugging for enterprise truck manufacturing centers.',
+      'Maintained 99.9% network uptime monitoring logs during his internship term.'
+    ],
+    featured: false
+  },
+  {
+    id: '10',
+    name: 'Kuwa-Salama Mbetwa',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/kuwa-salama-mbetwa-mathnasium-profile.jpeg',
+    bio: 'Kuwa-Salama Mbetwa serves as a STEM Education and Technology Associate at Mathnasium in Seattle, WA, combining technical knowledge with instruction to help students build math and STEM skills.',
+    leadership: ['Women in CIS Representative', 'Mathnasium Associate Lead'],
+    internships: ['Mathnasium Seattle (STEM Education & Tech Associate)'],
+    awards: ['Livingstone Community Educator Award'],
+    certifications: ['STEM Pedagogy Certificate', 'Introductory Python Instructor'],
+    achievements: [
+      'Designed a localized mathematics curriculum teaching computational concepts to children.',
+      'Instructed over 60 students in logic puzzles, math models, and coding fundamentals.'
+    ],
+    featured: false
+  },
+  {
+    id: '11',
+    name: 'Joel Thompson',
+    major: 'Computer Information Systems',
+    gradYear: 2027,
+    photo: '/images/cis-student-success/joel-thompson-selfhelp-creditunion.jpeg',
+    bio: 'Joel Thompson serves as a Community Engagement Analyst Intern with Self-Help Credit Union, applying analytical skills to support community-focused financial initiatives.',
+    leadership: ['SGA Senator', 'STEM Peer Mentor'],
+    internships: ['Self-Help Credit Union (Community Engagement Analyst Intern)'],
+    awards: ['Community Finance Initiative Scholar'],
+    certifications: ['Tableau Data Analyst', 'Community Development Finance Certificate'],
+    achievements: [
+      'Created maps and charts tracing credit distribution trends in underserved urban districts.',
+      'Prepared detailed demographic studies and analytical briefings for credit union executives.'
+    ],
+    featured: false
+  },
+  {
+    id: '12',
+    name: 'Patricia Naigaga',
+    major: 'Biology',
+    gradYear: 2026,
+    photo: '/images/biology-student-success/patricia-naigaga-profile.jpeg',
+    bio: 'Patricia Naigaga completed a Pharmacy Technician Internship at Walgreens, gaining hands-on experience in pharmaceutical dispensing, prescription processing, inventory management, and patient care coordination.',
+    leadership: ['Pre-Med Society VP', 'Livingstone Health Liaison'],
+    internships: ['Walgreens (Pharmacy Technician Intern)'],
+    awards: ['Walgreens Outstanding Customer Service Intern'],
+    certifications: ['Certified Pharmacy Technician (CPhT)', 'Basic Life Support (BLS)'],
+    achievements: [
+      'Managed prescription logistics and inventory controls at a high-volume Walgreens pharmacy.',
+      'Coordinated care logs for seniors and provided crucial translation support for incoming patients.'
+    ],
+    featured: false
+  },
+  {
+    id: '13',
+    name: 'Naomi Nuhamin Bullo',
+    major: 'Biology',
+    gradYear: 2026,
+    photo: '/images/biology-student-success/naomi-nuhamin-bullo-profile.jpeg',
+    bio: 'Naomi Nuhamin Bullo built a diverse portfolio of biology-related experience across research and clinical settings, serving as a Davidson College Research Fellow, Atrium Health Summer Intern, and Registered Behavioral Technician at Above and Beyond.',
+    leadership: ['Neurodevelopmental Support Volunteer Lead', 'Biology Peer Mentor'],
+    internships: ['Davidson College (Research Fellow)', 'Atrium Health (Summer Intern)', 'Above and Beyond (Registered Behavioral Technician)'],
+    awards: ['Davidson College Research Fellowship', 'Atrium Health Summer Fellow Award'],
+    certifications: ['Registered Behavioral Technician (RBT)', 'Biomedical Research Ethics Certificate'],
+    achievements: [
+      'Conducted clinical support studies for children with neurological developmental needs.',
+      'Drafted clinical observation reports during healthcare operations research at Atrium Health.'
+    ],
+    featured: false
+  },
+  {
+    id: '14',
+    name: 'Darryl Fisher',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/darryl-fisher-syngenta-internship.jpeg',
+    bio: 'Darryl Fisher gained industry experience at Syngenta as a Product Safety Lab Operations Intern, contributing within a professional laboratory operations environment.',
+    leadership: ['Department Safety Monitor', 'Beta Beta Beta Biological Honors Society Rep'],
+    internships: ['Syngenta (Product Safety Lab Operations Intern)'],
+    awards: ['Syngenta Lab Excellence Scholar'],
+    certifications: ['OSHA Laboratory Safety Standards', 'GLP (Good Laboratory Practices) Certificate'],
+    achievements: [
+      'Oversaw chemical inventories and lab safety audit compliance lists for Syngenta research teams.',
+      'Maintained biological sample registries and prepared cell assays under department guidance.'
+    ],
+    featured: false
+  },
+  {
+    id: '15',
+    name: 'Francis Suapim',
+    major: 'Mathematics',
+    gradYear: 2026,
+    photo: '/images/math-student-success/francis-suapim-profile.png',
+    bio: 'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on structural vulnerability among MSMEs in Ghana.',
+    leadership: ['Math Club President', 'Advanced Computing Peer Tutor'],
+    internships: ['Chaminade University of Honolulu (ACSC Research Fellow)'],
+    awards: ['ACSC Fellowship Recipient', 'Mathematics Academic Excellence Scholarship'],
+    certifications: ['ACSC Advanced Computing Certificate', 'Python for Data Analysis (IBM)'],
+    achievements: [
+      'Analyzed economic vulnerability indices for 200+ Ghanaian small businesses using R and Python.',
+      'Presented structural vulnerability models to academic judges in Honolulu, Hawaii.'
     ],
     featured: false
   }
@@ -266,11 +387,11 @@ export const studentProjects: StudentProject[] = [
     title: 'BlueBear Smart Transit App',
     description: 'A comprehensive campus navigation and bus tracking application designed specifically for the campus community. The system integrates real-time GPS telemetry from campus shuttles and provides route optimizations, ride booking for evening security escorts, and live delay notifications.',
     technologies: ['Next.js', 'React Native', 'Node.js', 'MongoDB', 'Mapbox API', 'WebSockets'],
-    team: ['Marcus Vance (CIS)', 'Devin Carter (CIS)', 'Sophia Ross (Business)'],
+    team: ['Jerome Adonis (CIS)', 'Jephter Ofori (CIS)', 'Kamar Goudelock (Business)'],
     outcomes: 'Successfully piloted with 250+ active students during the spring semester. Reduced shuttle wait times by an average of 4.2 minutes and increased evening escort scheduling efficiency by 30%.',
     demoUrl: 'https://bluebear-transit.livingstone.edu',
     githubUrl: 'https://github.com/livingstone-stem/bluebear-transit',
-    image: '/images/student-showcase/student5.jpeg',
+    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
     featured: true
   },
   {
@@ -278,10 +399,10 @@ export const studentProjects: StudentProject[] = [
     title: 'Bio-Remediation Water Assayer',
     description: 'A hardware-software hybrid IoT device designed to monitor river basin water quality. Using cellular micro-sensors, the device samples pH, turbidity, microplastic density, and oxygenation levels, uploading the telemetry data directly to an open-source research dashboard.',
     technologies: ['Raspberry Pi', 'Python', 'React', 'Tailwind CSS', 'InfluxDB', 'LoRaWAN'],
-    team: ['Gabriella Patel (Biology)', 'Tariq Simmons (Mathematics)'],
+    team: ['Francis Boadu (Biology)', 'Sally Adenutsi (Mathematics)'],
     outcomes: 'Deployed three sensor buoys in the Yadkin River basin. Telemetry is used by the EPA regional office for watershed reports. The project won first prize in the Statewide Environmental Design Competition.',
     githubUrl: 'https://github.com/livingstone-stem/river-assayer-iot',
-    image: '/images/student-showcase/student9.jpeg',
+    image: '/images/biology-student-success/francis-boadu-duke-research.png',
     featured: true
   },
   {
@@ -289,11 +410,23 @@ export const studentProjects: StudentProject[] = [
     title: 'OptiWarehouse Supply Chain Engine',
     description: 'An AI-driven warehouse optimization model that simulates stock flow and predicts inventory bottlenecks using historic seasonal sales records. The model suggests shelf layouts to minimize picking times.',
     technologies: ['Python (pandas/NumPy)', 'TensorFlow', 'TypeScript', 'Next.js', 'PostgreSQL'],
-    team: ['Maya Lin (Business)', 'Kevin Zhao (Mathematics)'],
+    team: ['Emmanuel Amponsah (Business)', 'Francis Suapim (Mathematics)'],
     outcomes: 'Deployed prototype with a regional retail supplier, yielding a 14% improvement in warehouse order-picking speeds and preventing stockouts on high-demand seasonal items.',
     demoUrl: 'https://optiwarehouse-demo.livingstone.edu',
     githubUrl: 'https://github.com/livingstone-stem/optiwarehouse',
-    image: '/images/student-showcase/student7.jpeg',
+    image: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg',
+    featured: false
+  },
+  {
+    id: '4',
+    title: 'Student Success Center Digital Timesheet',
+    description: 'A digital timesheet system designed to replace paper-based hour tracking for Student Success Center employees. It automatically calculates daily, weekly, and monthly hours, validates entries, supports supervisor and payroll approval, and generates downloadable PDF timesheets.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jsPDF', 'Vercel'],
+    team: ['Aïda Garba (Computer Information Systems)'],
+    outcomes: 'Developed and deployed a responsive prototype that simplifies employee hour tracking, reduces manual calculations, and creates consistent, payroll-ready timesheets. The system includes automatic hour totals, entry validation, signature sections, and PDF export.',
+    demoUrl: 'https://digital-timesheet-fawn.vercel.app/',
+    githubUrl: 'https://github.com/Aidarag/lc-stem-website',
+    image: '/images/cis-student-success/aida-garba-profile.jpg',
     featured: false
   }
 ];
@@ -306,8 +439,8 @@ export const competitions: Competition[] = [
     description: 'The LC STEM team went head-to-head with 12 universities in a 36-hour sprint to build AI-driven solutions addressing clean energy bottlenecks. Our team designed a community solar share platform using Next.js and predictive load modeling.',
     date: 'February 2026',
     award: '1st Place Overall Champion',
-    students: ['Marcus Vance', 'Devin Carter', 'Sophia Ross'],
-    image: '/images/student-showcase/student1.jpeg',
+    students: ['Jerome Adonis', 'Jephter Ofori', 'Kamar Goudelock'],
+    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
     topics: ['AI Load Modeling', 'Next.js', 'Clean Energy', 'Predictive Analytics'],
     outcomes: 'Secured 1st Place out of 12 regional university teams in a 36-hour sprint, developing a prototype community solar sharing platform.',
     link: 'https://ciaa.com/hackathon'
@@ -316,11 +449,11 @@ export const competitions: Competition[] = [
     id: '2',
     title: 'National Pre-Med Research Symposium',
     subtitle: 'Showcasing Undergraduate Biological Discoveries',
-    description: 'Aaliyah Jones presented her co-authored research paper on gene-editing pathways for cancer cell regulation before an academic board of researchers. The presentation focused on targeted cellular delivery systems.',
+    description: 'Francis Boadu presented his co-authored research paper on gene-editing pathways for cancer cell regulation before an academic board of researchers. The presentation focused on targeted cellular delivery systems.',
     date: 'November 2025',
     award: 'Outstanding Undergraduate Presentation Award',
-    students: ['Aaliyah Jones'],
-    image: '/images/student-showcase/student2.jpeg',
+    students: ['Francis Boadu'],
+    image: '/images/biology-student-success/francis-boadu-duke-research.png',
     topics: ['Gene Editing', 'Oncology', 'Cellular Biology', 'Targeted Delivery'],
     outcomes: 'Awarded Outstanding Undergraduate Presentation honors among 50+ national research papers; co-authored publication featured in Journal of Student Research.',
     link: 'https://symposium.premed-research.org'
@@ -332,8 +465,8 @@ export const competitions: Competition[] = [
     description: 'LC Mathematics students developed a predictive model to map food deserts in Salisbury and outline optimal community garden sites based on census income, transit, and soil quality parameters.',
     date: 'April 2026',
     award: 'Best Social Impact Solution Award',
-    students: ['Tariq Simmons', 'Kevin Zhao'],
-    image: '/images/student-showcase/student3.jpeg',
+    students: ['Sally Adenutsi', 'Francis Suapim'],
+    image: '/images/math-student-success/sally-adenutsi-profile.jpeg',
     topics: ['Data Modeling', 'GIS Analysis', 'Python', 'Urban Planning'],
     outcomes: 'Recognized with the Best Social Impact Solution Award. Proposed garden sites are currently under review with the Salisbury City Council.',
     link: 'https://datasciencebowl.org'
@@ -372,27 +505,27 @@ export const newsItems: NewsItem[] = [
     title: 'LC STEM Students Win Big at Microsoft Hackathon',
     date: 'April 15, 2026',
     summary: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon by designing a next-gen disaster communications router.',
-    content: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon in Charlotte, North Carolina. Facing competition from over twenty prominent HBCUs, the LC STEM team built "NetBeacon", a hardware-software solution enabling emergency communication during power grid failure.\n\nThe team, led by Marcus Vance, utilized low-power Bluetooth mesh networks and Next.js to deploy a lightweight routing dashboard. In addition to a $10,000 cash prize, Microsoft offered full-time internship placements to all three team members.',
+    content: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon in Charlotte, North Carolina. Facing competition from over twenty prominent HBCUs, the LC STEM team built "NetBeacon", a hardware-software solution enabling emergency communication during power grid failure.\n\nThe team, led by Jerome Adonis, utilized low-power Bluetooth mesh networks and Next.js to deploy a lightweight routing dashboard. In addition to a $10,000 cash prize, Microsoft offered full-time internship placements to all three team members.',
     category: 'Competition',
-    image: '/images/student-showcase/student1.jpeg'
+    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg'
   },
   {
     id: '2',
-    title: 'Senior Biology Major Aaliyah Jones Awarded Prestigious NSF Fellowship',
+    title: 'Senior Biology Major Francis Boadu Appointed Duke Research Scholar',
     date: 'March 20, 2026',
-    summary: 'Aaliyah Jones has been selected for the National Science Foundation Graduate Research Fellowship to support her MD-PhD studies in cancer genetics.',
-    content: 'Senior Biology major Aaliyah Jones has been selected for the National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP). This highly competitive award provides a three-year annual stipend of $37,000 along with tuition allowances to support graduate studies at any accredited US institution.\n\nAaliyah, who has co-authored multiple publications in molecular biology, plans to enroll in a dual MD-PhD program to study genetics and oncology. "Our undergraduate research groups gave me the keys to explore complex biological hypotheses," said Aaliyah.',
+    summary: 'Francis Boadu has been selected for a prestigious research fellowship at Duke University School of Medicine to support his cancer genetics investigations.',
+    content: 'Senior Biology major Francis Boadu has been selected to join the Duke University School of Medicine research collaboration. This highly competitive program provides student researchers hands-on access to advanced clinical oncology research operations.\n\nFrancis, who has specialized in molecular biology and mammalian cell culture, plans to explore gene-editing pathways for cancer cell regulation. "Our department research labs gave me the keys to explore complex biological hypotheses," said Francis.',
     category: 'Milestone',
-    image: '/images/student-showcase/student2.jpeg'
+    image: '/images/biology-student-success/francis-boadu-duke-research.png'
   },
   {
     id: '3',
     title: 'Summer Internship Placements Break Department Records',
     date: 'May 2, 2026',
-    summary: 'LC STEM student community reports that 88% of upperclassmen have secured summer internships at top-tier firms including Google, Microsoft, and Novartis.',
-    content: 'The LC STEM student community is proud to announce a record-breaking year for student placement. As of May, 88% of junior and senior majors have secured technical summer internships at leading companies and national research labs.\n\nStudents will be working in roles ranging from Software Engineering to Actuarial Risk Analysis and Oncology Research. "Our focus on hands-on project building and professional certification prep is directly translating into high-demand internship offers," stated Dr. Sarah Jenkins, Community Mentor.',
+    summary: 'LC STEM student community reports that 60% of upperclassmen have secured summer internships at top-tier firms including Google, Microsoft, and Novartis.',
+    content: 'The LC STEM student community is proud to announce a record-breaking year for student placement. As of May, 60% of junior and senior majors have secured technical summer internships at leading companies and national research labs.\n\nStudents will be working in roles ranging from Software Engineering to Actuarial Risk Analysis and Oncology Research. "Our focus on hands-on project building and professional certification prep is directly translating into high-demand internship offers," stated Dr. Sarah Jenkins, Community Mentor.',
     category: 'Internship',
-    image: '/images/student-showcase/student8.jpeg'
+    image: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg'
   }
 ];
 

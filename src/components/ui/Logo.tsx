@@ -39,13 +39,15 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
       </div>
 
       {/* Clean Single-Line Typography */}
-      <div className={`font-sans ${textSizes[size]} tracking-tight flex items-center gap-1.5 ${
-        isDark ? 'text-white' : 'text-gray-900'
-      }`}>
-        <span className="font-extrabold transition-colors group-hover:text-purple-600">
+      <div className="flex items-center select-none">
+        <span className={`font-sans font-black italic tracking-tighter ${textSizes[size]} bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent transition-all duration-300 group-hover:from-purple-500 group-hover:to-indigo-400`}>
           LC
         </span>
-        <span className="font-bold text-purple-600">
+        <span className={`font-script text-[1.55em] font-normal -ml-1 pb-1.5 leading-none transform -rotate-6 transition-all duration-300 group-hover:scale-105 ${
+          isDark 
+            ? 'text-accent-lime drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.3)]' 
+            : 'text-lime-600 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]'
+        }`}>
           STEM
         </span>
       </div>

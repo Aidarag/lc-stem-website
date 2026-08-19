@@ -65,42 +65,36 @@ export default function Home() {
               {/* Badge Capsule */}
               <div className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge px-4 py-2 text-xs sm:text-sm text-purple-200">
                 <span className="rounded-full bg-purple-600 text-[#e3fc51] font-mono px-3 py-1 font-extrabold text-xs uppercase shadow-sm border border-[#e3fc51]/40">
-                  New
+                  NEW
                 </span>
-                <span className="font-semibold text-gray-200">2026 Academic Showcase Now Live!</span>
+                <span className="font-semibold text-gray-200">The 2026 STEM Showcase just dropped.</span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
-                Learn from Top <br />
-                <span className="text-gradient-purple-pink">STEM Mentors</span> <br />
-                & Researchers
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white uppercase">
+                Meet the Minds <br />
+                <span className="text-gradient-purple-pink">Behind What&apos;s Next.</span>
               </h1>
 
               {/* Subtitle */}
               <p className="max-w-xl font-sans text-base sm:text-lg md:text-xl leading-relaxed text-gray-200 font-normal">
-                Explore highly demanded technical skills and undergraduate research projects created by Livingstone College STEM students and faculty, focused on real-world applications.
+                Discover the students turning bold ideas into research, innovation, and real-world impact across STEM.
               </p>
 
               {/* CTAs */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
-                  href="/programs/computer-information-systems"
+                  href="/programs"
                   className="btn-gradient-lime inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-sm sm:text-base font-extrabold tracking-wide shadow-xl transition-all cursor-pointer"
                 >
                   View Programs <ArrowRight className="h-5 w-5 stroke-[2.5]" />
                 </Link>
-                <button
-                  onClick={() => setSelectedStudentVideo({
-                    name: "Marcus Vance",
-                    major: "Computer Information Systems",
-                    project: "Campus Transit & Route Optimization System",
-                    videoUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-                  })}
-                  className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge hover:bg-white/20 text-white px-7 py-4 text-sm sm:text-base font-bold tracking-wide transition-all hover:scale-105 active:scale-95"
+                <Link
+                  href="/spotlight"
+                  className="inline-flex items-center gap-2.5 rounded-full glass-pill-badge hover:bg-white/20 text-white px-7 py-4 text-sm sm:text-base font-bold tracking-wide transition-all hover:scale-105 active:scale-95 cursor-pointer"
                 >
-                  Watch Preview <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-purple-900"><Play className="h-3 w-3 fill-purple-900 ml-0.5" /></span>
-                </button>
+                  Meet our Students <ArrowRight className="h-5 w-5" />
+                </Link>
               </div>
 
               {/* Trust Bar & Avatars */}
@@ -113,7 +107,7 @@ export default function Home() {
                   <Image src="/images/student-showcase/student4.jpeg" alt="Student" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm sm:text-base font-bold text-white">Loved by 500+ Alumni & Recruiters</p>
+                  <p className="font-sans text-sm sm:text-base font-bold text-white">Talent worth knowing. Work worth watching.</p>
                   <div className="flex items-center gap-2 mt-1">
                     <div className="flex text-amber-400">
                       {[...Array(5)].map((_, i) => (
@@ -137,7 +131,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
               <div className="pt-2 md:pt-0">
                 <h3 className="font-serif text-4xl md:text-5xl font-extrabold text-[#e3fc51]">
-                  <StatCounter end={88} suffix="%" />
+                  <StatCounter end={60} suffix="%" />
                 </h3>
                 <p className="mt-2 font-mono text-xs sm:text-sm uppercase tracking-wider text-purple-200 font-semibold">Summer Internship Rate</p>
               </div>
@@ -243,7 +237,7 @@ export default function Home() {
                 },
                 {
                   q: "3. Are there summer internship placement support programs?",
-                  a: "Yes! Our department maintains an 88% summer internship placement rate with corporate partners like Microsoft, Google, Vercel, IBM, FedEx, and regional healthcare networks."
+                  a: "Yes! Our department maintains a 60% summer internship placement rate with corporate partners like Microsoft, Google, Vercel, IBM, FedEx, and regional healthcare networks."
                 },
                 {
                   q: "4. What kind of real-world projects will I work on?",

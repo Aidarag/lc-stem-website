@@ -75,7 +75,7 @@ export default function Navbar() {
             href="/contact"
             className="group btn-gradient-lime inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-mono text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer"
           >
-            Apply Now <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            Connect with us <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
 
@@ -183,7 +183,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="mt-4 w-full rounded-2xl bg-purple-600 hover:bg-purple-700 py-3.5 text-center font-mono text-xs font-bold uppercase tracking-wider text-white shadow-md flex items-center justify-center gap-2 transition-all"
               >
-                Apply Now <ArrowRight className="h-4 w-4" />
+                Connect with us <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </motion.div>
