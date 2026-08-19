@@ -16,27 +16,27 @@ const students = [
     icon: Cloud,
   },
   {
-    name: 'Micah Colding',
-    roles: ['Cybersecurity & Fraud Management Intern'],
-    organizations: ['TIAA'],
-    description:
-      'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
-    image: null,
-    imageAlt: '',
-    imagePosition: '50% 50%',
-    tags: ['Cybersecurity', 'Fraud Management', 'Financial Services'],
-    icon: ShieldCheck,
-  },
-  {
     name: 'Yves Kwawu',
     roles: ['IT Intern'],
     organizations: ['NCDOT'],
     description:
       'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
-    image: null,
-    imageAlt: '',
+    image: '/images/cis-student-success/micahprofile.jpeg',
+    imageAlt: 'Portrait of Micah Colding',
     imagePosition: '50% 50%',
     tags: ['Information Technology', 'Government Technology', 'Technical Support'],
+    icon: ShieldCheck,
+  },
+  {
+    name: 'Micah Colding',
+    roles: ['Cybersecurity & Fraud Management Intern'],
+    organizations: ['TIAA'],
+    description:
+      'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
+    image: '/images/cis-student-success/yvesprofile.jpeg',
+    imageAlt: 'Portrait of Yves Kwawu',
+    imagePosition: '50% 55%',
+    tags: ['Cybersecurity', 'Fraud Management', 'Financial Services'],
     icon: Laptop,
   },
   {
