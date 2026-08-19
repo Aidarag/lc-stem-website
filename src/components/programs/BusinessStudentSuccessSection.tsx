@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BriefcaseBusiness, ChartNoAxesCombined, Landmark } from 'lucide-react';
+import { BriefcaseBusiness, ChartNoAxesCombined, Landmark, Wallet } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const businessStudents = [
@@ -36,6 +36,17 @@ const businessStudents = [
       'Innovation Sprint',
     ],
     icon: ChartNoAxesCombined,
+  },
+  {
+    name: 'Ellis Dogbe-Gakpetor',
+    roles: ['Finance Intern'],
+    organizations: ['AccessPoint Health Systems'],
+    image: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
+    imageAlt: 'Professional portrait of Ellis Dogbe-Gakpetor wearing a gray suit and patterned tie',
+    description:
+      'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
+    highlights: ['Finance', 'Financial Analysis', 'Healthcare Industry', 'Business Operations'],
+    icon: Wallet,
   },
 ] as const;
 

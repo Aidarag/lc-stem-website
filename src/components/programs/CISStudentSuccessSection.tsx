@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Cloud, Database, GraduationCap, Laptop, MonitorCog, ShieldCheck, Users } from 'lucide-react';
+import { Cloud, Database, GraduationCap, Laptop, MonitorCog, Network, ShieldCheck, Users } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const students = [
@@ -74,6 +74,18 @@ const students = [
     imagePosition: '50% 50%',
     tags: ['Product Safety', 'Data Management', 'Digital Tools', 'Industry Experience'],
     icon: Database,
+  },
+  {
+    name: 'Emmanuel Adrabo',
+    roles: ['Network Administrator Intern'],
+    organizations: ['Daimler Trucks North America'],
+    description:
+      'Emmanuel Adrabo served as a Network Administrator Intern at Daimler Trucks North America (Mercedes-Benz), where he handled network troubleshooting and monitoring, provided user support, and assisted with switch and router support.',
+    image: '/images/cis-student-success/emmanuel-adrabo-daimler-profile.jpeg',
+    imageAlt: 'Portrait of Emmanuel Adrabo wearing a light blue Livingstone College Golf Team polo',
+    imagePosition: '50% 20%',
+    tags: ['Network Administration', 'Network Troubleshooting', 'Network Monitoring', 'Technical Support'],
+    icon: Network,
   },
 ] as const;
 
