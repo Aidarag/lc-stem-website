@@ -9,6 +9,7 @@ const businessStudents = [
     organizations: ['ANCHOR', 'Orion Equity Research Group'],
     image: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg',
     imageAlt: 'Professional portrait of Kamar Goudelock wearing a navy suit jacket',
+    imagePosition: '50% 50%',
     description:
       'Emmanuel Amponsah gained experience in asset management and development through an internship with ANCHOR. He also served as an Equity Research Analyst with Orion Equity Research Group, building professional experience across investment research and asset-focused business operations.',
     highlights: [
@@ -25,6 +26,7 @@ const businessStudents = [
     organizations: ['Wells Fargo'],
     image: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg',
     imageAlt: 'Professional portrait of Emmanuel Amponsah wearing a gray suit and tie',
+    imagePosition: '50% 50%',
     description:
       'Kamar Goudelock completed a summer internship with Wells Fargo as a Global Operations Control Management Intern. Through governance meetings and collaborative projects, he learned how teams across a large organization work together. He applied data analytics and AI prompt development to improve processes and make information more accessible. During an Innovation Sprint, his team also advised a nonprofit on improving its website and supporting its community impact.',
     highlights: [
@@ -43,6 +45,7 @@ const businessStudents = [
     organizations: ['AccessPoint Health Systems'],
     image: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
     imageAlt: 'Professional portrait of Ellis Dogbe-Gakpetor wearing a gray suit and patterned tie',
+    imagePosition: '50% 50%',
     description:
       'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
     highlights: ['Finance', 'Financial Analysis', 'Healthcare Industry', 'Business Operations'],
