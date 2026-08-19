@@ -64,6 +64,28 @@ const students = [
     imageAlt: 'Portrait of Patricia Naigaga',
     tags: ['Pharmaceutical Dispensing', 'Patient Care', 'Pharmacy Operations', 'Healthcare Internship', 'Regulatory Compliance'],
   },
+  {
+    name: 'Daniel Frimpong',
+    role: 'Health Administrative Intern',
+    organization: 'Atrium Health',
+    details: 'Healthcare Administration Experience',
+    description:
+      'Daniel Frimpong completed a Health Administrative Internship at Atrium Health, one of the largest healthcare systems in the Southeast. He gained hands-on exposure to healthcare operations, including patient services coordination, clinical workflow support, and administrative process improvement. His experience bridged his biology knowledge with the business and operational side of delivering quality patient care.',
+    image: '/images/biology-student-success/daniel-frimpong-profile.jpeg',
+    imageAlt: 'Portrait of Daniel Frimpong',
+    tags: ['Healthcare Administration', 'Clinical Operations', 'Patient Services', 'Healthcare Systems'],
+  },
+  {
+    name: 'Emmanuella Nyarko',
+    role: 'Health Administrative Intern',
+    organization: 'Atrium Health',
+    details: 'Healthcare Administration Experience',
+    description:
+      'Emmanuella Nyarko completed a Health Administrative Internship at Atrium Health, gaining practical experience in healthcare operations and administration. She contributed to patient services coordination, supported clinical workflow processes, and developed a deeper understanding of how large-scale healthcare systems deliver quality care to diverse communities.',
+    image: '/images/biology-student-success/emmanuella-nyarko-profile.jpeg',
+    imageAlt: 'Portrait of Emmanuella Nyarko',
+    tags: ['Healthcare Administration', 'Clinical Operations', 'Patient Services', 'Healthcare Systems'],
+  },
 ] as const;
 
 export default function BiologyStudentSuccessSection() {
