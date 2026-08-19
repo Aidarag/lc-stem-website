@@ -426,7 +426,7 @@ export const studentProjects: StudentProject[] = [
     outcomes: 'Developed and deployed a responsive prototype that simplifies employee hour tracking, reduces manual calculations, and creates consistent, payroll-ready timesheets. The system includes automatic hour totals, entry validation, signature sections, and PDF export.',
     demoUrl: 'https://digital-timesheet-fawn.vercel.app/',
     githubUrl: 'https://github.com/Aidarag/lc-stem-website',
-    image: '/images/cis-student-success/aida-garba-profile.jpg',
+    image: '/images/cis-student-success/im-aida-garba-profile.jpeg',
     featured: false
   }
 ];
