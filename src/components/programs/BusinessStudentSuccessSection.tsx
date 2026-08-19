@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BriefcaseBusiness, ChartNoAxesCombined, Landmark, Wallet } from 'lucide-react';
+import { BriefcaseBusiness, ChartNoAxesCombined, Landmark, Wallet, Megaphone } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const businessStudents = [
@@ -48,6 +48,25 @@ const businessStudents = [
     highlights: ['Finance', 'Financial Analysis', 'Healthcare Industry', 'Business Operations'],
     icon: Wallet,
   },
+  {
+    name: 'Shambhabi Sinha',
+    roles: ['Social Media Content Creator Intern'],
+    organizations: ['Tosot Comfort'],
+    image: '/images/business-student-success/shambhabi-sinha-profile.jpeg',
+    imageAlt: 'Portrait of Shambhabi Sinha',
+    imagePosition: '50% 30%',
+    description:
+      'Shambhabi Sinha completed a Social Media Content Creator Internship at Tosot Comfort, where she developed and executed social media strategies to build brand awareness and drive audience engagement. She created compelling digital content, analyzed campaign performance metrics, and contributed to growing the company\'s online presence across multiple platforms.',
+    highlights: [
+      'Social media strategy',
+      'Content creation',
+      'Digital marketing',
+      'Brand awareness',
+      'Audience engagement',
+      'Campaign analytics',
+    ],
+    icon: Megaphone,
+  },
 ] as const;
 
 export default function BusinessStudentSuccessSection() {
@@ -85,7 +104,8 @@ export default function BusinessStudentSuccessSection() {
                     src={student.image}
                     alt={student.imageAlt}
                     fill
-                    className="object-cover object-top"
+                    style={{ objectPosition: student.imagePosition ?? '50% 50%' }}
+                    className="object-cover"
                     sizes="(max-width: 1023px) 100vw, 50vw"
                   />
                 </div>
