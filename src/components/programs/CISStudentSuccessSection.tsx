@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Cloud, GraduationCap, Laptop, MonitorCog, ShieldCheck, Users } from 'lucide-react';
+import { Cloud, Database, GraduationCap, Laptop, MonitorCog, ShieldCheck, Users } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const students = [
@@ -62,6 +62,18 @@ const students = [
     imagePosition: '50% 50%',
     tags: ['Community Engagement', 'Data Analysis', 'Financial Services'],
     icon: Users,
+  },
+  {
+    name: 'Jephter Ofori',
+    roles: ['Product Safety Digital and Data Intern'],
+    organizations: ['Syngenta'],
+    description:
+      'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
+    image: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg',
+    imageAlt: 'Portrait of Jephter Ofori wearing a blue Livingstone College Mentoring Matters hoodie',
+    imagePosition: '50% 50%',
+    tags: ['Product Safety', 'Data Management', 'Digital Tools', 'Industry Experience'],
+    icon: Database,
   },
 ] as const;
 
