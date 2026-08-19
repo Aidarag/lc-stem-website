@@ -23,7 +23,7 @@ const students = [
       'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
     image: '/images/cis-student-success/micahprofile.jpeg',
     imageAlt: 'Portrait of Micah Colding',
-    imagePosition: '50% 50%',
+    imagePosition: '50% 35%',
     tags: ['Information Technology', 'Government Technology', 'Technical Support'],
     icon: ShieldCheck,
   },
