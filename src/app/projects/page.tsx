@@ -56,6 +56,45 @@ export default function AchievementsPage() {
     }),
   ];
 
+  // Helper to determine demo link text based on content category
+  const getDemoLinkText = (achievement: typeof achievementsList[0]) => {
+    const titleLower = achievement.title.toLowerCase();
+    const descLower = achievement.description.toLowerCase();
+    const typeLower = (achievement.type || '').toLowerCase();
+
+    // 1. Research Papers
+    if (
+      titleLower.includes('research') || 
+      titleLower.includes('symposium') || 
+      titleLower.includes('vulnerability') || 
+      titleLower.includes('paper') ||
+      descLower.includes('research paper') ||
+      descLower.includes('findings') ||
+      descLower.includes('study')
+    ) {
+      return 'View research paper';
+    }
+
+    // 2. Hackathons / Challenges
+    if (
+      typeLower === 'hackathon' || 
+      titleLower.includes('hackathon') || 
+      titleLower.includes('sprint') || 
+      titleLower.includes('challenge') ||
+      titleLower.includes('bowl')
+    ) {
+      return 'View presentation';
+    }
+
+    // 3. Projects
+    if (achievement.isProject) {
+      return 'View Project';
+    }
+
+    // Fallback
+    return 'View presentation';
+  };
+
   // Filter achievements by category and search query
   const filteredAchievements = achievementsList.filter((achievement) => {
     const matchesCategory = activeFilter === 'All' || achievement.type === activeFilter;
@@ -328,18 +367,7 @@ export default function AchievementsPage() {
                         rel="noreferrer"
                         className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
                       >
-                        {achievement.demoText ?? (achievement.isProject ? 'Visit Site' : 'View Presentation')}{' '}
-                        <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                      </a>
-                    )}
-                    {achievement.githubUrl && (
-                      <a
-                        href={achievement.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
-                      >
-                        {achievement.githubText ?? 'GitHub'}{' '}
+                        {getDemoLinkText(achievement)}{' '}
                         <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}
