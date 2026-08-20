@@ -161,9 +161,9 @@ export default function AboutPage() {
             {[
               {
                 title: 'Biology',
-                desc: 'Pre-med student circles, independent gene-regulation experiments, and environmental river sensor testing.',
+                desc: 'Student research circles, independent gene-regulation experiments, and environmental river sensor testing.',
                 icon: <Atom className="h-6 w-6" />,
-                topics: ['Gene Regulation', 'Pre-Med Research', 'IoT Buoys']
+                topics: ['Gene Regulation', 'Undergraduate Research', 'IoT Buoys']
               },
               {
                 title: 'Computer Info Systems',

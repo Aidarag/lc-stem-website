@@ -229,7 +229,7 @@ export default function Home() {
               {[
                 {
                   q: "1. What STEM concentrations are offered at Livingstone College?",
-                  a: "Livingstone College offers four specialized academic tracks: Computer Information Systems (CIS), Biology & Pre-Med, Mathematics & Data Science, and Business Analytics."
+                  a: "Livingstone College offers four specialized academic tracks: Computer Information Systems (CIS), Biology, Mathematics & Data Science, and Business Analytics."
                 },
                 {
                   q: "2. How can I participate in undergraduate research or hackathons?",

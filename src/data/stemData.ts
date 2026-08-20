@@ -90,7 +90,7 @@ export const academicPrograms: AcademicProgram[] = [
   {
     name: 'Mathematics',
     slug: 'mathematics',
-    overview: 'The Mathematics program cultivates critical thinking, analytical reasoning, and rigorous problem-solving skills. Students explore theoretical structures and applied mathematics, preparing them for careers in data science, actuarial modeling, finance, and cryptography.',
+    overview: 'The Mathematics program cultivates critical thinking, analytical reasoning, and rigorous problem-solving skills. Students explore theoretical structures and applied mathematics, preparing them for careers in data science, actuarial modeling, and finance.',
     careers: ['Data Scientist', 'Actuary', 'Quantitative Analyst', 'Operations Researcher', 'Cryptographer'],
     skills: ['Statistical Modeling', 'Linear Algebra & Calculus', 'Data Visualization (R/Python)', 'Predictive Analytics', 'Algorithmic Logic'],
     highlights: [
