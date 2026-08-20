@@ -17,12 +17,15 @@ export interface StudentSpotlight {
 export interface StudentProject {
   id: string;
   title: string;
+  subtitle?: string;
   description: string;
   technologies: string[];
   team: string[];
   outcomes: string;
   demoUrl?: string;
   githubUrl?: string;
+  demoText?: string;
+  githubText?: string;
   image: string;
   featured: boolean;
 }
@@ -427,6 +430,21 @@ export const studentProjects: StudentProject[] = [
     demoUrl: 'https://digital-timesheet-fawn.vercel.app/',
     githubUrl: 'https://github.com/Aidarag/lc-stem-website',
     image: '/images/cis-student-success/im-aida-garba-profile.jpeg',
+    featured: false
+  },
+  {
+    id: '5',
+    title: 'Structural Vulnerability Among MSMEs in Ghana',
+    subtitle: 'Advanced Computing Student Collaborative (ACSC) — Honolulu, Hawaii',
+    description: 'A research project examining structural vulnerability among micro, small, and medium enterprises in Ghana. Through data analysis and visualization, the study explored the factors that make businesses more vulnerable and highlighted patterns affecting their stability and resilience.',
+    technologies: ['Python (Pandas/NumPy)', 'Matplotlib & Seaborn', 'Jupyter Notebooks', 'Data Analysis', 'Data Visualization'],
+    team: ['Francis Suapim (Computer Information Systems)', 'Aïda Garba (Computer Information Systems)'],
+    outcomes: 'Selected to participate in the Advanced Computing Student Collaborative, a research program focused on advanced computing, data science, and AI for societal impact. Completed the research project and presented the findings during the program’s final presentation.',
+    demoUrl: '#',
+    githubUrl: '#',
+    demoText: 'View Presentation',
+    githubText: 'View Research',
+    image: '/images/math-student-success/francis-suapim-acsc-presentation.png',
     featured: false
   }
 ];

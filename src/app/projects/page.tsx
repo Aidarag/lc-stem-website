@@ -19,13 +19,15 @@ export default function AchievementsPage() {
       id: `project-${p.id}`,
       type: 'Projects' as const,
       title: p.title,
-      subtitle: p.team.join(', '),
+      subtitle: p.subtitle ?? p.team.join(', '),
       description: p.description,
       image: p.image,
       technologies: p.technologies,
       outcomes: p.outcomes,
       demoUrl: p.demoUrl,
       githubUrl: p.githubUrl,
+      demoText: p.demoText,
+      githubText: p.githubText,
       team: p.team,
       isProject: true,
       award: undefined,
@@ -48,6 +50,8 @@ export default function AchievementsPage() {
         outcomes: c.outcomes,
         demoUrl: c.link,
         githubUrl: undefined,
+        demoText: undefined,
+        githubText: undefined,
       };
     }),
   ];
@@ -324,7 +328,7 @@ export default function AchievementsPage() {
                         rel="noreferrer"
                         className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
                       >
-                        {achievement.isProject ? 'Visit Site' : 'View Presentation'}{' '}
+                        {achievement.demoText ?? (achievement.isProject ? 'Visit Site' : 'View Presentation')}{' '}
                         <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}
@@ -335,7 +339,7 @@ export default function AchievementsPage() {
                         rel="noreferrer"
                         className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
                       >
-                        GitHub{' '}
+                        {achievement.githubText ?? 'GitHub'}{' '}
                         <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}

@@ -12,22 +12,23 @@ interface CommunityShowcaseSectionProps {
 }
 
 const marqueeCards = [
-  { name: 'Marcus Vance', major: 'CIS Major', project: 'AI-Powered Credentialing Platform', img: '/images/student-showcase/student1.jpeg' },
-  { name: 'Aaliyah Jones', major: 'Biology Pre-Med', project: 'Gene Regulation Assays Research', img: '/images/student-showcase/student2.jpeg' },
-  { name: 'Tariq Simmons', major: 'Math Honors', project: 'Actuarial Predictive Risk Model', img: '/images/student-showcase/student3.jpeg' },
-  { name: 'Maya Lin', major: 'Business & STEM', project: 'Quantitative Supply Chain Analytics', img: '/images/student-showcase/student4.jpeg' },
-  { name: 'Devin Carter', major: 'CIS Fellow', project: 'Mesh Network Router Protocols', img: '/images/student-showcase/student5.jpeg' },
-  { name: 'Dr. E. Vance', major: 'Biology Faculty', project: 'Environmental Sensor Research', img: '/images/student-showcase/student6.jpeg' },
-  { name: 'Jordan Smith', major: 'Data Science', project: 'Urban Transit Machine Learning Model', img: '/images/student-showcase/student7.jpeg' },
-  { name: 'Elena Rostova', major: 'Genetics Lab', project: 'CRISPR Sequence Mapping', img: '/images/student-showcase/student8.jpeg' },
-  { name: 'Marcus Vance', major: 'CIS Major', project: 'AI-Powered Credentialing Platform', img: '/images/student-showcase/student1.jpeg' },
-  { name: 'Aaliyah Jones', major: 'Biology Pre-Med', project: 'Gene Regulation Assays Research', img: '/images/student-showcase/student2.jpeg' },
-  { name: 'Tariq Simmons', major: 'Math Honors', project: 'Actuarial Predictive Risk Model', img: '/images/student-showcase/student3.jpeg' },
-  { name: 'Maya Lin', major: 'Business & STEM', project: 'Quantitative Supply Chain Analytics', img: '/images/student-showcase/student4.jpeg' },
-  { name: 'Devin Carter', major: 'CIS Fellow', project: 'Mesh Network Router Protocols', img: '/images/student-showcase/student5.jpeg' },
-  { name: 'Dr. E. Vance', major: 'Biology Faculty', project: 'Environmental Sensor Research', img: '/images/student-showcase/student6.jpeg' },
-  { name: 'Jordan Smith', major: 'Data Science', project: 'Urban Transit Machine Learning Model', img: '/images/student-showcase/student7.jpeg' },
-  { name: 'Elena Rostova', major: 'Genetics Lab', project: 'CRISPR Sequence Mapping', img: '/images/student-showcase/student8.jpeg' },
+  { name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
+  { name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+  { name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
+  { name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
+  { name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
+  { name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+  { name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
+  { name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
+  // Duplicate for seamless infinite marquee scroll
+  { name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
+  { name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+  { name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
+  { name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
+  { name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
+  { name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+  { name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
+  { name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
 ];
 
 export default function CommunityShowcaseSection({ onSelectVideo }: CommunityShowcaseSectionProps) {
