@@ -438,7 +438,7 @@ export const studentProjects: StudentProject[] = [
     subtitle: 'Advanced Computing Student Collaborative (ACSC) — Honolulu, Hawaii',
     description: 'A research project examining structural vulnerability among micro, small, and medium enterprises in Ghana. Through data analysis and visualization, the study explored the factors that make businesses more vulnerable and highlighted patterns affecting their stability and resilience.',
     technologies: ['Python (Pandas/NumPy)', 'Matplotlib & Seaborn', 'Jupyter Notebooks', 'Data Analysis', 'Data Visualization'],
-    team: ['Francis Suapim (Computer Information Systems)', 'Aïda Garba (Computer Information Systems)'],
+    team: ['Francis Suapim (Computer Information Systems)'],
     outcomes: 'Selected to participate in the Advanced Computing Student Collaborative, a research program focused on advanced computing, data science, and AI for societal impact. Completed the research project and presented the findings during the program’s final presentation.',
     demoUrl: '#',
     githubUrl: '#',
