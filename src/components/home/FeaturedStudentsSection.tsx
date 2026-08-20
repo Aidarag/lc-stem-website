@@ -66,7 +66,7 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
                     <h3 className="font-serif text-2xl font-extrabold text-gray-900 mt-2.5">{student.name}</h3>
                   </div>
                   <p className="font-sans text-sm sm:text-base leading-relaxed text-gray-600 line-clamp-3">
-                    "{student.bio}"
+                    &ldquo;{student.bio}&rdquo;
                   </p>
                 </div>
               </div>

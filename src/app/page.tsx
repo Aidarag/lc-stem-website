@@ -42,9 +42,9 @@ export default function Home() {
   const [selectedStudentVideo, setSelectedStudentVideo] = useState<SelectedVideo | null>(null);
 
   // Fetch student spotlight data
-  const featuredStudents = studentSpotlights.slice(0, 3); // Marcus, Aaliyah, Tariq
+  const featuredStudents = studentSpotlights; // All students, grouped by major in the section
   const featuredProject = studentProjects[0]; // BlueBear Transit App
-  const featuredHackathon = competitions[0]; // CIAA STEM Hackathon
+  const featuredHackathon = competitions[3]; // Sensor Spoofing Detection — MS-CC Hackathon (1st Place)
 
   return (
     <div className="w-full bg-[#FFFFFF] font-sans text-foreground overflow-hidden">
