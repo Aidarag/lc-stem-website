@@ -98,24 +98,18 @@ export default function Home() {
               </div>
 
               {/* Trust Bar & Avatars */}
-              <div className="flex items-center gap-6 pt-6 border-t border-white/10">
+              <div className="flex items-center gap-5 pt-6 border-t border-white/10">
                 {/* Avatars Stack */}
                 <div className="flex -space-x-3 overflow-hidden">
-                  <Image src="/images/student-showcase/student1.jpeg" alt="Student" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
-                  <Image src="/images/student-showcase/student2.jpeg" alt="Student" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
-                  <Image src="/images/student-showcase/student3.jpeg" alt="Student" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
-                  <Image src="/images/student-showcase/student4.jpeg" alt="Student" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
+                  <Image src="/images/cis-student-success/im-aida-garba-profile.jpeg" alt="Aïda Garba (CIS)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
+                  <Image src="/images/biology-student-success/francis-boadu-duke-research.png" alt="Francis Boadu (Biology)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
+                  <Image src="/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg" alt="Kamar Goudelock (Business)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
+                  <Image src="/images/math-student-success/sally-adenutsi-profile.jpeg" alt="Sally Adenutsi (Mathematics)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover animate-pulse-slow" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm sm:text-base font-bold text-white">Talent worth knowing. Work worth watching.</p>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="flex text-amber-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-amber-400" />
-                      ))}
-                    </div>
-                    <span className="font-mono text-xs text-gray-300 font-semibold">5.0 (130+ Showcase Reviews)</span>
-                  </div>
+                  <p className="font-sans text-sm sm:text-base font-bold text-white tracking-wide">
+                    Talent worth knowing. Work worth watching.
+                  </p>
                 </div>
               </div>
 
@@ -147,12 +141,14 @@ export default function Home() {
                 </h3>
                 <p className="mt-2 font-mono text-xs sm:text-sm uppercase tracking-wider text-purple-200 font-semibold">STEM Concentrations</p>
               </div>
-              <div className="pt-2 md:pt-0">
-                <h3 className="font-serif text-4xl md:text-5xl font-extrabold text-purple-300">
-                  <StatCounter end={15} suffix="+" />
+              <Link href="/projects" className="pt-2 md:pt-0 block group/stat transition-all hover:scale-105 duration-200 cursor-pointer">
+                <h3 className="font-serif text-4xl md:text-5xl font-extrabold text-purple-300 group-hover/stat:text-purple-200 transition-colors">
+                  <StatCounter end={30} suffix="+" />
                 </h3>
-                <p className="mt-2 font-mono text-xs sm:text-sm uppercase tracking-wider text-purple-200 font-semibold">Active Research Papers</p>
-              </div>
+                <p className="mt-2 font-mono text-xs sm:text-sm uppercase tracking-wider text-purple-200 font-semibold group-hover/stat:text-white transition-colors flex items-center justify-center gap-1">
+                  Achievements <ArrowRight className="h-3 w-3 opacity-0 group-hover/stat:opacity-100 group-hover/stat:translate-x-0.5 transition-all duration-200" />
+                </p>
+              </Link>
             </div>
           </div>
 
