@@ -254,11 +254,19 @@ export default function AboutPage() {
               desc: 'We map corporate interview paths at Microsoft, Vercel, Novartis, and FedEx, providing peer-led resume critiques, portfolio audits, and mock technical reviews.',
               icon: <Users className="h-6 w-6" />,
               tags: ['Microsoft & Google Prep', 'Portfolio Audits', 'Mock Interviews']
+            },
+            {
+              title: 'Research & Data Exploration',
+              desc: 'We support students in conducting meaningful research through data collection, analysis, visualization, and presentation. Members can explore real-world questions, communicate their findings, and showcase research focused on societal impact.',
+              icon: <Binary className="h-6 w-6" />,
+              tags: ['Data Analysis', 'Data Visualization', 'Research Presentations']
             }
           ].map((activity, index) => (
             <ScrollReveal
               key={index}
-              className="group bg-white rounded-3xl border border-gray-200/90 p-8 shadow-lg hover:shadow-2xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between h-full"
+              className={`group bg-white rounded-3xl border border-gray-200/90 p-8 shadow-lg hover:shadow-2xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between h-full ${
+                index === 4 ? 'md:col-span-2' : ''
+              }`}
             >
               <div className="flex items-start gap-5">
                 <div className="p-3.5 rounded-2xl bg-purple-50 text-purple-600 border border-purple-100 shrink-0 group-hover:scale-105 group-hover:bg-purple-600 group-hover:text-white transition-all">
