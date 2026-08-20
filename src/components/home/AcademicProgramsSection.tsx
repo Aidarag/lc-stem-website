@@ -13,7 +13,7 @@ const programs = [
   },
   {
     name: 'Biology',
-    desc: 'Molecular assays, cellular genetics regulation, pre-med networks, and field ecology.',
+    desc: 'Molecular assays, cellular genetics regulation, and field ecology.',
     accent: 'border-l-purple-500',
     color: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
     href: '/programs/biology',
@@ -29,7 +29,7 @@ const programs = [
   },
   {
     name: 'Mathematics',
-    desc: 'Algorithmic logic, predictive data science, statistical math models, and cryptography.',
+    desc: 'Algorithmic logic, predictive data science, and statistical math models.',
     accent: 'border-l-violet-400',
     color: 'text-violet-300 bg-violet-500/10 border-violet-500/20',
     href: '/programs/mathematics',
