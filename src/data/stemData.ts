@@ -446,6 +446,19 @@ export const studentProjects: StudentProject[] = [
     githubText: 'View Research',
     image: '/images/math-student-success/francis-suapim-acsc-presentation.png',
     featured: false
+  },
+  {
+    id: '6',
+    title: 'Shalom Recovery AI',
+    subtitle: 'Healthcare Innovation Sprint — June 2026',
+    description: 'An AI-powered postoperative care assistant designed to support patients throughout recovery. The solution helps patients follow care instructions, monitor their recovery, and identify concerning symptoms that may require medical attention.',
+    technologies: ['Artificial Intelligence', 'Product Design', 'Healthcare Technology', 'Next.js', 'TypeScript', 'Gemini API', 'Vercel'],
+    team: ['Aïda Garba — AI Product Lead (Computer Information Systems)'],
+    outcomes: 'Awarded 2nd Place in the Healthcare Innovation Sprint. The project was developed and presented as a patient-centered solution for making postoperative recovery more accessible, organized, and responsive.',
+    demoUrl: '#',
+    demoText: 'View Project',
+    image: '/images/cis-student-success/shalom-recovery-ai.png',
+    featured: false
   }
 ];
 
