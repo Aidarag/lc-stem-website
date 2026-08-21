@@ -9,6 +9,24 @@ import { Search, Filter, X, Award, Briefcase, GraduationCap, Code, Compass, Arro
 import { studentSpotlights, StudentSpotlight } from '@/data/stemData';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
+const getLinkedInUrl = (student: { name: string; linkedin?: string }) => {
+  if (student.linkedin) return student.linkedin;
+  const slug = student.name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+  return `https://www.linkedin.com/in/${slug}/`;
+};
+
+const LinkedInIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+  </svg>
+);
+
 function SpotlightContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -122,7 +140,7 @@ function SpotlightContent() {
                 className="group relative cursor-pointer overflow-hidden rounded-3xl border border-gray-200/90 bg-white shadow-lg hover:shadow-2xl hover:border-purple-300 transition-all duration-300"
               >
                 {/* Photo with gradient overlay */}
-                <div className="relative h-[280px] w-full overflow-hidden">
+                <div className="relative aspect-[3/4] w-full overflow-hidden">
                   <Image
                     src={student.photo}
                     alt={student.name}
@@ -166,9 +184,15 @@ function SpotlightContent() {
                     <span className="font-mono text-xs font-bold uppercase tracking-wider text-purple-600 group-hover:text-purple-800 flex items-center gap-1.5 transition-colors">
                       Explore Profile <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                     </span>
-                    <span className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200 px-2.5 py-1 rounded-full font-mono text-[11px] font-bold uppercase tracking-wider transition-all inline-flex items-center gap-1">
-                      <Mail className="h-3 w-3 text-purple-600" /> Connect
-                    </span>
+                    <a
+                      href={getLinkedInUrl(student)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200 px-2.5 py-1 rounded-full font-mono text-[11px] font-bold uppercase tracking-wider transition-all inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <LinkedInIcon className="h-3 w-3 text-purple-600" /> Connect
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -362,13 +386,14 @@ function SpotlightContent() {
 
                 {/* Connect Action Bar */}
                 <div className="pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
-                  <Link
-                    href={`/contact?student=${encodeURIComponent(activeStudent.name)}`}
-                    onClick={closeStudent}
+                  <a
+                    href={getLinkedInUrl(activeStudent)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-gradient-lime font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0B051D] px-6 py-3.5 rounded-full shadow-lg transition-all cursor-pointer inline-flex items-center gap-2"
                   >
-                    <Mail className="h-4 w-4" /> Connect with {activeStudent.name.split(' ')[0]} <ArrowRight className="h-4 w-4" />
-                  </Link>
+                    <LinkedInIcon className="h-4 w-4" /> Connect with {activeStudent.name.split(' ')[0]} <ArrowRight className="h-4 w-4" />
+                  </a>
 
                   <a
                     href={`mailto:${activeStudent.name.toLowerCase().replace(/[^a-z0-9]/g, '.')}@livingstone.edu`}

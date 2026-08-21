@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Atom } from 'lucide-react';
+import logoDark from '../../../public/images/lc-stem-logo-dark.png';
+import logoLight from '../../../public/images/lc-stem-logo-light.png';
 
 interface LogoProps {
   variant?: 'light' | 'dark';
@@ -8,48 +10,43 @@ interface LogoProps {
 
 export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
   const isDark = variant === 'dark';
+  const logoImg = isDark ? logoDark : logoLight;
+
+  const heightClasses = {
+    sm: 'h-12',
+    md: 'h-16',
+    lg: 'h-22',
+  };
 
   const iconContainerSizes = {
-    sm: 'h-7 w-7 rounded-md',
+    sm: 'h-6 w-6 rounded-md',
     md: 'h-8 w-8 rounded-lg',
     lg: 'h-10 w-10 rounded-xl',
   };
 
   const iconSizes = {
-    sm: 'h-4 w-4',
-    md: 'h-5 w-5',
-    lg: 'h-6 w-6',
-  };
-
-  const textSizes = {
-    sm: 'text-base',
-    md: 'text-lg sm:text-xl',
-    lg: 'text-2xl sm:text-3xl',
+    sm: 'h-3.5 w-3.5',
+    md: 'h-4.5 w-4.5',
+    lg: 'h-5.5 w-5.5',
   };
 
   return (
-    <Link href="/" className="group inline-flex items-center gap-2.5 select-none">
-      {/* Sleek Minimalist Icon Badge */}
+    <Link href="/" className="group inline-flex items-center gap-2 select-none cursor-pointer">
+      {/* Sleek Minimalist Icon Badge next to the brand logo */}
       <div className={`flex ${iconContainerSizes[size]} items-center justify-center ${
         isDark 
-          ? 'bg-purple-600 text-white shadow-md border border-purple-400/30' 
+          ? 'bg-purple-600 text-[#e3fc51] shadow-md border border-purple-400/30' 
           : 'bg-purple-600 text-white shadow-sm'
       } transition-transform duration-200 group-hover:scale-105 shrink-0`}>
         <Atom className={`${iconSizes[size]} stroke-[2.2]`} />
       </div>
 
-      {/* Clean Single-Line Typography */}
-      <div className="flex items-center select-none">
-        <span className={`font-sans font-black italic tracking-tighter ${textSizes[size]} bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent transition-all duration-300 group-hover:from-purple-500 group-hover:to-indigo-400`}>
-          LC
-        </span>
-        <span className={`font-script text-[1.55em] font-normal -ml-1 pb-1.5 leading-none transform -rotate-6 transition-all duration-300 group-hover:scale-105 ${
-          isDark 
-            ? 'text-accent-lime drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.3)]' 
-            : 'text-lime-600 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]'
-        }`}>
-          STEM
-        </span>
+      <div className="relative flex items-center justify-start py-1">
+        <img
+          src={logoImg.src}
+          alt="LC STEM Logo"
+          className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]`}
+        />
       </div>
     </Link>
   );

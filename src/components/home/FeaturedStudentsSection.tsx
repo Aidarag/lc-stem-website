@@ -1,7 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Users } from 'lucide-react';
-import ScrollReveal from '@/components/ui/ScrollReveal';
 import { StudentSpotlight } from '@/data/stemData';
 
 interface FeaturedStudentsSectionProps {
@@ -9,6 +10,10 @@ interface FeaturedStudentsSectionProps {
 }
 
 export default function FeaturedStudentsSection({ featuredStudents }: FeaturedStudentsSectionProps) {
+  // Select exactly 4 students: 2 men (Jerome, Francis) and 2 women (Sally, Aïda)
+  const selectedIds = ['1', '2', '4', '16'];
+  const displayStudents = featuredStudents.filter((student) => selectedIds.includes(student.id));
+
   return (
     <section className="relative bg-white py-24 md:py-32 border-b border-gray-200/80 text-gray-900 overflow-hidden">
       <div className="absolute inset-0 z-0 grid-pattern opacity-30 pointer-events-none" />
@@ -34,62 +39,61 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
           </Link>
         </div>
 
-        {/* Student Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredStudents.map((student) => (
-            <ScrollReveal
+        {/* Student Grid (4 Columns for 4 Cards) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {displayStudents.map((student) => (
+            <div
               key={student.id}
               className="bg-white border border-gray-200/90 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-purple-400 flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-1"
             >
-              <div>
-                {/* Student Photo */}
-                <div className="relative h-[300px] w-full border-b border-gray-100 bg-gray-100">
-                  <Image
-                    src={student.photo}
-                    alt={student.name}
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: student.photoPosition || 'center' }}
-                    sizes="(max-w-768px) 100vw, 30vw"
-                  />
-                  <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
-                    Class of {student.gradYear}
+              <Link href={`/spotlight?id=${student.id}`} className="flex flex-col h-full justify-between">
+                <div>
+                  {/* Student Photo */}
+                  <div className="relative aspect-[3/4] w-full border-b border-gray-100 bg-gray-100">
+                    <Image
+                      src={student.photo}
+                      alt={student.name}
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: student.photoPosition || 'center' }}
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                    <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
+                      Class of {student.gradYear}
+                    </div>
+                  </div>
+
+                  {/* Student Credentials */}
+                  <div className="p-6 space-y-3">
+                    <div>
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md border border-purple-100">
+                        {student.major}
+                      </span>
+                      <h3 className="font-serif text-xl font-extrabold text-gray-900 mt-2">{student.name}</h3>
+                    </div>
+                    <p className="font-sans text-xs sm:text-sm leading-relaxed text-gray-600 line-clamp-3">
+                      &ldquo;{student.bio}&rdquo;
+                    </p>
                   </div>
                 </div>
 
-                {/* Student Credentials */}
-                <div className="p-8 space-y-4">
-                  <div>
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md border border-purple-100">
-                      {student.major}
+                <div className="p-6 pt-0">
+                  {/* Spotlight Achievement */}
+                  <div className="border-t border-gray-100 pt-4 space-y-1">
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Highlight</span>
+                    <p className="font-sans text-xs sm:text-sm text-purple-700 font-bold line-clamp-1">
+                      {student.awards[0] || student.internships[0]}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                    <span className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800">
+                      View profile details <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                     </span>
-                    <h3 className="font-serif text-2xl font-extrabold text-gray-900 mt-2.5">{student.name}</h3>
                   </div>
-                  <p className="font-sans text-sm sm:text-base leading-relaxed text-gray-600 line-clamp-3">
-                    &ldquo;{student.bio}&rdquo;
-                  </p>
                 </div>
-              </div>
-
-              <div className="p-8 pt-0">
-                {/* Spotlight Achievement */}
-                <div className="border-t border-gray-100 pt-4 space-y-1.5">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-gray-400 block">Highlight</span>
-                  <p className="font-sans text-sm sm:text-base text-purple-700 font-bold line-clamp-1">
-                    {student.awards[0] || student.internships[0]}
-                  </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-gray-100">
-                  <Link
-                    href={`/spotlight?id=${student.id}`}
-                    className="inline-flex items-center text-xs sm:text-sm font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800"
-                  >
-                    View profile details <ArrowRight className="ml-1.5 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

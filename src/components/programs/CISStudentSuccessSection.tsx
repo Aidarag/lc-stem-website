@@ -22,7 +22,7 @@ const students = [
     description:
       'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
     image: '/images/cis-student-success/micahprofile.jpeg',
-    imageAlt: 'Portrait of Micah Colding',
+    imageAlt: 'Portrait of Yves Kwawu',
     imagePosition: '50% 35%',
     tags: ['Information Technology', 'Government Technology', 'Technical Support'],
     icon: ShieldCheck,
@@ -34,7 +34,7 @@ const students = [
     description:
       'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
     image: '/images/cis-student-success/yvesprofile.jpeg',
-    imageAlt: 'Portrait of Yves Kwawu',
+    imageAlt: 'Portrait of Micah Colding',
     imagePosition: '50% 55%',
     tags: ['Cybersecurity', 'Fraud Management', 'Financial Services'],
     icon: Laptop,

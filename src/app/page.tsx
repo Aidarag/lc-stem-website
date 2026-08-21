@@ -6,10 +6,10 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ArrowRight, Star, BookOpen, X, Play, Plus, Minus, GraduationCap,
+  ArrowRight, Star, BookOpen, Plus, Minus, GraduationCap,
 } from 'lucide-react';
 import StatCounter from '@/components/ui/StatCounter';
-import HeroShowcaseGrid, { type SelectedVideo } from '@/components/home/HeroShowcaseGrid';
+import HeroShowcaseGrid from '@/components/home/HeroShowcaseGrid';
 import { studentSpotlights, studentProjects, competitions } from '@/data/stemData';
 
 // Below-the-fold sections: split into their own chunks. SSR stays on (no
@@ -39,12 +39,10 @@ function DeferredOffscreen({
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [selectedStudentVideo, setSelectedStudentVideo] = useState<SelectedVideo | null>(null);
 
   // Fetch student spotlight data
   const featuredStudents = studentSpotlights; // All students, grouped by major in the section
-  const featuredProject = studentProjects[0]; // BlueBear Transit App
-  const featuredHackathon = competitions[3]; // Sensor Spoofing Detection — MS-CC Hackathon (1st Place)
+  const sensorSpoofingProject = competitions[3]; // Sensor Spoofing Detection — MS-CC Hackathon (1st Place)
 
   return (
     <div className="w-full bg-[#FFFFFF] font-sans text-foreground overflow-hidden">
@@ -116,7 +114,7 @@ export default function Home() {
             </div>
 
             {/* Right Column: Tilted 3D Cascading Cards Grid (EuVerse Style) */}
-            <HeroShowcaseGrid onSelectVideo={setSelectedStudentVideo} />
+            <HeroShowcaseGrid />
 
           </div>
 
@@ -189,7 +187,7 @@ export default function Home() {
 
       {/* 05 — Achievements Section (Editorial Bento Grid Layout) */}
       <DeferredOffscreen minHeight={900}>
-        <AchievementsSection featuredProject={featuredProject} featuredHackathon={featuredHackathon} />
+        <AchievementsSection featuredProject={sensorSpoofingProject} />
       </DeferredOffscreen>
 
       {/* 06 — Interactive FAQ Section — LIGHT SLATE MODE */}
@@ -289,7 +287,7 @@ export default function Home() {
 
       {/* 07 — Signature Community Showcase Section — DARK OBSIDIAN MODE */}
       <DeferredOffscreen minHeight={1100}>
-        <CommunityShowcaseSection onSelectVideo={setSelectedStudentVideo} />
+        <CommunityShowcaseSection />
       </DeferredOffscreen>
 
       {/* 08 — Newsletter Section — LIGHT SLATE ELEGANT MODE */}
@@ -297,75 +295,7 @@ export default function Home() {
         <NewsletterSection />
       </DeferredOffscreen>
 
-      {/* Interactive Video Showcase Modal */}
-      <AnimatePresence>
-        {selectedStudentVideo && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedStudentVideo(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xl p-4 sm:p-6"
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0, y: 16 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 16 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl overflow-hidden rounded-3xl border border-gray-800 bg-[#0A0518] shadow-2xl"
-            >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between border-b border-gray-800/80 bg-[#0F0826] px-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-purple-600/30 text-purple-300 border border-purple-500/30">
-                    <Play className="h-4 w-4 fill-purple-300 ml-0.5" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-base font-bold text-white">
-                      {selectedStudentVideo.name}
-                    </h3>
-                    <p className="font-mono text-xs text-purple-300 flex items-center gap-1.5 mt-0.5">
-                      <GraduationCap className="h-3.5 w-3.5 text-purple-300 inline" /> {selectedStudentVideo.major} • <span className="text-gray-200 font-semibold">{selectedStudentVideo.project}</span>
-                    </p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelectedStudentVideo(null)}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white hover:bg-white/20 transition-colors cursor-pointer"
-                  aria-label="Close video player"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
 
-              {/* Real Video Player Frame (Responsive Iframe) */}
-              <div className="relative aspect-video w-full bg-black">
-                <iframe
-                  src={selectedStudentVideo.videoUrl || "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"}
-                  title={`${selectedStudentVideo.name} - ${selectedStudentVideo.project}`}
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-
-              {/* Modal Footer */}
-              <div className="flex items-center justify-between border-t border-gray-800/80 bg-[#0F0826] px-6 py-4 text-xs font-sans">
-                <span className="font-mono text-gray-400">
-                  Livingstone College STEM Student Research Showcase
-                </span>
-                <Link
-                  href="/spotlight"
-                  onClick={() => setSelectedStudentVideo(null)}
-                  className="inline-flex items-center gap-1.5 font-bold text-purple-300 hover:text-white transition-colors"
-                >
-                  Full Student Profile <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
     </div>
   );

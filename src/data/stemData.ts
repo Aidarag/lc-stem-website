@@ -12,6 +12,7 @@ export interface StudentSpotlight {
   certifications: string[];
   achievements: string[];
   featured: boolean;
+  linkedin?: string;
 }
 
 export interface StudentProject {
@@ -132,6 +133,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2026,
     photo: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
+    photoPosition: '50% 0%',
     bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
     leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
     internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
@@ -149,6 +151,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Biology',
     gradYear: 2026,
     photo: '/images/biology-student-success/francis-boadu-duke-research.png',
+    photoPosition: '50% 10%',
     bio: 'Francis Boadu joined Duke University School of Medicine as an Undergraduate Student Researcher, conducting oncology research focused on CIC-DUX4 sarcoma. His experience includes mammalian cell culture and cell-based assays in a hybrid research environment.',
     leadership: ['Pre-Med Club Officer', 'Biology Lab Safety Officer', 'Research Group Coordinator'],
     internships: ['Duke University School of Medicine (Undergraduate Student Researcher)'],
@@ -158,7 +161,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Conducted critical biological assays for sarcoma cell line investigations at Duke Medicine.',
       'Presented cancer research findings to an academic board of oncology researchers.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/francis-boadu-8b8800327/'
   },
   {
     id: '3',
@@ -166,7 +170,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Business',
     gradYear: 2027,
     photo: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg',
-    photoPosition: 'top',
+    photoPosition: '50% 20%',
     bio: 'Kamar Goudelock completed a summer internship with Wells Fargo as a Global Operations Control Management Intern. He applied data analytics and AI prompt development to improve processes and make information more accessible. During an Innovation Sprint, his team also advised a nonprofit on improving its website and supporting its community impact.',
     leadership: ['Business & Finance Club President', 'Innovation Sprint Team Captain'],
     internships: ['Wells Fargo (Global Operations Control Management Intern)'],
@@ -184,6 +188,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Mathematics',
     gradYear: 2026,
     photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
     leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
     internships: ['STEM Camp (Lead Mathematics Mentor)'],
@@ -201,6 +206,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Biology',
     gradYear: 2027,
     photo: '/images/biology-student-success/robert-osei-poe-center-internship.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Robert Osei completed a two-month remote internship with the Poe Center for Health Education in North Carolina, gaining professional experience within a health-education organization.',
     leadership: ['Community Health Ambassador', 'Biology Club Secretary'],
     internships: ['Poe Center for Health Education (Health Education Intern)'],
@@ -218,6 +224,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Business',
     gradYear: 2026,
     photo: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Emmanuel Amponsah gained experience in asset management and development through an internship with ANCHOR. He also served as an Equity Research Analyst with Orion Equity Research Group, building professional experience across investment research and asset-focused business operations.',
     leadership: ['Equity Research Group Lead', 'Finance Club Secretary'],
     internships: ['ANCHOR (Asset Management and Development Intern)', 'Orion Equity Research Group (Equity Research Analyst)'],
@@ -235,6 +242,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Business',
     gradYear: 2027,
     photo: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
     leadership: ['Business Administration SGA Rep', 'STEM Peer Tutor'],
     internships: ['AccessPoint Health Systems (Finance Intern)'],
@@ -252,6 +260,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2026,
     photo: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
     leadership: ['CIS Student Developer Lead', 'Hackathon Mentor'],
     internships: ['Syngenta (Product Safety Digital & Data Intern)'],
@@ -269,6 +278,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2026,
     photo: '/images/cis-student-success/emmanuel-adrabo-daimler-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Emmanuel Adrabo served as a Network Administrator Intern at Daimler Trucks North America (Mercedes-Benz), where he handled network troubleshooting and monitoring, provided user support, and assisted with switch and router support.',
     leadership: ['Livingstone Varsity Golf Team Captain', 'Network Lab Lead Assistant'],
     internships: ['Daimler Trucks North America (Network Administrator Intern)'],
@@ -286,6 +296,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2026,
     photo: '/images/cis-student-success/kuwa-salama-mbetwa-mathnasium-profile.jpeg',
+    photoPosition: '50% 30%',
     bio: 'Kuwa-Salama Mbetwa serves as a STEM Education and Technology Associate at Mathnasium in Seattle, WA, combining technical knowledge with instruction to help students build math and STEM skills.',
     leadership: ['Women in CIS Representative', 'Mathnasium Associate Lead'],
     internships: ['Mathnasium Seattle (STEM Education & Tech Associate)'],
@@ -303,6 +314,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Computer Information Systems',
     gradYear: 2027,
     photo: '/images/cis-student-success/joel-thompson-selfhelp-creditunion.jpeg',
+    photoPosition: '50% 30%',
     bio: 'Joel Thompson serves as a Community Engagement Analyst Intern with Self-Help Credit Union, applying analytical skills to support community-focused financial initiatives.',
     leadership: ['SGA Senator', 'STEM Peer Mentor'],
     internships: ['Self-Help Credit Union (Community Engagement Analyst Intern)'],
@@ -320,6 +332,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Biology',
     gradYear: 2026,
     photo: '/images/biology-student-success/patricia-naigaga-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Patricia Naigaga completed a Pharmacy Technician Internship at Walgreens, gaining hands-on experience in pharmaceutical dispensing, prescription processing, inventory management, and patient care coordination.',
     leadership: ['Pre-Med Society VP', 'Livingstone Health Liaison'],
     internships: ['Walgreens (Pharmacy Technician Intern)'],
@@ -337,6 +350,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Biology',
     gradYear: 2026,
     photo: '/images/biology-student-success/naomi-nuhamin-bullo-profile.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Naomi Nuhamin Bullo built a diverse portfolio of biology-related experience across research and clinical settings, serving as a Davidson College Research Fellow, Atrium Health Summer Intern, and Registered Behavioral Technician at Above and Beyond.',
     leadership: ['Neurodevelopmental Support Volunteer Lead', 'Biology Peer Mentor'],
     internships: ['Davidson College (Research Fellow)', 'Atrium Health (Summer Intern)', 'Above and Beyond (Registered Behavioral Technician)'],
@@ -354,6 +368,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Biology',
     gradYear: 2027,
     photo: '/images/biology-student-success/darryl-fisher-syngenta-internship.jpeg',
+    photoPosition: '50% 20%',
     bio: 'Darryl Fisher gained industry experience at Syngenta as a Product Safety Lab Operations Intern, contributing within a professional laboratory operations environment.',
     leadership: ['Department Safety Monitor', 'Beta Beta Beta Biological Honors Society Rep'],
     internships: ['Syngenta (Product Safety Lab Operations Intern)'],
@@ -371,6 +386,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     major: 'Mathematics',
     gradYear: 2026,
     photo: '/images/math-student-success/francis-suapim-profile.png',
+    photoPosition: '50% 20%',
     bio: 'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on structural vulnerability among MSMEs in Ghana.',
     leadership: ['Math Club President', 'Advanced Computing Peer Tutor'],
     internships: ['Chaminade University of Honolulu (ACSC Research Fellow)'],
@@ -379,6 +395,114 @@ export const studentSpotlights: StudentSpotlight[] = [
     achievements: [
       'Analyzed economic vulnerability indices for 200+ Ghanaian small businesses using R and Python.',
       'Presented structural vulnerability models to academic judges in Honolulu, Hawaii.'
+    ],
+    featured: false
+  },
+  {
+    id: '16',
+    name: 'Aïda Garba',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/im-aida-garba-profile.jpeg',
+    photoPosition: '50% 20%',
+    bio: 'Aïda Garba developed and deployed the Student Success Center Digital Timesheet system, replacing manual paper tracking with a responsive, payroll-ready validation application.',
+    leadership: ['Timesheet Project Lead', 'SGA STEM Committee', 'CIS Peer Mentor'],
+    internships: ['Livingstone Student Success Center (Software Developer Intern)'],
+    awards: ['Livingstone STEM Innovation Award', 'Dean\'s List Scholar'],
+    certifications: ['Full Stack Web Development Certificate', 'Responsive Web Design (freeCodeCamp)'],
+    achievements: [
+      'Built a fully responsive digital timesheet application using modern web standards.',
+      'Presented the timesheet automation prototype to Livingstone College administrative leadership.'
+    ],
+    featured: false
+  },
+  {
+    id: '17',
+    name: 'Yves Kwawu',
+    major: 'Computer Information Systems',
+    gradYear: 2027,
+    photo: '/images/cis-student-success/micahprofile.jpeg',
+    photoPosition: 'top',
+    bio: 'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
+    leadership: ['SGA IT Representative', 'CIS Lab Assistant'],
+    internships: ['NCDOT (IT Intern)'],
+    awards: ['NCDOT Service Award'],
+    certifications: ['Google IT Support Professional Certificate', 'CompTIA A+ Prep Certificate'],
+    achievements: [
+      'Completed an IT operations support internship at NCDOT.',
+      'Configured and deployed computer hardware for department staff.'
+    ],
+    featured: false
+  },
+  {
+    id: '18',
+    name: 'Micah Colding',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/yvesprofile.jpeg',
+    photoPosition: 'center',
+    bio: 'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
+    leadership: ['Cybersecurity Club Founder', 'Peer Math & CIS Tutor'],
+    internships: ['TIAA (Cybersecurity & Fraud Management Intern)'],
+    awards: ['TIAA Cybersecurity Scholar', 'Outstanding Senior in CIS'],
+    certifications: ['CompTIA Security+', 'CompTIA CySA+'],
+    achievements: [
+      'Analyzed threat metrics and fraud patterns during a summer internship at TIAA.',
+      'Developed security incident response playbooks for the internal fraud analytics team.'
+    ],
+    featured: false
+  },
+  {
+    id: '19',
+    name: 'Shambhabi Sinha',
+    major: 'Business',
+    gradYear: 2027,
+    photo: '/images/business-student-success/shambhabi-sinha-profile.jpeg',
+    photoPosition: 'top',
+    bio: 'Shambhabi Sinha completed a Social Media Content Creator Internship at Tosot Comfort, where she developed and executed social media strategies to build brand awareness and drive audience engagement.',
+    leadership: ['Marketing Association Vice President', 'International Student Advocate'],
+    internships: ['Tosot Comfort (Social Media Content Creator Intern)'],
+    awards: ['Best Digital Marketing Campaign Award', 'International Student Excellence Scholarship'],
+    certifications: ['Google Digital Marketing & E-commerce Professional Certificate', 'HubSpot Social Media Marketing Certificate'],
+    achievements: [
+      'Designed and executed social media strategies that drove audience engagement for Tosot Comfort.',
+      'Analyzed weekly campaign metrics and increased platform visibility.'
+    ],
+    featured: false
+  },
+  {
+    id: '20',
+    name: 'Daniel Frimpong',
+    major: 'Biology',
+    gradYear: 2026,
+    photo: '/images/biology-student-success/daniel-frimpong-profile.jpeg',
+    photoPosition: 'center',
+    bio: 'Daniel Frimpong completed a Health Administrative Internship at Atrium Health, gaining hands-on exposure to healthcare operations, patient services, and administrative process improvements.',
+    leadership: ['Biology Club Treasurer', 'Health Admin Coordinator'],
+    internships: ['Atrium Health (Health Administrative Intern)'],
+    awards: ['Atrium Health Outstanding Intern Award'],
+    certifications: ['HIPAA Certified', 'Healthcare Operations Basics'],
+    achievements: [
+      'Completed a clinical operations internship at Atrium Health.',
+      'Analyzed patient service pathways and improved front-desk workflows.'
+    ],
+    featured: false
+  },
+  {
+    id: '21',
+    name: 'Emmanuella Nyarko',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/emmanuella-nyarko-profile.jpeg',
+    photoPosition: 'center',
+    bio: 'Emmanuella Nyarko completed a Health Administrative Internship at Atrium Health, contributing to patient services coordination and supporting clinical workflow processes.',
+    leadership: ['SGA Health Outreach Rep', 'Pre-Med Club Secretary'],
+    internships: ['Atrium Health (Health Administrative Intern)'],
+    awards: ['Pre-Med Student Leadership Award'],
+    certifications: ['HIPAA Certified', 'Basic Life Support (BLS) Certification'],
+    achievements: [
+      'Managed patient workflow data during her Atrium Health internship.',
+      'Coordinated community outreach health educational seminars.'
     ],
     featured: false
   }

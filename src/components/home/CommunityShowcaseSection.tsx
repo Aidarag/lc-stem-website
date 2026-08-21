@@ -4,34 +4,30 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
-import { ArrowRight, GraduationCap, Play, Users } from 'lucide-react';
-import type { SelectedVideo } from './HeroShowcaseGrid';
-
-interface CommunityShowcaseSectionProps {
-  onSelectVideo: (video: SelectedVideo) => void;
-}
+import { ArrowRight, GraduationCap, Users } from 'lucide-react';
+import { studentSpotlights } from '@/data/stemData';
 
 const marqueeCards = [
-  { name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
-  { name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
-  { name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
-  { name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
-  { name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
-  { name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
-  { name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
-  { name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
+  { id: '1', name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
+  { id: '2', name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+  { id: '3', name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
+  { id: '4', name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
+  { id: '16', name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
+  { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+  { id: '15', name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
+  { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
   // Duplicate for seamless infinite marquee scroll
-  { name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
-  { name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
-  { name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
-  { name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
-  { name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
-  { name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
-  { name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
-  { name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
+  { id: '1', name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
+  { id: '2', name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+  { id: '3', name: 'Kamar Goudelock', major: 'Business & STEM', project: 'Wells Fargo Control Operations Analytics', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
+  { id: '4', name: 'Sally Adenutsi', major: 'Math Honors', project: 'Global Leadership & Math Mentorship', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
+  { id: '16', name: 'Aïda Garba', major: 'CIS Major', project: 'Student Success Center Digital Timesheet', img: '/images/cis-student-success/im-aida-garba-profile.jpeg' },
+  { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+  { id: '15', name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile.png' },
+  { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
 ];
 
-export default function CommunityShowcaseSection({ onSelectVideo }: CommunityShowcaseSectionProps) {
+export default function CommunityShowcaseSection() {
   const marqueeRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(marqueeRef, { amount: 0.1 });
   const shouldReduceMotion = useReducedMotion();
@@ -94,44 +90,40 @@ export default function CommunityShowcaseSection({ onSelectVideo }: CommunitySho
               transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
               className="flex space-x-6 shrink-0 pr-6"
             >
-              {marqueeCards.map((card, idx) => (
-                <div
-                  key={`marquee-card-${idx}`}
-                  onClick={() => onSelectVideo({
-                    name: card.name,
-                    major: card.major,
-                    project: card.project,
-                    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-                  })}
-                  className="group relative w-60 sm:w-64 shrink-0 cursor-pointer overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:scale-105 hover:border-purple-400/80 hover:shadow-purple-500/20"
-                >
-                  <div className="relative aspect-[3/4] w-full overflow-hidden">
-                    <Image
-                      src={card.img}
-                      alt={card.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="256px"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+              {marqueeCards.map((card, idx) => {
+                const spotlight = studentSpotlights.find((s) => s.id === card.id);
+                const photoPosition = spotlight?.photoPosition || 'center';
 
-                    {/* Play Video Pill Top Right */}
-                    <div className="absolute top-3.5 right-3.5 flex h-9 w-9 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white group-hover:bg-purple-600 group-hover:scale-110 transition-all shadow-md">
-                      <Play className="h-4 w-4 fill-white ml-0.5" />
-                    </div>
+                return (
+                  <Link
+                    key={`marquee-card-${idx}`}
+                    href={`/spotlight?id=${card.id}`}
+                    className="group relative w-60 sm:w-64 shrink-0 cursor-pointer overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:scale-105 hover:border-purple-400/80 hover:shadow-purple-500/20"
+                  >
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+                      <Image
+                        src={card.img}
+                        alt={card.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        style={{ objectPosition: photoPosition }}
+                        sizes="256px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                    {/* Student Info Bottom */}
-                    <div className="absolute bottom-4 left-4 right-4 space-y-1 text-left">
-                      <p className="font-sans text-base sm:text-lg font-extrabold text-white flex items-center gap-1.5 leading-snug">
-                        <Users className="h-4 w-4 text-purple-300 shrink-0" /> {card.name}
-                      </p>
-                      <p className="font-mono text-xs text-purple-200 font-bold flex items-center gap-1">
-                        <GraduationCap className="h-3.5 w-3.5 text-purple-300 shrink-0" /> {card.major}
-                      </p>
+                      {/* Student Info Bottom */}
+                      <div className="absolute bottom-4 left-4 right-4 space-y-1 text-left">
+                        <p className="font-sans text-base sm:text-lg font-extrabold text-white flex items-center gap-1.5 leading-snug">
+                          <Users className="h-4 w-4 text-purple-300 shrink-0" /> {card.name}
+                        </p>
+                        <p className="font-mono text-xs text-purple-200 font-bold flex items-center gap-1">
+                          <GraduationCap className="h-3.5 w-3.5 text-purple-300 shrink-0" /> {card.major}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </Link>
+                );
+              })}
             </motion.div>
           </div>
         </div>
