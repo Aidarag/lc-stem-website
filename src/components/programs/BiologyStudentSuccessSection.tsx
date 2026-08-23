@@ -86,6 +86,41 @@ const students = [
     imageAlt: 'Portrait of Emmanuella Nyarko',
     tags: ['Healthcare Administration', 'Clinical Operations', 'Patient Services', 'Healthcare Systems'],
   },
+  {
+    name: 'Afia Owusu Agyemang',
+    role: 'STEM Summer Camp Mentor',
+    organization: 'Livingstone College White Coat Scholars',
+    details: '2025 · Mentorship & Student Leadership',
+    description:
+      'Afia Owusu Agyemang served as a mentor for the 2025 STEM Summer Camp, guiding younger students through hands-on science activities and encouraging their interest in STEM fields. She also holds a leadership role as Secretary of the Livingstone College White Coat Scholars, a pre-health student organization that supports students pursuing careers in medicine and healthcare.',
+    image: '/images/biology-student-success/afia-owusu-agyemang-profile.jpeg',
+    imageAlt: 'Portrait of Afia Owusu Agyemang',
+    imagePosition: '50% 55%',
+    tags: ['STEM Mentorship', 'Student Leadership', 'Pre-Health', 'White Coat Scholars'],
+  },
+  {
+    name: 'Emeglad Boakye-Yiadom',
+    role: 'Healthcare Administration Intern',
+    organization: 'Healthcare Administration',
+    details: 'Healthcare Administration & Campus Leadership',
+    description:
+      'Emeglad Boakye-Yiadom serves as a Healthcare Administration Intern, gaining hands-on experience in healthcare operations. She is also active across campus as a STEM Summer Camp student mentor, a Billie Bear mentor supporting incoming students, and a member of the Alpha Lambda Delta honors society. She further participates in the HBCU Energy Pathway program, expanding her exposure to energy-sector opportunities alongside her healthcare-focused coursework.',
+    image: '/images/biology-student-success/emeglad-boakye-yiadom-profile.jpeg',
+    imageAlt: 'Portrait of Emeglad Boakye-Yiadom wearing glasses',
+    imagePosition: '50% 15%',
+    tags: ['Healthcare Administration', 'Student Mentorship', 'Honors Society', 'HBCU Energy Pathway'],
+  },
+  {
+    name: 'Bright Karikari',
+    role: 'Undergraduate Researcher',
+    organization: 'Livingstone College',
+    details: 'Undergraduate Research',
+    description:
+      'Bright Karikari serves as an undergraduate researcher, contributing to ongoing scientific research as part of his biology coursework. He presented his research at the Emerging Researchers National (ERN) Conference, an event that showcases undergraduate STEM research from students across the country.',
+    image: '/images/biology-student-success/bright-karikari-profile.jpeg',
+    imageAlt: 'Portrait of Bright Karikari wearing a patterned collared shirt',
+    tags: ['Undergraduate Research', 'ERN Conference', 'Scientific Research'],
+  },
 ] as const;
 
 export default function BiologyStudentSuccessSection() {
@@ -124,6 +159,7 @@ export default function BiologyStudentSuccessSection() {
                   src={student.image}
                   alt={student.imageAlt}
                   fill
+                  style={'imagePosition' in student ? { objectPosition: student.imagePosition } : undefined}
                   className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none"
                   sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                 />
