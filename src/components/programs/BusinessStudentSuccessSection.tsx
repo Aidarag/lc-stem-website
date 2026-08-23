@@ -26,7 +26,7 @@ const businessStudents = [
     organizations: ['Wells Fargo'],
     image: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg',
     imageAlt: 'Professional portrait of Emmanuel Amponsah wearing a gray suit and tie',
-    imagePosition: '50% 50%',
+    imagePosition: '50% 0%',
     description:
       'Kamar Goudelock completed a summer internship with Wells Fargo as a Global Operations Control Management Intern. Through governance meetings and collaborative projects, he learned how teams across a large organization work together. He applied data analytics and AI prompt development to improve processes and make information more accessible. During an Innovation Sprint, his team also advised a nonprofit on improving its website and supporting its community impact.',
     highlights: [
