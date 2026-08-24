@@ -147,6 +147,18 @@ const students = [
     ],
     icon: Laptop,
   },
+  {
+    name: 'George Damtey',
+    roles: ['Digital Operations Intern'],
+    organizations: ['TTX'],
+    description:
+      'George Damtey completed a Digital Operations Internship at TTX, a leading railcar leasing company. He gained hands-on experience in digital operations, data management, and process automation, contributing to the optimization of technology-driven workflows within the logistics and transportation industry.',
+    image: '/images/cis-student-success/george-damtey-profile.png',
+    imageAlt: 'Portrait of George Damtey',
+    imagePosition: '50% 30%',
+    tags: ['Digital Operations', 'Process Automation', 'Data Management', 'Logistics Technology'],
+    icon: Database,
+  },
 ] as const;
 
 export default function CISStudentSuccessSection() {

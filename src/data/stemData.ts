@@ -523,6 +523,24 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Built WealthBridge project for the Risk Management Association (RMA) and participated in BE Smart Hackathon, HBCU Battle of the Brains, and Mastercard Data Challenge.'
     ],
     featured: true
+  },
+  {
+    id: '23',
+    name: 'George Damtey',
+    major: 'Computer Information Systems',
+    gradYear: 2027,
+    photo: '/images/cis-student-success/george-damtey-profile.png',
+    photoPosition: '50% 30%',
+    bio: 'George Damtey completed a Digital Operations Internship at TTX, a leading railcar leasing company. He gained hands-on experience in digital operations, data management, and process automation, contributing to the optimization of technology-driven workflows within the logistics and transportation industry.',
+    leadership: ['CIS Student Association Member', 'Technology Operations Volunteer'],
+    internships: ['TTX (Digital Operations Intern)'],
+    awards: ['TTX Digital Excellence Intern Award'],
+    certifications: ['Digital Operations Foundations', 'Data Management Essentials'],
+    achievements: [
+      'Contributed to digital operations optimization at TTX, a major railcar leasing company.',
+      'Gained hands-on experience in process automation and technology-driven logistics workflows.'
+    ],
+    featured: true
   }
 ];
 
