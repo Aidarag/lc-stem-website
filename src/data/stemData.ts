@@ -146,25 +146,6 @@ export const studentSpotlights: StudentSpotlight[] = [
     featured: true
   },
   {
-    id: '2',
-    name: 'Francis Boadu',
-    major: 'Biology',
-    gradYear: 2026,
-    photo: '/images/biology-student-success/francis-boadu-duke-research.png',
-    photoPosition: '50% 10%',
-    bio: 'Francis Boadu joined Duke University School of Medicine as an Undergraduate Student Researcher, conducting oncology research focused on CIC-DUX4 sarcoma. His experience includes mammalian cell culture and cell-based assays in a hybrid research environment.',
-    leadership: ['Pre-Med Club Officer', 'Biology Lab Safety Officer', 'Research Group Coordinator'],
-    internships: ['Duke University School of Medicine (Undergraduate Student Researcher)'],
-    awards: ['Undergraduate Oncology Research Award', 'National Pre-Med Colloquium Poster Winner'],
-    certifications: ['Mammalian Cell Culture Certification', 'NIH Biosafety Level 2 Protocol Training'],
-    achievements: [
-      'Conducted critical biological assays for sarcoma cell line investigations at Duke Medicine.',
-      'Presented cancer research findings to an academic board of oncology researchers.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/francis-boadu-8b8800327/'
-  },
-  {
     id: '3',
     name: 'Kamar Goudelock',
     major: 'Business',

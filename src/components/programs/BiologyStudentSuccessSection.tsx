@@ -15,23 +15,6 @@ const students = [
     tags: ['Health Education', 'Remote Internship', 'Professional Experience'],
   },
   {
-    name: 'Francis Boadu',
-    role: 'Undergraduate Student Researcher',
-    organization: 'Duke University School of Medicine',
-    details: 'Beginning April 2026 · Hybrid',
-    description:
-      'Francis Boadu joined Duke University School of Medicine as an Undergraduate Student Researcher, conducting oncology research focused on CIC-DUX4 sarcoma. His experience includes mammalian cell culture and cell-based assays in a hybrid research environment.',
-    image: '/images/biology-student-success/francis-boadu-duke-research.png',
-    imageAlt: 'Francis Boadu speaking at a microphone while wearing a suit and conference badge',
-    tags: [
-      'Oncology Research',
-      'CIC-DUX4 Sarcoma',
-      'Mammalian Cell Culture',
-      'Cell-Based Assays',
-      'Undergraduate Research',
-    ],
-  },
-  {
     name: 'Darryl Fisher',
     role: 'Product Safety Lab Operations Intern',
     organization: 'Syngenta',
