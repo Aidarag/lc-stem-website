@@ -366,7 +366,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     name: 'Francis Suapim',
     major: 'Mathematics',
     gradYear: 2026,
-    photo: '/images/math-student-success/francis-suapim-profile.png',
+    photo: '/images/math-student-success/francis-suapim-profile-v2.png',
     photoPosition: '50% 20%',
     bio: 'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on structural vulnerability among MSMEs in Ghana.',
     leadership: ['Math Club President', 'Advanced Computing Peer Tutor'],

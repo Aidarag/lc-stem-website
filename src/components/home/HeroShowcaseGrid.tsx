@@ -55,10 +55,10 @@ const columns = [
     iconColor: 'text-indigo-300',
     majorColor: 'text-indigo-200',
     students: [
-      { id: '15', name: 'Francis Suapim', major: 'Mathematics', img: '/images/math-student-success/francis-suapim-profile.png' },
+      { id: '15', name: 'Francis Suapim', major: 'Mathematics', img: '/images/math-student-success/francis-suapim-profile-v2.png' },
       { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
       { id: '13', name: 'Naomi Nuhamin Bullo', major: 'Biology Major', img: '/images/biology-student-success/naomi-nuhamin-bullo-profile.jpeg' },
-      { id: '15', name: 'Francis Suapim', major: 'Mathematics', img: '/images/math-student-success/francis-suapim-profile.png' },
+      { id: '15', name: 'Francis Suapim', major: 'Mathematics', img: '/images/math-student-success/francis-suapim-profile-v2.png' },
       { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
     ],
   },

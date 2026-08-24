@@ -23,7 +23,7 @@ const students = [
     details: 'Research program · Honolulu, Hawaii',
     description:
       'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on "Structural Vulnerability Among Micro, Small, and Medium Enterprises in Ghana," using data analysis and visualization to examine business vulnerability, and concluded the program by presenting his findings in a final presentation.',
-    image: '/images/math-student-success/francis-suapim-profile.png',
+    image: '/images/math-student-success/francis-suapim-profile-v2.png',
     imageAlt: 'Portrait of Francis Suapim',
     tags: ['Data Science', 'AI for Societal Impact', 'Research Presentation', 'Data Analysis & Visualization'],
   },
