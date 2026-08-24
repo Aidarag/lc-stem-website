@@ -120,6 +120,33 @@ const students = [
     ],
     icon: MonitorCog,
   },
+  {
+    name: 'Swetakshi Nanda',
+    roles: [
+      'Undergraduate Researcher',
+      'Web Developer Intern',
+      'Hackathon Participant',
+    ],
+    organizations: [
+      'Livingstone College',
+      'Ase Healing Center, LLC (Delores Place)',
+      'Various Conferences',
+    ],
+    description:
+      'Swetakshi Nanda has built a strong profile in research, web development, and competitive technology events. She presented her research paper "AI in Environmental Education" at multiple prestigious conferences including the NC Honors Association Conference at Queens University (2025), the International Academy of Business (IAB) Conference at Howard University (2025), I-Cube at Livingstone College (2026), and the 3rd ICRABIF Conference at Livingstone College (2026). She has been interning as a Web Developer at Ase Healing Center, LLC (Delores Place) since May 2026 and has participated in hackathons including the BE Smart Hackathon, HBCU Battle of the Brains, and the Mastercard Data Challenge. She also worked with a team to create WealthBridge for the Risk Management Association (RMA).',
+    image: '/images/cis-student-success/swetakshi-nanda-profile.jpeg',
+    imageAlt: 'Portrait of Swetakshi Nanda',
+    imagePosition: '50% 30%',
+    tags: [
+      'AI Research',
+      'Web Development',
+      'Academic Conferences',
+      'Hackathons',
+      'Environmental Education',
+      'Software Engineering',
+    ],
+    icon: Laptop,
+  },
 ] as const;
 
 export default function CISStudentSuccessSection() {

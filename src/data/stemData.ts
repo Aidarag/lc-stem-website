@@ -432,7 +432,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Completed an IT operations support internship at NCDOT.',
       'Configured and deployed computer hardware for department staff.'
     ],
-    featured: false
+    featured: true
   },
   {
     id: '18',
@@ -505,6 +505,24 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Coordinated community outreach health educational seminars.'
     ],
     featured: false
+  },
+  {
+    id: '22',
+    name: 'Swetakshi Nanda',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/swetakshi-nanda-profile.jpeg',
+    photoPosition: '50% 30%',
+    bio: 'Swetakshi Nanda has built a strong profile in research, web development, and competitive technology events. She presented her research paper "AI in Environmental Education" at multiple prestigious conferences including the NC Honors Association Conference at Queens University, the IAB Conference at Howard University, I-Cube at Livingstone College, and the 3rd ICRABIF Conference. She has been interning as a Web Developer at Ase Healing Center, LLC (Delores Place) and has participated in hackathons including the BE Smart Hackathon, HBCU Battle of the Brains, and the Mastercard Data Challenge.',
+    leadership: ['Undergraduate Researcher', 'Hackathon Team Member', 'Web Developer'],
+    internships: ['Ase Healing Center, LLC — Delores Place (Web Developer Intern)'],
+    awards: ['NC Honors Association Conference Presenter', 'IAB Conference Presenter at Howard University', 'I-Cube Innovation Showcase'],
+    certifications: ['Web Development Certificate', 'AI & Environmental Education Research Certificate'],
+    achievements: [
+      'Presented "AI in Environmental Education" research paper at 4 prestigious conferences including Queens University, Howard University, and Livingstone College.',
+      'Built WealthBridge project for the Risk Management Association (RMA) and participated in BE Smart Hackathon, HBCU Battle of the Brains, and Mastercard Data Challenge.'
+    ],
+    featured: true
   }
 ];
 
