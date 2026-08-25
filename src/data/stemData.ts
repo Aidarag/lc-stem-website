@@ -364,7 +364,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Designed a localized mathematics curriculum teaching computational concepts to children.',
       'Instructed over 60 students in logic puzzles, math models, and coding fundamentals.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/kuwa-salama-mbetwa-642548380/'
   },
   {
     id: '11',
