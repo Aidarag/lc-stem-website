@@ -342,7 +342,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Managed network switch configuring and router debugging for enterprise truck manufacturing centers.',
       'Maintained 99.9% network uptime monitoring logs during his internship term.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/adrabo-emmanuel/'
   },
   {
     id: '10',
@@ -378,7 +379,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Created maps and charts tracing credit distribution trends in underserved urban districts.',
       'Prepared detailed demographic studies and analytical briefings for credit union executives.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/joel-thompson233/'
   },
   {
     id: '12',
