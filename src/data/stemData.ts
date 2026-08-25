@@ -402,7 +402,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Managed prescription logistics and inventory controls at a high-volume Walgreens pharmacy.',
       'Coordinated care logs for seniors and provided crucial translation support for incoming patients.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/patricia-naigaga-573603338/'
   },
   {
     id: '13',
