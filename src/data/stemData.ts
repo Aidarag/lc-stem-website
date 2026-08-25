@@ -286,7 +286,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Conducted detailed asset valuation reports and equity analysis for regional portfolios.',
       'Presented market trend forecasts to senior investment managers at Orion.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/manuel-amponsah/'
   },
   {
     id: '7',
