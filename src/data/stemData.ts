@@ -608,7 +608,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Contributed to digital operations optimization at TTX, a major railcar leasing company.',
       'Gained hands-on experience in process automation and technology-driven logistics workflows.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/george-damtey-ba23a7304/'
   }
 ];
 
