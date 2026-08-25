@@ -43,6 +43,8 @@ export default function AchievementsSection({ featuredProject }: AchievementsSec
                 src={featuredProject.image}
                 alt={featuredProject.title}
                 fill
+                quality={featuredProject.imageQuality}
+                unoptimized={featuredProject.imageUnoptimized}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

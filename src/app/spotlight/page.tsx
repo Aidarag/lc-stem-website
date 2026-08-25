@@ -147,7 +147,7 @@ function SpotlightContent() {
                     src={student.photo}
                     alt={student.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`object-cover transition-transform duration-500 ${student.photoZoom ? 'scale-[1.3] group-hover:scale-[1.35]' : 'group-hover:scale-105'}`}
                     style={{ objectPosition: student.photoPosition || 'center' }}
                     sizes="(max-w-640px) 100vw, (max-w-1024px) 50vw, 25vw"
                   />
@@ -396,6 +396,8 @@ function SpotlightContent() {
                                   src={experience.image}
                                   alt={experience.imageAlt || ''}
                                   fill
+                                  quality={experience.imageQuality}
+                                  unoptimized={experience.imageUnoptimized}
                                   className="object-cover"
                                   sizes="(max-width: 768px) 100vw, 55vw"
                                 />

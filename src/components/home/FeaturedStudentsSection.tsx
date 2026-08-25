@@ -54,7 +54,7 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
                       src={student.photo}
                       alt={student.name}
                       fill
-                      className="object-cover"
+                      className={`object-cover transition-transform duration-500 ${student.photoZoom ? 'scale-[1.3] group-hover:scale-[1.35]' : 'group-hover:scale-105'}`}
                       style={{ objectPosition: student.photoPosition || 'center' }}
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />

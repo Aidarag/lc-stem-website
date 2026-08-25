@@ -21,6 +21,9 @@ export default function AchievementsPage() {
       subtitle: p.subtitle ?? p.team.join(', '),
       description: p.description,
       image: p.image,
+      imagePosition: p.imagePosition,
+      imageQuality: p.imageQuality,
+      imageUnoptimized: p.imageUnoptimized,
       technologies: p.technologies,
       outcomes: p.outcomes,
       demoUrl: p.demoUrl,
@@ -41,6 +44,9 @@ export default function AchievementsPage() {
         subtitle: c.subtitle,
         description: c.description,
         image: c.image,
+        imagePosition: c.imagePosition,
+        imageQuality: c.imageQuality,
+        imageUnoptimized: c.imageUnoptimized,
         date: c.date,
         award: c.award,
         team: c.students,
@@ -191,7 +197,10 @@ export default function AchievementsPage() {
                 src={featuredAchievement.image}
                 alt={featuredAchievement.title}
                 fill
+                quality={featuredAchievement.imageQuality}
+                unoptimized={featuredAchievement.imageUnoptimized}
                 className="object-cover"
+                style={{ objectPosition: featuredAchievement.imagePosition || 'center' }}
                 sizes="(max-w-1024px) 100vw, 50vw"
                 priority
               />
@@ -265,7 +274,10 @@ export default function AchievementsPage() {
                         src={achievement.image}
                         alt={achievement.title}
                         fill
+                        quality={achievement.imageQuality}
+                        unoptimized={achievement.imageUnoptimized}
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        style={{ objectPosition: achievement.imagePosition || 'center' }}
                         sizes="(max-w-768px) 100vw, 40vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

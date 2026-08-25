@@ -19,9 +19,11 @@ const columns = [
     iconColor: 'text-purple-300',
     majorColor: 'text-purple-200',
     students: [
+      { id: '24', name: 'Prosper Nasangma', major: 'Computer & Info Science', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
       { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
       { id: '4', name: 'Sally Adenutsi', major: 'Mathematics', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
+      { id: '24', name: 'Prosper Nasangma', major: 'Computer & Info Science', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
       { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
     ],
@@ -88,6 +90,7 @@ export default function HeroShowcaseGrid() {
             {column.students.map((student, idx) => {
               const spotlight = studentSpotlights.find((s) => s.id === student.id);
               const photoPosition = spotlight?.photoPosition || 'center';
+              const photoZoom = spotlight?.photoZoom;
 
               return (
                 <Link
@@ -101,7 +104,7 @@ export default function HeroShowcaseGrid() {
                       alt={student.name}
                       fill
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 200px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-500 ${photoZoom ? 'scale-[1.3] group-hover:scale-[1.35]' : 'group-hover:scale-105'}`}
                       style={{ objectPosition: photoPosition }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
