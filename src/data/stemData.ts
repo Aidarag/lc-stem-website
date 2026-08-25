@@ -421,7 +421,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Conducted clinical support studies for children with neurological developmental needs.',
       'Drafted clinical observation reports during healthcare operations research at Atrium Health.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/nuhamin-bullo/'
   },
   {
     id: '14',
