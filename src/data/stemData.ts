@@ -323,7 +323,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Automated product safety reporting pipelines at Syngenta using custom SQL and Python scripts.',
       'Won the WVSU MS-CC Hackathon for Air Quality sensor spoofing anomaly detection.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/ofori-jephter-takyi/'
   },
   {
     id: '9',
