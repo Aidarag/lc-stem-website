@@ -552,7 +552,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Completed a clinical operations internship at Atrium Health.',
       'Analyzed patient service pathways and improved front-desk workflows.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/daniel-frimpong-4308a8326/'
   },
   {
     id: '21',
