@@ -571,7 +571,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Managed patient workflow data during her Atrium Health internship.',
       'Coordinated community outreach health educational seminars.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/emmanuella-nyarko-8a078b35b/'
   },
   {
     id: '22',
