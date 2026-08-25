@@ -3,13 +3,12 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, X, Award, Briefcase, GraduationCap, Code, Compass, ArrowRight, Star, BookOpen, CheckCircle2, Trophy, Mail, Send } from 'lucide-react';
+import { Search, Filter, X, Award, Briefcase, GraduationCap, Code, Compass, ArrowRight, Star, BookOpen, CheckCircle2, Trophy, Send, MapPin } from 'lucide-react';
 import { studentSpotlights, StudentSpotlight } from '@/data/stemData';
-import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const getLinkedInUrl = (student: { name: string; linkedin?: string }) => {
+  if (student.linkedin === 'PASTE_PROSPER_LINKEDIN_URL_HERE') return null;
   if (student.linkedin) return student.linkedin;
   const slug = student.name
     .toLowerCase()
@@ -44,6 +43,8 @@ function SpotlightContent() {
     const idParam = searchParams.get('id');
 
     if (majorParam) {
+      // The URL is the external source of truth for directory filters.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedMajor(majorParam);
     }
     if (idParam) {
@@ -72,7 +73,8 @@ function SpotlightContent() {
 
   // Filter students based on major and search query
   const filteredStudents = studentSpotlights.filter((student) => {
-    const matchesMajor = selectedMajor === 'All' || student.major === selectedMajor;
+    const matchesMajor = selectedMajor === 'All' || student.major === selectedMajor ||
+      (selectedMajor === 'Computer Information Systems' && student.major === 'Computer and Information Science');
     const matchesSearch =
       student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       student.bio.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -159,9 +161,11 @@ function SpotlightContent() {
                   )}
 
                   {/* Class year */}
-                  <span className="absolute top-4 right-4 border border-white/30 bg-black/40 backdrop-blur-sm text-white px-2.5 py-1 rounded-full font-mono text-xs font-bold">
-                    {student.gradYear}
-                  </span>
+                  {student.gradYear && (
+                    <span className="absolute top-4 right-4 border border-white/30 bg-black/40 backdrop-blur-sm text-white px-2.5 py-1 rounded-full font-mono text-xs font-bold">
+                      {student.gradYear}
+                    </span>
+                  )}
 
                   {/* Student info on image bottom */}
                   <div className="absolute bottom-4 left-4 right-4 space-y-1">
@@ -184,15 +188,18 @@ function SpotlightContent() {
                     <span className="font-mono text-xs font-bold uppercase tracking-wider text-purple-600 group-hover:text-purple-800 flex items-center gap-1.5 transition-colors">
                       Explore Profile <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                     </span>
-                    <a
-                      href={getLinkedInUrl(student)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200 px-2.5 py-1 rounded-full font-mono text-[11px] font-bold uppercase tracking-wider transition-all inline-flex items-center gap-1 cursor-pointer"
-                    >
-                      <LinkedInIcon className="h-3 w-3 text-purple-600" /> Connect
-                    </a>
+                    {getLinkedInUrl(student) && (
+                      <a
+                        href={getLinkedInUrl(student) || undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View ${student.name}'s LinkedIn profile`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200 px-2.5 py-1 rounded-full font-mono text-[11px] font-bold uppercase tracking-wider transition-all inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        <LinkedInIcon className="h-3 w-3 text-purple-600" /> Connect
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -203,7 +210,7 @@ function SpotlightContent() {
             <Compass className="mx-auto h-12 w-12 text-gray-300 animate-pulse" />
             <h3 className="font-serif text-xl font-bold text-gray-900 mt-4">No Profiles Found</h3>
             <p className="font-sans text-sm text-gray-500 mt-2 max-w-sm mx-auto">
-              We couldn't find any student spotlights matching your criteria. Try adjusting your search query or filters.
+              We couldn&apos;t find any student spotlights matching your criteria. Try adjusting your search query or filters.
             </p>
           </div>
         )}
@@ -254,7 +261,7 @@ function SpotlightContent() {
                 {/* Top Badges */}
                 <div className="relative z-10 flex flex-wrap items-center gap-2">
                   <span className="bg-purple-600 text-[#e3fc51] font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-purple-400/40 shadow-md">
-                    Class of {activeStudent.gradYear}
+                    {activeStudent.gradYear ? `Class of ${activeStudent.gradYear}` : 'Featured Student'}
                   </span>
                   {activeStudent.featured && (
                     <span className="btn-gradient-lime font-mono text-xs font-extrabold uppercase tracking-wider text-[#0B051D] px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1">
@@ -272,6 +279,9 @@ function SpotlightContent() {
                     <GraduationCap className="h-3.5 w-3.5 text-purple-300" />
                     <span>{activeStudent.major}</span>
                   </div>
+                  {activeStudent.institution && (
+                    <p className="font-sans text-sm font-semibold text-white/80">{activeStudent.institution}</p>
+                  )}
                 </div>
               </div>
 
@@ -367,6 +377,68 @@ function SpotlightContent() {
 
                 </div>
 
+                {/* Featured Experiences */}
+                {activeStudent.experiences && activeStudent.experiences.length > 0 && (
+                  <div className="space-y-4 pt-4 border-t border-gray-100">
+                    <h4 className="font-mono text-xs font-extrabold uppercase tracking-wider text-gray-900 flex items-center gap-1.5">
+                      <Star className="h-4 w-4 text-purple-600" /> Achievements &amp; Experiences
+                    </h4>
+                    <div className="space-y-4">
+                      {activeStudent.experiences.map((experience) => (
+                        <article
+                          key={experience.title}
+                          className={`overflow-hidden rounded-2xl border ${experience.emphasis ? 'border-purple-300 bg-purple-50/60' : 'border-gray-200 bg-gray-50/70'}`}
+                        >
+                          {experience.image && (
+                            <figure>
+                              <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
+                                <Image
+                                  src={experience.image}
+                                  alt={experience.imageAlt || ''}
+                                  fill
+                                  className="object-cover"
+                                  sizes="(max-width: 768px) 100vw, 55vw"
+                                />
+                              </div>
+                              {experience.caption && (
+                                <figcaption className="border-b border-gray-200 bg-white px-4 py-2.5 font-sans text-xs leading-relaxed text-gray-500">
+                                  {experience.caption}
+                                </figcaption>
+                              )}
+                            </figure>
+                          )}
+                          <div className="p-4 sm:p-5 space-y-2">
+                            {experience.emphasis && (
+                              <span className="inline-flex rounded-full bg-purple-600 px-2.5 py-1 font-mono text-[10px] font-extrabold uppercase tracking-wider text-white">
+                                Team Achievement
+                              </span>
+                            )}
+                            <h5 className="font-serif text-lg font-extrabold leading-snug text-gray-900">{experience.title}</h5>
+                            {experience.organization && (
+                              <p className="flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wide text-purple-700">
+                                <MapPin className="h-3.5 w-3.5" /> {experience.organization}
+                              </p>
+                            )}
+                            <p className="font-sans text-sm leading-relaxed text-gray-700">{experience.description}</p>
+                            {experience.sourceUrl && (
+                              <a
+                                href={experience.sourceUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${experience.sourceLabel || 'View experience'} (opens in a new tab)`}
+                                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-purple-200 bg-white px-4 py-2 font-mono text-xs font-bold uppercase tracking-wide text-purple-700 transition-colors hover:border-purple-300 hover:bg-purple-50 cursor-pointer"
+                              >
+                                <LinkedInIcon className="h-4 w-4" />
+                                {experience.sourceLabel || 'View Experience'}
+                              </a>
+                            )}
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Key Accomplishments */}
                 {activeStudent.achievements.length > 0 && (
                   <div className="space-y-3 pt-4 border-t border-gray-100">
@@ -386,14 +458,17 @@ function SpotlightContent() {
 
                 {/* Connect Action Bar */}
                 <div className="pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
-                  <a
-                    href={getLinkedInUrl(activeStudent)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gradient-lime font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0B051D] px-6 py-3.5 rounded-full shadow-lg transition-all cursor-pointer inline-flex items-center gap-2"
-                  >
-                    <LinkedInIcon className="h-4 w-4" /> Connect with {activeStudent.name.split(' ')[0]} <ArrowRight className="h-4 w-4" />
-                  </a>
+                  {getLinkedInUrl(activeStudent) && (
+                    <a
+                      href={getLinkedInUrl(activeStudent) || undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${activeStudent.name}'s LinkedIn profile`}
+                      className="btn-gradient-lime font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0B051D] px-6 py-3.5 rounded-full shadow-lg transition-all cursor-pointer inline-flex items-center gap-2"
+                    >
+                      <LinkedInIcon className="h-4 w-4" /> Connect with {activeStudent.name.split(' ')[0]} <ArrowRight className="h-4 w-4" />
+                    </a>
+                  )}
 
                   <a
                     href={`mailto:${activeStudent.name.toLowerCase().replace(/[^a-z0-9]/g, '.')}@livingstone.edu`}

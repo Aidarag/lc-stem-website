@@ -6,11 +6,11 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ArrowRight, Star, BookOpen, Plus, Minus, GraduationCap,
+  ArrowRight, BookOpen, Plus, Minus,
 } from 'lucide-react';
 import StatCounter from '@/components/ui/StatCounter';
 import HeroShowcaseGrid from '@/components/home/HeroShowcaseGrid';
-import { studentSpotlights, studentProjects, competitions } from '@/data/stemData';
+import { studentSpotlights, competitions } from '@/data/stemData';
 
 // Below-the-fold sections: split into their own chunks. SSR stays on (no
 // ssr:false) so the content is still present in the static HTML for SEO,
@@ -206,7 +206,7 @@ export default function Home() {
                 Got <span className="text-purple-600">Questions?</span>
               </h2>
               <p className="font-sans text-base sm:text-lg text-gray-600 leading-relaxed max-w-md">
-                Livingstone STEM is your gateway to a high-impact technical career. With our four specialized tracks, hands-on lab research, and industry partnerships, you'll gain the skills, confidence, and portfolio to stand out.
+                Livingstone STEM is your gateway to a high-impact technical career. With our four specialized tracks, hands-on lab research, and industry partnerships, you&apos;ll gain the skills, confidence, and portfolio to stand out.
               </p>
               <div>
                 <Link

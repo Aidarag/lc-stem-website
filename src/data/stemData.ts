@@ -1,8 +1,9 @@
 export interface StudentSpotlight {
   id: string;
   name: string;
-  major: 'Computer Information Systems' | 'Mathematics' | 'Biology' | 'Business';
-  gradYear: number;
+  major: 'Computer Information Systems' | 'Computer and Information Science' | 'Mathematics' | 'Biology' | 'Business';
+  institution?: string;
+  gradYear?: number;
   photo: string;
   photoPosition?: string;
   bio: string;
@@ -13,6 +14,19 @@ export interface StudentSpotlight {
   achievements: string[];
   featured: boolean;
   linkedin?: string;
+  experiences?: StudentExperience[];
+}
+
+export interface StudentExperience {
+  title: string;
+  organization?: string;
+  description: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
+  image?: string;
+  imageAlt?: string;
+  caption?: string;
+  emphasis?: boolean;
 }
 
 export interface StudentProject {
@@ -127,6 +141,51 @@ export const academicPrograms: AcademicProgram[] = [
 ];
 
 export const studentSpotlights: StudentSpotlight[] = [
+  {
+    id: '24',
+    name: 'Prosper Nasangma',
+    major: 'Computer and Information Science',
+    institution: 'Livingstone College',
+    photo: '/images/cis-student-success/prosper-profile.png',
+    photoPosition: '50% 22%',
+    bio: 'Prosper Nasangma is a Computer and Information Science student whose interests span software engineering, artificial intelligence, cybersecurity, undergraduate research, and technology-driven problem solving. His interdisciplinary experiences connect technical innovation with leadership, economics, and public policy.',
+    leadership: ['Technology, leadership, and public policy program participant'],
+    internships: [],
+    awards: ['First-place MS-CC Hackathon team member'],
+    certifications: [],
+    achievements: [
+      'Represented Livingstone College with Cephas Osei Bonsu as key contributors to the first-place team at the MS-CC Cybersecurity & Environmental Data Hackathon.',
+      'Contributed to a real-time anomaly-detection solution for identifying abnormal, unreliable, or potentially compromised environmental sensor readings.',
+      'Developed research experience through analytical thinking, technical curiosity, and the application of computer science to real-world questions.'
+    ],
+    experiences: [
+      {
+        title: 'MS-CC Cybersecurity & Environmental Data Hackathon — First Place',
+        organization: 'West Virginia State University',
+        image: '/images/cis-student-success/prosper-hackathon.jpg',
+        imageAlt: 'Livingstone College participants at the MS-CC Cybersecurity and Environmental Data Hackathon',
+        caption: 'Livingstone College students Prosper Nasangma and Cephas Osei Bonsu were key contributors to the first-place team at the MS-CC Cybersecurity & Environmental Data Hackathon hosted at West Virginia State University.',
+        description: 'Prosper Nasangma and Cephas Osei Bonsu represented Livingstone College as key contributors to the first-place team. Their team developed a real-time anomaly-detection solution to help identify abnormal, unreliable, or potentially compromised environmental sensor readings.',
+        emphasis: true
+      },
+      {
+        title: 'Cato Institute Program Participant',
+        organization: 'Washington, D.C.',
+        image: '/images/cis-student-success/prosper-cato.jpeg',
+        imageAlt: 'Prosper Nasangma and fellow participants outside the Cato Institute in Washington, D.C.',
+        description: 'An interdisciplinary educational experience exploring public policy, economics, leadership, technology, society, and policy analysis—complementing Prosper’s technical studies with a broader view of how technology interacts with institutions.'
+      },
+      {
+        title: '2026 PFx Student Researcher',
+        organization: 'AUC Data Science Initiative',
+        description: 'Through the PFx program, Prosper is building experience in data science research, analytical problem-solving, leadership, and collaboration while engaging with real-world challenges.',
+        sourceUrl: 'https://www.linkedin.com/posts/prosper-nasangma-b6a878346_2026-pfx-student-researcher-auc-data-science-activity-7490438464711168004-DpLE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFagM4IBMZvyeRKf7AdPCOLNzSlkss4FdUY',
+        sourceLabel: 'View PFX experience on LinkedIn'
+      }
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/prosper-nasangma-b6a878346'
+  },
   {
     id: '1',
     name: 'Jerome Adonis',
@@ -645,13 +704,13 @@ export const competitions: Competition[] = [
   },
   {
     id: '4',
-    title: 'Sensor Spoofing Detection for PurpleAir Air Quality Networks',
-    subtitle: 'First Place, MS-CC Hackathon at West Virginia State University',
-    description: 'A Python based trust and stress scoring model that uses statistical deviation analysis to detect spoofed sensors in PurpleAir air quality networks. Awarded first place at the MS-CC Hackathon at West Virginia State University.',
+    title: 'First Place — MS-CC Cybersecurity & Environmental Data Hackathon',
+    subtitle: 'West Virginia State University',
+    description: 'Prosper Nasangma and Cephas Osei Bonsu represented Livingstone College as key contributors to the first-place team. The team developed a real-time anomaly-detection solution to help identify abnormal, unreliable, or potentially compromised environmental sensor readings.',
     date: 'April 2026',
-    award: '1st Place Winner',
+    award: 'First Place',
     students: ['Cephas Osei Bonsu', 'Prosper Nasangma', 'Amos Abdulai', 'Michael Atayi'],
-    image: '/images/achievements/ms-cc-hackathon-2026-team.jpeg',
+    image: '/images/cis-student-success/prosper-hackathon.jpg',
     topics: ['Python', 'Statistical Deviation Analysis', 'Cyber Physical Systems Security', 'Anomaly Detection', 'IoT Sensor Networks'],
     outcomes: 'Placed first in the cyber physical systems security track at the MS-CC Hackathon, hosted by the Minority Serving Cyberinfrastructure Consortium at West Virginia State University.',
     category: 'Hackathon'
@@ -667,6 +726,19 @@ export const competitions: Competition[] = [
     image: '/images/achievements/mastercard-data-challenge-2026-team.jpeg',
     topics: ['Healthcare Access', 'Data Analysis', 'Robeson County, NC', 'Community Health'],
     outcomes: 'Produced for the 2026 Mastercard Data Challenge, hosted by the AUC Data Science Initiative, where the Livingstone College team was one of those selected from 106 competing HBCU teams.',
+    category: 'Honors'
+  },
+  {
+    id: '7',
+    title: '2026 PFX Student Researcher',
+    subtitle: 'AUC Data Science Initiative',
+    description: 'Through the PFx program, Prosper Nasangma is building experience in data science research, analytical problem-solving, leadership, and collaboration while engaging with real-world challenges.',
+    award: 'Undergraduate Research Experience',
+    students: ['Prosper Nasangma'],
+    image: '/images/cis-student-success/prosper-profile.png',
+    topics: ['Data Science', 'Research', 'Analytical Thinking', 'Problem Solving', 'Collaboration'],
+    outcomes: 'Strengthened research, analytical thinking, technical curiosity, leadership, and collaborative problem-solving skills through the AUC Data Science Initiative’s PFx program.',
+    link: 'https://www.linkedin.com/posts/prosper-nasangma-b6a878346_2026-pfx-student-researcher-auc-data-science-activity-7490438464711168004-DpLE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFagM4IBMZvyeRKf7AdPCOLNzSlkss4FdUY',
     category: 'Honors'
   }
 ];

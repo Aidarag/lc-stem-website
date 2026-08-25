@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Search, ExternalLink, Code, Users, ClipboardCheck, Star, Award, Trophy, Calendar, ArrowRight } from 'lucide-react';
+import { Search, ExternalLink, Code, Users, ClipboardCheck, Star, Award, Trophy, Calendar } from 'lucide-react';
 import { studentProjects, competitions } from '@/data/stemData';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -371,6 +370,17 @@ export default function AchievementsPage() {
                         <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     )}
+                    {achievement.githubUrl && (
+                      <a
+                        href={achievement.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center text-xs font-bold font-mono uppercase tracking-wider text-purple-600 hover:text-purple-800 transition-colors group/link"
+                      >
+                        {achievement.githubText || 'View GitHub'}
+                        <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                      </a>
+                    )}
                   </div>
                   <span className="font-mono text-[10px] font-semibold text-gray-400 uppercase tracking-widest">
                     LC STEM {achievement.type}
@@ -384,7 +394,7 @@ export default function AchievementsPage() {
             <Code className="mx-auto h-12 w-12 text-gray-300 animate-pulse" />
             <h3 className="font-serif text-xl font-bold text-gray-900 mt-4">No Achievements Found</h3>
             <p className="font-sans text-sm text-gray-500 mt-2">
-              We couldn't find any achievements matching your search. Try adjusting your filters.
+              We couldn&apos;t find any achievements matching your search. Try adjusting your filters.
             </p>
           </div>
         )}

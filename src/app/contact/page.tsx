@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, ShieldAlert, Star, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import ResponseConsole, { ConsoleTicket } from '@/components/ui/ResponseConsole';
 
@@ -11,24 +11,17 @@ function ContactFormContent() {
   const searchParams = useSearchParams();
   const studentParam = searchParams.get('student');
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(() => ({
     name: '',
     email: '',
     major: 'Computer Information Systems',
-    message: '',
-  });
+    message: studentParam
+      ? `Hello! I would like to connect with ${studentParam} regarding their research, project milestones, and student experience in Livingstone STEM.`
+      : '',
+  }));
   
   const [submitted, setSubmitted] = useState(false);
   const [userTickets, setUserTickets] = useState<Omit<ConsoleTicket, 'id' | 'status' | 'timestamp'>[]>([]);
-
-  useEffect(() => {
-    if (studentParam) {
-      setFormData((prev) => ({
-        ...prev,
-        message: `Hello! I would like to connect with ${studentParam} regarding their research, project milestones, and student experience in Livingstone STEM.`,
-      }));
-    }
-  }, [studentParam]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

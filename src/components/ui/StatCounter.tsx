@@ -29,7 +29,6 @@ export default function StatCounter({
     if (!isInView) return;
 
     if (shouldReduceMotion) {
-      setCount(end);
       return;
     }
 
@@ -55,7 +54,7 @@ export default function StatCounter({
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {count.toFixed(decimals)}
+      {(shouldReduceMotion ? end : count).toFixed(decimals)}
       {suffix}
     </span>
   );

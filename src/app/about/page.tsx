@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { 
   Users, Code, BookOpen, Trophy, Target, Binary, Atom, 
-  TrendingUp, ArrowRight, Star, Heart, Laptop, CheckCircle2, ShieldCheck, Award
+  TrendingUp, ArrowRight, Star, Heart, Laptop, CheckCircle2, ShieldCheck
 } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="font-sans text-base leading-relaxed text-gray-600">
-                Our mission is to foster analytical, computational, and molecular research capabilities among peers by establishing an active workspace of collaboration. We believe that by pooling resources, reviewing each other's code repositories, and practicing scientific defense, we can prepare every student to secure top-tier tech placements and gain entry to advanced graduate programs.
+                Our mission is to foster analytical, computational, and molecular research capabilities among peers by establishing an active workspace of collaboration. We believe that by pooling resources, reviewing each other&apos;s code repositories, and practicing scientific defense, we can prepare every student to secure top-tier tech placements and gain entry to advanced graduate programs.
               </p>
             </div>
             <div className="mt-8 pt-5 border-t border-gray-100 bg-gradient-to-br from-slate-50 to-gray-50/80 border border-gray-200/90 p-4 rounded-2xl space-y-1">

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Award, Calendar, Users, Trophy, Star } from 'lucide-react';
+import { Calendar, Users, Trophy, Star } from 'lucide-react';
 import { competitions } from '@/data/stemData';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 

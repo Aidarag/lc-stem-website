@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Users, CheckCircle, Clock, Play, UserCheck, AlertCircle } from 'lucide-react';
+import { Terminal, CheckCircle, Clock, Play, UserCheck, AlertCircle } from 'lucide-react';
 
 export interface ConsoleTicket {
   id: string;
@@ -304,7 +304,7 @@ export default function ResponseConsole({ userTickets }: ResponseConsoleProps) {
 
                 {/* Ticket Message */}
                 <p className="font-sans text-xs sm:text-sm text-gray-300 leading-relaxed font-normal">
-                  "{ticket.message}"
+                  &ldquo;{ticket.message}&rdquo;
                 </p>
 
                 {/* Assignment Footer */}
@@ -352,7 +352,7 @@ export default function ResponseConsole({ userTickets }: ResponseConsoleProps) {
           ) : (
             <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-gray-500 font-mono text-xs">
               <Terminal className="h-8 w-8 text-gray-600 mb-2.5 animate-pulse" />
-              <span>No tickets in "{activeTab}" filter.</span>
+              <span>No tickets in &ldquo;{activeTab}&rdquo; filter.</span>
             </div>
           )}
         </AnimatePresence>

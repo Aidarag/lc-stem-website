@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Atom } from 'lucide-react';
 import logoDark from '../../../public/images/lc-stem-logo-dark.png';
 import logoLight from '../../../public/images/lc-stem-logo-light.png';
@@ -42,8 +43,8 @@ export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
       </div>
 
       <div className="relative flex items-center justify-start py-1">
-        <img
-          src={logoImg.src}
+        <Image
+          src={logoImg}
           alt="LC STEM Logo"
           className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]`}
         />

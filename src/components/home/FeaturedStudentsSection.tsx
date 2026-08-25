@@ -11,7 +11,7 @@ interface FeaturedStudentsSectionProps {
 
 export default function FeaturedStudentsSection({ featuredStudents }: FeaturedStudentsSectionProps) {
   // Select students: Jerome, Sally, Aïda, Yves, Swetakshi, George
-  const selectedIds = ['1', '4', '16', '17', '22', '23'];
+  const selectedIds = ['24', '1', '4', '16'];
   const displayStudents = featuredStudents.filter((student) => selectedIds.includes(student.id));
 
   return (
@@ -59,7 +59,7 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
                     <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
-                      Class of {student.gradYear}
+                      {student.gradYear ? `Class of ${student.gradYear}` : 'Featured Student'}
                     </div>
                   </div>
 
