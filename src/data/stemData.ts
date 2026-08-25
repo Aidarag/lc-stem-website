@@ -533,7 +533,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Designed and executed social media strategies that drove audience engagement for Tosot Comfort.',
       'Analyzed weekly campaign metrics and increased platform visibility.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/shambhabi-sinha-88222a1a9/'
   },
   {
     id: '20',
