@@ -477,7 +477,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Built a fully responsive digital timesheet application using modern web standards.',
       'Presented the timesheet automation prototype to Livingstone College administrative leadership.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/aidagarba/'
   },
   {
     id: '17',
@@ -513,7 +514,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Analyzed threat metrics and fraud patterns during a summer internship at TIAA.',
       'Developed security incident response playbooks for the internal fraud analytics team.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/micah-colding-005a38348/'
   },
   {
     id: '19',
