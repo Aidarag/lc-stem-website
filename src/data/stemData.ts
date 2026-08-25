@@ -440,7 +440,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Oversaw chemical inventories and lab safety audit compliance lists for Syngenta research teams.',
       'Maintained biological sample registries and prepared cell assays under department guidance.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/darryl-fisher-500b62327/'
   },
   {
     id: '15',
