@@ -214,7 +214,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Completed 3 high-profile technical internships with industry leaders.',
       'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/jeromeadonis/'
   },
   {
     id: '3',
@@ -250,7 +251,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
       'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/sally-adenutsi-045b62363/'
   },
   {
     id: '5',
@@ -268,7 +270,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Developed interactive health curriculum modules for remote public school outreach.',
       'Co-authored Robeson County health access data presentations for the Mastercard Data Challenge.'
     ],
-    featured: false
+    featured: false,
+    linkedin: 'https://www.linkedin.com/in/robert-osei-159401324/'
   },
   {
     id: '6',
