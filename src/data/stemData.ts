@@ -615,29 +615,6 @@ export const studentSpotlights: StudentSpotlight[] = [
 
 export const studentProjects: StudentProject[] = [
   {
-    id: '1',
-    title: 'BlueBear Smart Transit App',
-    description: 'A comprehensive campus navigation and bus tracking application designed specifically for the campus community. The system integrates real-time GPS telemetry from campus shuttles and provides route optimizations, ride booking for evening security escorts, and live delay notifications.',
-    technologies: ['Next.js', 'React Native', 'Node.js', 'MongoDB', 'Mapbox API', 'WebSockets'],
-    team: ['Jerome Adonis (CIS)', 'Jephter Ofori (CIS)', 'Kamar Goudelock (Business)'],
-    outcomes: 'Successfully piloted with 250+ active students during the spring semester. Reduced shuttle wait times by an average of 4.2 minutes and increased evening escort scheduling efficiency by 30%.',
-    demoUrl: 'https://bluebear-transit.livingstone.edu',
-    githubUrl: 'https://github.com/livingstone-stem/bluebear-transit',
-    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
-    featured: true
-  },
-  {
-    id: '2',
-    title: 'Bio-Remediation Water Assayer',
-    description: 'A hardware-software hybrid IoT device designed to monitor river basin water quality. Using cellular micro-sensors, the device samples pH, turbidity, microplastic density, and oxygenation levels, uploading the telemetry data directly to an open-source research dashboard.',
-    technologies: ['Raspberry Pi', 'Python', 'React', 'Tailwind CSS', 'InfluxDB', 'LoRaWAN'],
-    team: ['Francis Boadu (Biology)', 'Sally Adenutsi (Mathematics)'],
-    outcomes: 'Deployed three sensor buoys in the Yadkin River basin. Telemetry is used by the EPA regional office for watershed reports. The project won first prize in the Statewide Environmental Design Competition.',
-    githubUrl: 'https://github.com/livingstone-stem/river-assayer-iot',
-    image: '/images/biology-student-success/francis-boadu-duke-research.png',
-    featured: true
-  },
-  {
     id: '3',
     title: 'Simon Property Group Equity Research — Orion Analyst',
     description: 'An equity research report on Simon Property Group (NYSE: SPG) published through Orion Equity Research Group. Over a 10-week program, the research involved analyzing SPG\'s business and industry, building a 3-year financial model, and developing a valuation framework using EV/EBITDA, P/E, and DCF methodologies. The analysis resulted in a HOLD rating and $239.18 12-month price target.',
@@ -692,45 +669,6 @@ export const studentProjects: StudentProject[] = [
 ];
 
 export const competitions: Competition[] = [
-  {
-    id: '1',
-    title: 'CIAA STEM Hackathon',
-    subtitle: 'Celebrating Regional Development Excellence',
-    description: 'The LC STEM team went head-to-head with 12 universities in a 36-hour sprint to build AI-driven solutions addressing clean energy bottlenecks. Our team designed a community solar share platform using Next.js and predictive load modeling.',
-    date: 'February 2026',
-    award: '1st Place Overall Champion',
-    students: ['Jerome Adonis', 'Jephter Ofori', 'Kamar Goudelock'],
-    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
-    topics: ['AI Load Modeling', 'Next.js', 'Clean Energy', 'Predictive Analytics'],
-    outcomes: 'Secured 1st Place out of 12 regional university teams in a 36-hour sprint, developing a prototype community solar sharing platform.',
-    link: 'https://ciaa.com/hackathon'
-  },
-  {
-    id: '2',
-    title: 'National Pre-Med Research Symposium',
-    subtitle: 'Showcasing Undergraduate Biological Discoveries',
-    description: 'Francis Boadu presented his co-authored research paper on gene-editing pathways for cancer cell regulation before an academic board of researchers. The presentation focused on targeted cellular delivery systems.',
-    date: 'November 2025',
-    award: 'Outstanding Undergraduate Presentation Award',
-    students: ['Francis Boadu'],
-    image: '/images/biology-student-success/francis-boadu-duke-research.png',
-    topics: ['Gene Editing', 'Oncology', 'Cellular Biology', 'Targeted Delivery'],
-    outcomes: 'Awarded Outstanding Undergraduate Presentation honors among 50+ national research papers; co-authored publication featured in Journal of Student Research.',
-    link: 'https://symposium.premed-research.org'
-  },
-  {
-    id: '3',
-    title: 'Carolinas Data Science Bowl',
-    subtitle: 'Solving Urban Planning Bottlenecks',
-    description: 'LC Mathematics students developed a predictive model to map food deserts in Salisbury and outline optimal community garden sites based on census income, transit, and soil quality parameters.',
-    date: 'April 2026',
-    award: 'Best Social Impact Solution Award',
-    students: ['Sally Adenutsi', 'Francis Suapim'],
-    image: '/images/math-student-success/sally-adenutsi-profile.jpeg',
-    topics: ['Data Modeling', 'GIS Analysis', 'Python', 'Urban Planning'],
-    outcomes: 'Recognized with the Best Social Impact Solution Award. Proposed garden sites are currently under review with the Salisbury City Council.',
-    link: 'https://datasciencebowl.org'
-  },
   {
     id: '4',
     title: 'First Place — MS-CC Cybersecurity & Environmental Data Hackathon',
