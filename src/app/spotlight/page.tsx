@@ -74,7 +74,7 @@ function SpotlightContent() {
   // Filter students based on major and search query
   const filteredStudents = studentSpotlights.filter((student) => {
     const matchesMajor = selectedMajor === 'All' || student.major === selectedMajor ||
-      (selectedMajor === 'Computer Information Systems' && student.major === 'Computer and Information Science');
+      (selectedMajor === 'Computer Information Systems' && student.major === 'Computer and Information Systems');
     const matchesSearch =
       student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       student.bio.toLowerCase().includes(searchQuery.toLowerCase()) ||

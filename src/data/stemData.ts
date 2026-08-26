@@ -1,10 +1,11 @@
 export interface StudentSpotlight {
   id: string;
   name: string;
-  major: 'Computer Information Systems' | 'Computer and Information Science' | 'Mathematics' | 'Biology' | 'Business';
+  major: 'Computer Information Systems' | 'Computer and Information Systems' | 'Mathematics' | 'Biology' | 'Business';
   institution?: string;
   gradYear?: number;
   photo: string;
+  cardPhoto?: string;
   photoPosition?: string;
   photoZoom?: boolean;
   bio: string;
@@ -153,12 +154,13 @@ export const studentSpotlights: StudentSpotlight[] = [
   {
     id: '24',
     name: 'Prosper Nasangma',
-    major: 'Computer and Information Science',
+    major: 'Computer and Information Systems',
     institution: 'Livingstone College',
     photo: '/images/cis-student-success/prosper-profile.png',
+    cardPhoto: '/images/cis-student-success/prosper-profile-card.png',
     photoPosition: '50% 18%',
     photoZoom: true,
-    bio: 'Prosper Nasangma is a Computer and Information Science student whose interests span software engineering, artificial intelligence, cybersecurity, undergraduate research, and technology-driven problem solving. His interdisciplinary experiences connect technical innovation with leadership, economics, and public policy.',
+    bio: 'Prosper Nasangma is a Computer and Information Systems student whose interests span software engineering, artificial intelligence, cybersecurity, undergraduate research, and technology-driven problem solving. His interdisciplinary experiences connect technical innovation with leadership, economics, and public policy.',
     leadership: ['Technology, leadership, and public policy program participant'],
     internships: [],
     awards: ['First-place MS-CC Hackathon team member'],

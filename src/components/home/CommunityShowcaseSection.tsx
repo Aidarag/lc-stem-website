@@ -16,6 +16,7 @@ const marqueeCards = [
   { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
   { id: '15', name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile-v2.png' },
   { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
+  { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', project: '2026 PFX Student Researcher', img: '/images/cis-student-success/prosper-profile.png' },
   // Duplicate for seamless infinite marquee scroll
   { id: '1', name: 'Jerome Adonis', major: 'CIS Major', project: 'AWS Cloud Scaling Solutions', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
   { id: '2', name: 'Francis Boadu', major: 'Biology Pre-Med', project: 'Oncology Research & Mammalian Assays', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
@@ -25,6 +26,7 @@ const marqueeCards = [
   { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', project: 'Syngenta Data Automation Scripting', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
   { id: '15', name: 'Francis Suapim', major: 'Mathematics', project: 'ACSC Ghanaian MSME Structural Analysis', img: '/images/math-student-success/francis-suapim-profile-v2.png' },
   { id: '6', name: 'Emmanuel Amponsah', major: 'Business & STEM', project: 'Asset Management & Equity Research', img: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg' },
+  { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', project: '2026 PFX Student Researcher', img: '/images/cis-student-success/prosper-profile.png' },
 ];
 
 export default function CommunityShowcaseSection() {
@@ -93,6 +95,7 @@ export default function CommunityShowcaseSection() {
               {marqueeCards.map((card, idx) => {
                 const spotlight = studentSpotlights.find((s) => s.id === card.id);
                 const photoPosition = spotlight?.photoPosition || 'center';
+                const photoZoom = spotlight?.photoZoom;
 
                 return (
                   <Link
@@ -105,7 +108,7 @@ export default function CommunityShowcaseSection() {
                         src={card.img}
                         alt={card.name}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        className={`object-cover transition-transform duration-700 ${photoZoom ? 'scale-[1.3] group-hover:scale-[1.35]' : 'group-hover:scale-110'}`}
                         style={{ objectPosition: photoPosition }}
                         sizes="256px"
                       />

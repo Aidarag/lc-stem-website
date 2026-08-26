@@ -19,11 +19,11 @@ const columns = [
     iconColor: 'text-purple-300',
     majorColor: 'text-purple-200',
     students: [
-      { id: '24', name: 'Prosper Nasangma', major: 'Computer & Info Science', img: '/images/cis-student-success/prosper-profile.png' },
+      { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
       { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
       { id: '4', name: 'Sally Adenutsi', major: 'Mathematics', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
-      { id: '24', name: 'Prosper Nasangma', major: 'Computer & Info Science', img: '/images/cis-student-success/prosper-profile.png' },
+      { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg' },
       { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
     ],
@@ -79,7 +79,7 @@ export default function HeroShowcaseGrid() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B051D] via-[#0B051D]/60 to-transparent z-20" />
 
       {/* Tilted Container */}
-      <div className="tilted-grid-container grid grid-cols-2 sm:grid-cols-3 gap-4 w-[115%] -ml-6 -mt-10">
+      <div className="tilted-grid-container grid w-full -translate-x-2 grid-cols-2 gap-4 -mt-10 sm:grid-cols-3 lg:-translate-x-12">
         {columns.map((column) => (
           <motion.div
             key={column.key}

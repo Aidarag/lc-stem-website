@@ -51,11 +51,11 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
                   {/* Student Photo */}
                   <div className="relative aspect-[3/4] w-full border-b border-gray-100 bg-gray-100">
                     <Image
-                      src={student.photo}
+                      src={student.cardPhoto || student.photo}
                       alt={student.name}
                       fill
-                      className={`object-cover transition-transform duration-500 ${student.photoZoom ? 'scale-[1.3] group-hover:scale-[1.35]' : 'group-hover:scale-105'}`}
-                      style={{ objectPosition: student.photoPosition || 'center' }}
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ objectPosition: student.cardPhoto ? 'center' : student.photoPosition || 'center' }}
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
                     <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-3.5 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
