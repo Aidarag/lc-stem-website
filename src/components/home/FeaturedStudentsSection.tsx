@@ -11,7 +11,7 @@ interface FeaturedStudentsSectionProps {
 
 export default function FeaturedStudentsSection({ featuredStudents }: FeaturedStudentsSectionProps) {
   // Select students: Jerome, Sally, Aïda, Yves, Swetakshi, George
-  const selectedIds = ['24', '1', '4', '16'];
+  const selectedIds = ['24', '1', '4', '16', '25'];
   const displayStudents = featuredStudents.filter((student) => selectedIds.includes(student.id));
 
   return (

@@ -70,6 +70,25 @@ const businessStudents = [
     ],
     icon: Megaphone,
   },
+  {
+    name: 'Esinam Dedoo',
+    roles: ['Finance + Marketing Fellow', 'YBLA CEP Program Participant'],
+    organizations: ['Stryker', 'YBLA'],
+    image: '/images/business-student-success/esinam-dedoo-profile.jpg',
+    imageAlt: 'Portrait of Esinam Dedoo',
+    imagePosition: '50% 30%',
+    description:
+      'Esinam Dedoo completed the Stryker Finance + Marketing Fellowship with The Application | HBCU 20x20, connecting with current Stryker employees in marketing and finance. She was also selected as 1 of 400 students out of 1,000+ applicants to attend the Thurgood Marshall College Fund DevCon 2025, and was featured on BET with Fantasia as part of the HBCU Honors x Walmart Dream Big Campaign.',
+    highlights: [
+      'Finance & Marketing',
+      'Fellowship',
+      'Leadership',
+      'BET Feature',
+      'YBLA CEP Program',
+      'NCNW Chapter President',
+    ],
+    icon: Landmark,
+  },
 ] as const;
 
 export default function BusinessStudentSuccessSection() {

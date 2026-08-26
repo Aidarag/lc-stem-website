@@ -612,6 +612,45 @@ export const studentSpotlights: StudentSpotlight[] = [
     ],
     featured: true,
     linkedin: 'https://www.linkedin.com/in/george-damtey-ba23a7304/'
+  },
+  {
+    id: '25',
+    name: 'Esinam Dedoo',
+    major: 'Business',
+    gradYear: 2027,
+    photo: '/images/business-student-success/esinam-dedoo-profile.jpg',
+    cardPhoto: '/images/business-student-success/esinam-dedoo-card.jpg',
+    photoPosition: '50% 30%',
+    bio: 'Esinam Dedoo is a distinguished Business Administration student at Livingstone College with a 4.0 GPA. She has been featured on BET with Fantasia as part of the HBCU Honors x Walmart Dream Big Campaign, inducted into Alpha Lambda Delta Honor Society, and selected as 1 of 400 students out of 1,000+ applicants to attend the Thurgood Marshall College Fund DevCon 2025.',
+    leadership: ['NCNW Chapter President 2025-2026', 'YBLA Black Talent Pipeline Cohort', 'DECA State Leadership Conference Volunteer'],
+    internships: ['Stryker (Finance + Marketing Fellow 2025)', 'YBLA Collegiate Emerging Professionals (CEP) 2025 Cohort'],
+    awards: ['NASPA NCCWSL Scholarship Recipient', 'Alpha Lambda Delta Honor Society', 'Thurgood Marshall College Fund DevCon 2025 Delegate'],
+    certifications: ['Stryker Finance + Marketing Fellowship Certificate'],
+    achievements: [
+      'Featured on BET with Fantasia as part of the HBCU Honors x Walmart Dream Big Campaign.',
+      'Selected as 1 of 400 students out of 1,000+ applicants to attend the Thurgood Marshall College Fund DevCon 2025.',
+      'Completed the Stryker Finance + Marketing Fellowship with The Application | HBCU 20x20.',
+      'Awarded a scholarship to attend the NASPA National Conference for College Women Student Leaders at the University of Maryland.'
+    ],
+    featured: true,
+    experiences: [
+      {
+        title: 'NASPA NCCWSL Conference',
+        organization: 'University of Maryland, College Park',
+        description: 'Awarded a scholarship to attend the NASPA National Conference for College Women Student Leaders. Met Gloria L. Blackwell, CEO of AAUW, and visited the African American Museum as a proud member of NCNW.',
+        image: '/images/business-student-success/esinam-dedoo-gallery-1.jpg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      },
+      {
+        title: 'Stryker Marketing & Finance Fellowship 2025',
+        organization: 'The Application | HBCU 20x20',
+        description: 'Completed the Fall 2025 Stryker Finance + Marketing Fellowship, connecting with current Stryker employees in marketing and finance and learning about career growth within the company.',
+        image: '/images/business-student-success/esinam-dedoo-gallery-2.jpg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      }
+    ]
   }
 ];
 
