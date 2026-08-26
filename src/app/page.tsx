@@ -42,7 +42,7 @@ export default function Home() {
 
   // Fetch student spotlight data
   const featuredStudents = studentSpotlights; // All students, grouped by major in the section
-  const sensorSpoofingProject = competitions[3]; // Sensor Spoofing Detection — MS-CC Hackathon (1st Place)
+  const sensorSpoofingProject = competitions[0]; // MS-CC Hackathon (1st Place)
 
   return (
     <div className="w-full bg-[#FFFFFF] font-sans text-foreground overflow-hidden">
