@@ -104,6 +104,18 @@ const students = [
     imageAlt: 'Portrait of Bright Karikari wearing a patterned collared shirt',
     tags: ['Undergraduate Research', 'ERN Conference', 'Scientific Research'],
   },
+  {
+    name: 'Nancy Oppong',
+    role: 'Environmental Science Research Fellow',
+    organization: 'Davidson College',
+    details: 'Summer 2025 · Research Fellowship',
+    description:
+      'Nancy Oppong was selected as a research fellow at Davidson College, where she contributed to an environmental science research project examining sustainable ecosystems and biodiversity conservation. She developed strong analytical and field research skills while collaborating with faculty and peers on data collection, laboratory analysis, and scientific reporting.',
+    image: '/images/biology-student-success/nancy-oppong-profile.png',
+    imageAlt: 'Portrait of Nancy Oppong',
+    imagePosition: '50% 30%',
+    tags: ['Environmental Science', 'Research Fellowship', 'Biodiversity', 'Field Research', 'Davidson College'],
+  },
 ] as const;
 
 export default function BiologyStudentSuccessSection() {

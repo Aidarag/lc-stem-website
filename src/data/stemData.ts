@@ -651,6 +651,60 @@ export const studentSpotlights: StudentSpotlight[] = [
         imageUnoptimized: true
       }
     ]
+  },
+  {
+    id: '26',
+    name: 'Nancy Oppong',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/nancy-oppong-profile.png',
+    photoPosition: '50% 30%',
+    bio: 'Nancy Oppong was selected as a research fellow at Davidson College, where she contributed to an environmental science research project examining sustainable ecosystems and biodiversity conservation.',
+    leadership: ['Biology Club Member', 'Environmental Science Advocate'],
+    internships: ['Davidson College (Environmental Science Research Fellow)'],
+    awards: ['Davidson College Research Fellowship'],
+    certifications: ['Environmental Science Research Methods'],
+    achievements: [
+      'Contributed to an environmental science research project at Davidson College examining sustainable ecosystems.',
+      'Developed strong analytical and field research skills through data collection and laboratory analysis.'
+    ],
+    featured: true
+  },
+  {
+    id: '27',
+    name: 'Afia Owusu Agyemang',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/afia-owusu-agyemang-profile.jpeg',
+    photoPosition: '50% 55%',
+    bio: 'Afia Owusu Agyemang served as a mentor for the 2025 STEM Summer Camp, guiding younger students through hands-on science activities. She also holds a leadership role as Secretary of the Livingstone College White Coat Scholars.',
+    leadership: ['White Coat Scholars Secretary', 'STEM Summer Camp Mentor'],
+    internships: [],
+    awards: ['White Coat Scholars Leadership Award'],
+    certifications: ['STEM Mentorship Training'],
+    achievements: [
+      'Guided younger students through hands-on science activities as a STEM Summer Camp Mentor.',
+      'Serves as Secretary of the Livingstone College White Coat Scholars pre-health organization.'
+    ],
+    featured: true
+  },
+  {
+    id: '28',
+    name: 'Emeglad Boakye-Yiadom',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/emeglad-boakye-yiadom-profile.jpeg',
+    photoPosition: '50% 15%',
+    bio: 'Emeglad Boakye-Yiadom serves as a Healthcare Administration Intern while being active across campus as a STEM Summer Camp mentor, Billie Bear mentor, and member of the Alpha Lambda Delta honors society.',
+    leadership: ['Alpha Lambda Delta Honor Society', 'Billie Bear Mentor', 'HBCU Energy Pathway Participant'],
+    internships: ['Healthcare Administration Intern'],
+    awards: ['Alpha Lambda Delta Honor Society'],
+    certifications: ['Healthcare Administration Foundations'],
+    achievements: [
+      'Active STEM Summer Camp mentor supporting incoming students and campus initiatives.',
+      'Participates in the HBCU Energy Pathway program expanding exposure to energy-sector opportunities.'
+    ],
+    featured: true
   }
 ];
 
