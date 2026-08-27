@@ -614,6 +614,45 @@ export const studentSpotlights: StudentSpotlight[] = [
     linkedin: 'https://www.linkedin.com/in/george-damtey-ba23a7304/'
   },
   {
+    id: '31',
+    name: 'Clifford Agyemang',
+    major: 'Computer Information Systems',
+    graduation: 'Computer Science',
+    gradYear: 2027,
+    photo: '/images/cis-student-success/clifford-agyemang-profile.jpg',
+    cardPhoto: '/images/cis-student-success/clifford-agyemang-headshot.jpg',
+    photoPosition: '50% 50%',
+    bio: 'Clifford Agyemang is a Computer Science student and Presidential Scholar who recently participated in Bloomberg\'s HBCU Academy of Excellence at Bloomberg\'s New York City headquarters.',
+    leadership: ['Presidential Scholar', 'Bloomberg HBCU Academy of Excellence'],
+    internships: ['Bloomberg (HBCU Academy of Excellence)'],
+    awards: ['Presidential Scholar'],
+    certifications: [],
+    achievements: [
+      'Participated in Bloomberg\'s HBCU Academy of Excellence at Bloomberg\'s New York City headquarters.',
+      'Named Presidential Scholar at Livingstone College.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/clifford01/',
+    experiences: [
+      {
+        title: 'Bloomberg HBCU Academy of Excellence',
+        organization: 'Bloomberg, New York City',
+        description: 'Participated in Bloomberg\'s HBCU Academy of Excellence at Bloomberg\'s New York City headquarters.',
+        image: '/images/cis-student-success/clifford-agyemang-gallery-1.jpg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      },
+      {
+        title: 'HBCU Academy Experience',
+        organization: 'Bloomberg',
+        description: 'Gained hands-on exposure to the financial technology industry through Bloomberg\'s HBCU Academy of Excellence.',
+        image: '/images/cis-student-success/clifford-agyemang-gallery-2.jpg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      }
+    ]
+  },
+  {
     id: '29',
     name: 'Javon Howie',
     major: 'Computer Information Systems',
