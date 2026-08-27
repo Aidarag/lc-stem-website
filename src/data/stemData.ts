@@ -635,6 +635,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Served as a squad leader in the U.S. Army National Guard, assuming command responsibilities.'
     ],
     featured: true,
+    linkedin: 'https://www.linkedin.com/in/javonhowie/',
     experiences: [
       {
         title: 'Cloud Security & AI Projects',
