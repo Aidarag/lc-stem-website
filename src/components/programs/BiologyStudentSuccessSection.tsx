@@ -88,7 +88,7 @@ const students = [
     details: 'Healthcare Administration & Campus Leadership',
     description:
       'Emeglad Boakye-Yiadom serves as a Healthcare Administration Intern, gaining hands-on experience in healthcare operations. She is also active across campus as a STEM Summer Camp student mentor, a Billie Bear mentor supporting incoming students, and a member of the Alpha Lambda Delta honors society. She further participates in the HBCU Energy Pathway program, expanding her exposure to energy-sector opportunities alongside her healthcare-focused coursework.',
-    image: '/images/biology-student-success/emeglad-boakye-yiadom-profile.jpeg',
+    image: '/images/biology-student-success/emeglad-boakye-yiadom-profile.png',
     imageAlt: 'Portrait of Emeglad Boakye-Yiadom wearing glasses',
     imagePosition: '50% 15%',
     tags: ['Healthcare Administration', 'Student Mentorship', 'Honors Society', 'HBCU Energy Pathway'],
