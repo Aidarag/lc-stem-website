@@ -92,21 +92,13 @@ const students = [
     roles: [
       'STEM Program Assistant',
       'Academic/CIS Tutor',
-      'Team Lead — Mastercard Inclusive Growth Challenge',
-      'AI Product Lead — Shalom Recovery AI',
-      'UX/UI Design Team Lead — LC STEM Website Project',
-      'Founder / Product Builder — STRIVE Tennis Platform',
     ],
     organizations: [
       'Livingstone College STEM Program',
       'Livingstone College Student Success Center',
-      'Mastercard Inclusive Growth Challenge',
-      'Healthcare Innovation Sprint',
-      'LC STEM Website Project',
-      'STRIVE',
     ],
     description:
-      'Im Aida Garba is a Presidential Scholar and NCAA Division II Women\'s Tennis student-athlete at Livingstone College with an exceptional record in technology, leadership, and academics. She served as a STEM Program Assistant and Academic/CIS Tutor while leading multiple high-impact projects as Team Lead for the Mastercard Inclusive Growth Challenge (Finalist, 2026), AI Product Lead for Shalom Recovery AI (2nd Place, Healthcare Innovation Sprint), and UX/UI Design Team Lead for the LC STEM Website. She also founded and built STRIVE, a tennis platform. Her achievements include the Presidential Scholar Merit Award, Academic Excellence Award, ITA All-Academic Scholar-Athlete recognition, and the TyNiece Sutton Scholarship.',
+      'Im Aida Garba is a Presidential Scholar and NCAA Division II Women\'s Tennis student-athlete at Livingstone College with an exceptional record in technology, leadership, and academics. She served as a STEM Program Assistant and Academic/CIS Tutor. Her achievements include the Presidential Scholar Merit Award, Academic Excellence Award, ITA All-Academic Scholar-Athlete recognition, and the TyNiece Sutton Scholarship.',
     image: '/images/cis-student-success/im-aida-garba-profile.jpeg',
     imageAlt: 'Portrait of Im Aida Garba',
     imagePosition: '50% 20%',
