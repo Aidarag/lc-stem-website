@@ -40,10 +40,10 @@ const columns = [
     majorColor: 'text-pink-200',
     students: [
       { id: '3', name: 'Kamar Goudelock', major: 'Business & STEM', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
-      { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+      { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.png' },
       { id: '5', name: 'Robert Osei', major: 'Biology Major', img: '/images/biology-student-success/robert-osei-poe-center-internship.jpeg' },
       { id: '3', name: 'Kamar Goudelock', major: 'Business & STEM', img: '/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg' },
-      { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg' },
+      { id: '8', name: 'Jephter Ofori', major: 'CIS Fellow', img: '/images/cis-student-success/jephter-ofori-syngenta-profile.png' },
     ],
   },
   {

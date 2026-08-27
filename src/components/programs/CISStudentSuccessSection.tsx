@@ -69,7 +69,7 @@ const students = [
     organizations: ['Syngenta'],
     description:
       'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
-    image: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg',
+    image: '/images/cis-student-success/jephter-ofori-syngenta-profile.png',
     imageAlt: 'Portrait of Jephter Ofori wearing a blue Livingstone College Mentoring Matters hoodie',
     imagePosition: '50% 50%',
     tags: ['Product Safety', 'Data Management', 'Digital Tools', 'Industry Experience'],
@@ -150,6 +150,18 @@ const students = [
     imagePosition: '50% 30%',
     tags: ['Digital Operations', 'Process Automation', 'Data Management', 'Logistics Technology'],
     icon: Database,
+  },
+  {
+    name: 'Javon Howie',
+    roles: ['Squad Leader', 'Cloud Security Researcher', 'Software Engineer', 'AI Developer'],
+    organizations: ['U.S. Army National Guard', 'AWS', 'ICRABIF Conference'],
+    description:
+      'Javon Howie is a Computer Science student maintaining a 4.00 GPA with Dean\'s List and President\'s List honors. He presented his work at the 3rd Annual ICRABIF Conference and competed in the BE Smart Hackathon and HBCU Battle of the Brains Hackathon, advancing as a finalist. He has developed AI-powered platforms including an AI hairstyle visualization tool, WealthBridge, and CubixAI, and built hands-on AWS infrastructure projects involving IAM, VPC, EC2, S3, DynamoDB, and CloudWatch.',
+    image: '/images/cis-student-success/javon-howie-profile.jpeg',
+    imageAlt: 'Portrait of Javon Howie',
+    imagePosition: '50% 30%',
+    tags: ['Cloud Security', 'Artificial Intelligence', 'AWS', 'Software Engineering', 'Research', 'Leadership'],
+    icon: ShieldCheck,
   },
 ] as const;
 

@@ -317,7 +317,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     name: 'Jephter Ofori',
     major: 'Computer Information Systems',
     gradYear: 2026,
-    photo: '/images/cis-student-success/jephter-ofori-syngenta-profile.jpeg',
+    photo: '/images/cis-student-success/jephter-ofori-syngenta-profile.png',
     photoPosition: '50% 20%',
     bio: 'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
     leadership: ['CIS Student Developer Lead', 'Hackathon Mentor'],
@@ -614,6 +614,86 @@ export const studentSpotlights: StudentSpotlight[] = [
     linkedin: 'https://www.linkedin.com/in/george-damtey-ba23a7304/'
   },
   {
+    id: '29',
+    name: 'Javon Howie',
+    major: 'Computer Information Systems',
+    graduation: 'Computer Science',
+    gradYear: 2027,
+    photo: '/images/cis-student-success/javon-howie-profile.jpeg',
+    cardPhoto: '/images/cis-student-success/javon-howie-headshot.jpg',
+    photoPosition: '50% 20%',
+    bio: 'Javon Howie is pursuing a Bachelor of Science in Computer Science at Livingstone College while maintaining a 4.00 GPA with Dean\'s List and President\'s List honors. He has presented his work at the 3rd Annual ICRABIF Conference and advanced as a finalist in the BE Smart Hackathon and HBCU Battle of the Brains Hackathon. He combines academic excellence with cloud security, AI, software engineering, and leadership from his service in the U.S. Army National Guard.',
+    leadership: ['U.S. Army National Guard Squad Leader', 'Competitive Hackathon Finalist'],
+    internships: ['AWS (Cloud Infrastructure & Security Projects)'],
+    awards: ['Dean\'s List', 'President\'s List', 'HBCU Battle of the Brains Finalist'],
+    certifications: ['AWS Cloud Security Foundations', 'IAM, VPC, EC2, S3, DynamoDB, CloudWatch'],
+    achievements: [
+      'Presented research at the 3rd Annual ICRABIF Conference.',
+      'Advanced as a finalist in the BE Smart Hackathon and HBCU Battle of the Brains Hackathon.',
+      'Developed AI-powered platforms including an AI hairstyle visualization tool, WealthBridge, and CubixAI.',
+      'Built hands-on AWS infrastructure and cloud security projects involving IAM, VPC, EC2, S3, DynamoDB, and CloudWatch.',
+      'Served as a squad leader in the U.S. Army National Guard, assuming command responsibilities.'
+    ],
+    featured: true,
+    experiences: [
+      {
+        title: 'Cloud Security & AI Projects',
+        organization: 'AWS',
+        description: 'Built hands-on AWS infrastructure and cloud security projects involving IAM, VPC, EC2, S3, DynamoDB, and CloudWatch.',
+        image: '/images/cis-student-success/javon-howie-card.jpeg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      },
+      {
+        title: 'Research & Competitive Technology',
+        organization: 'ICRABIF Conference',
+        description: 'Presented research at the 3rd Annual ICRABIF Conference and advanced as a finalist in the BE Smart Hackathon and HBCU Battle of the Brains Hackathon.',
+        image: '/images/cis-student-success/javon-howie-gallery.jpeg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      },
+      {
+        title: 'Leadership & Service',
+        organization: 'U.S. Army National Guard',
+        description: 'Served as a squad leader in the U.S. Army National Guard, assuming command responsibilities.',
+        image: '/images/cis-student-success/javon-howie-profile.jpeg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      }
+    ]
+  },
+  {
+    id: '30',
+    name: 'Madalyn Jones',
+    major: 'Business',
+    gradYear: 2027,
+    photo: '/images/business-student-success/madalyn-jones-profile.jpg',
+    cardPhoto: '/images/business-student-success/madalyn-jones-headshot.jpg',
+    photoPosition: '50% 30%',
+    bio: 'Madalyn Jones is a junior Presidential Scholar from Columbia, South Carolina. She interned with Charlotte Motor Speedway as an Events Intern, gained global perspective on a service trip to Belize with YBLA, and represented Livingstone College at DevCon during spring 2026.',
+    leadership: ['YBLA Service Trip Participant (Belize)', 'Presidential Scholar'],
+    internships: ['Charlotte Motor Speedway (Events Intern)'],
+    awards: ['Presidential Scholar'],
+    certifications: [],
+    achievements: [
+      'Interned as an Events Intern with Charlotte Motor Speedway.',
+      'Participated in a service trip to Belize with YBLA.',
+      'Represented Livingstone College at DevCon during spring 2026.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/madalyn-jones-397554281/',
+    experiences: [
+      {
+        title: 'YBLA Service Trip to Belize',
+        organization: 'YBLA',
+        description: 'Went to Belize on a service trip with YBLA alongside Esinam Dedoo.',
+        image: '/images/business-student-success/madalyn-jones-gallery-1.jpg',
+        imageQuality: 100,
+        imageUnoptimized: true
+      }
+    ]
+  },
+  {
     id: '25',
     name: 'Esinam Dedoo',
     major: 'Business',
@@ -668,7 +748,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Contributed to an environmental science research project at Davidson College examining sustainable ecosystems.',
       'Developed strong analytical and field research skills through data collection and laboratory analysis.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/nancy-oppong-9850812b4/'
   },
   {
     id: '27',
@@ -704,7 +785,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Active STEM Summer Camp mentor supporting incoming students and campus initiatives.',
       'Participates in the HBCU Energy Pathway program expanding exposure to energy-sector opportunities.'
     ],
-    featured: true
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/emeglad-boakye-yiadom-54496838a/'
   }
 ];
 

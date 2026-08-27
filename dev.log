@@ -1,0 +1,24 @@
+
+> temp-next-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.16.175.178:3000
+✓ Ready in 1017ms
+⚠ Warning: Next.js ignored package-lock.json in C:\Users\admin because it is outside the current Git repository (C:\Users\admin\AppData\Local\Temp\opencode\repo_temp).
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+✓ Running next.config.ts took 82ms
+
+ GET /spotlight 200 in 1862ms (next.js: 843ms, application-code: 1019ms)
+ GET /spotlight 200 in 470ms (next.js: 19ms, application-code: 451ms)
+ GET /programs/computer-information-systems 200 in 1051ms (next.js: 79ms, generate-params: 785ms, application-code: 187ms)
+✓ Compiled in 282ms
+ GET /spotlight 200 in 153ms (next.js: 44ms, application-code: 108ms)
+ GET /spotlight 200 in 72ms (next.js: 13ms, application-code: 59ms)
+ GET /programs/computer-information-systems 200 in 332ms (next.js: 23ms, generate-params: 11ms, application-code: 298ms)
+✓ Compiled in 852ms
+ GET /spotlight 200 in 443ms (next.js: 34ms, application-code: 409ms)
+ GET /spotlight 200 in 301ms (next.js: 214ms, application-code: 87ms)
+ GET /programs/computer-information-systems 200 in 368ms (next.js: 49ms, generate-params: 14ms, application-code: 306ms)

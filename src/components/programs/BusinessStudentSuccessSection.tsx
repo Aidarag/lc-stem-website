@@ -89,6 +89,24 @@ const businessStudents = [
     ],
     icon: Landmark,
   },
+  {
+    name: 'Madalyn Jones',
+    roles: ['Events Intern', 'YBLA Service Trip Participant'],
+    organizations: ['Charlotte Motor Speedway', 'YBLA Belize'],
+    image: '/images/business-student-success/madalyn-jones-profile.jpg',
+    imageAlt: 'Portrait of Madalyn Jones',
+    imagePosition: '50% 30%',
+    description:
+      'Madalyn Jones is a junior Presidential Scholar from Columbia, South Carolina. She interned with Charlotte Motor Speedway as an Events Intern, gained global perspective on a service trip to Belize with YBLA, and represented Livingstone College at DevCon during spring 2026.',
+    highlights: [
+      'Event Management',
+      'Presidential Scholar',
+      'YBLA Global Service',
+      'DevCon 2026 Representative',
+      'Leadership',
+    ],
+    icon: Landmark,
+  },
 ] as const;
 
 export default function BusinessStudentSuccessSection() {
