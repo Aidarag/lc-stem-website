@@ -5,18 +5,12 @@
 ▲ Next.js 16.3.0 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://172.16.175.178:3000
-✓ Ready in 1211ms
+✓ Ready in 1360ms
 ⚠ Warning: Next.js ignored package-lock.json in C:\Users\admin because it is outside the current Git repository (C:\Users\admin\AppData\Local\Temp\opencode\repo_temp).
  To use this directory, set `turbopack.root` in your Next.js config.
 
-✓ Running next.config.ts took 84ms
+✓ Running next.config.ts took 109ms
 
-[browser] Image with src "/images/cis-student-success/clifford-agyemang-gallery-1.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Image with src "/images/cis-student-success/mscc-hackathon-clear.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/images/cis-student-success/clifford-agyemang-gallery-2.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
- GET /spotlight?id=31 200 in 1641ms (next.js: 871ms, application-code: 770ms)
-[browser] Image with src "/images/cis-student-success/clifford-agyemang-gallery-1.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/images/cis-student-success/clifford-agyemang-gallery-2.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET /projects 200 in 1497ms (next.js: 804ms, application-code: 693ms)

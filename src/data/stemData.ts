@@ -887,6 +887,19 @@ export const studentProjects: StudentProject[] = [
 
 export const competitions: Competition[] = [
   {
+    id: '8',
+    title: '2nd Place — indigoLife Business Symposium & Pitch Competition',
+    subtitle: 'Virginia State University',
+    description: 'Ellis Dogbe-Gakpetor, Joel Thompson, Sabrena Hogan, and Nariah earned 2nd place at the indigoLife Business Symposium and Business Pitch Competition hosted at Virginia State University. Their team developed FreshVault, an innovative food-preservation concept designed to extend the freshness of fruits and vegetables, reduce post-harvest food waste, strengthen farmers\' profitability, and improve access to nutritious food.',
+    date: '2026',
+    award: '2nd Place',
+    students: ['Ellis Dogbe-Gakpetor', 'Joel Thompson', 'Sabrena Hogan', 'Nariah'],
+    image: '/images/achievements/indigolife-2nd-place-1.jpg',
+    topics: ['Entrepreneurship', 'Business Development', 'Food Preservation', 'Sustainability', 'Pitching'],
+    outcomes: 'Earned 2nd place at the indigoLife Business Symposium and Pitch Competition at Virginia State University, transforming FreshVault from an idea into a structured business concept covering branding, financial planning, market strategy, and revenue projections.',
+    category: 'Hackathon'
+  },
+  {
     id: '4',
     title: 'First Place — MS-CC Cybersecurity & Environmental Data Hackathon',
     subtitle: 'West Virginia State University',
