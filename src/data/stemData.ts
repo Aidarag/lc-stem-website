@@ -693,7 +693,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     name: 'Emeglad Boakye-Yiadom',
     major: 'Biology',
     gradYear: 2027,
-    photo: '/images/biology-student-success/emeglad-boakye-yiadom-profile.jpeg',
+    photo: '/images/biology-student-success/emeglad-boakye-yiadom-profile.png',
     photoPosition: '50% 15%',
     bio: 'Emeglad Boakye-Yiadom serves as a Healthcare Administration Intern while being active across campus as a STEM Summer Camp mentor, Billie Bear mentor, and member of the Alpha Lambda Delta honors society.',
     leadership: ['Alpha Lambda Delta Honor Society', 'Billie Bear Mentor', 'HBCU Energy Pathway Participant'],
