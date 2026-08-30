@@ -4,6 +4,7 @@ export interface StudentSpotlight {
   major: 'Computer Information Systems' | 'Computer and Information Systems' | 'Mathematics' | 'Biology' | 'Business';
   institution?: string;
   gradYear?: number;
+  graduation?: string;
   photo: string;
   cardPhoto?: string;
   photoPosition?: string;
