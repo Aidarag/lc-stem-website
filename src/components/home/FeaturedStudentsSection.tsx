@@ -10,8 +10,8 @@ interface FeaturedStudentsSectionProps {
 }
 
 export default function FeaturedStudentsSection({ featuredStudents }: FeaturedStudentsSectionProps) {
-  // Select 4 featured students across all 4 departments: Ellis (Business), Nancy (Biology), Sally (Math), Jerome (CIS)
-  const selectedIds = ['7', '26', '4', '1'];
+  // Select 4 featured students across all 4 departments: Jerome (CIS), Francis (Biology), Sally (Math), Ellis (Business)
+  const selectedIds = ['1', '2', '4', '7'];
   const displayStudents = selectedIds
     .map((id) => featuredStudents.find((student) => student.id === id))
     .filter((student): student is StudentSpotlight => Boolean(student));

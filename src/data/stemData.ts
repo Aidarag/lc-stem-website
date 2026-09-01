@@ -50,6 +50,9 @@ export interface StudentProject {
   imageQuality?: number;
   imageUnoptimized?: boolean;
   featured: boolean;
+  date?: string;
+  award?: string;
+  category?: 'Projects' | 'Honors' | 'Hackathon';
 }
 
 export interface Competition {
@@ -152,6 +155,97 @@ export const academicPrograms: AcademicProgram[] = [
 
 export const studentSpotlights: StudentSpotlight[] = [
   {
+    id: '1',
+    name: 'Jerome Adonis',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/jerome-adonis-headshot.jpg',
+    cardPhoto: '/images/cis-student-success/jerome-adonis-headshot.jpg',
+    photoPosition: '50% 15%',
+    bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
+    leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
+    internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
+    awards: ['AWS Technical Excellence Award', 'Bank of America Scholar'],
+    certifications: ['AWS Cloud Practitioner', 'AWS Solutions Architect - Associate'],
+    achievements: [
+      'Completed 3 high-profile technical internships with industry leaders.',
+      'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/jeromeadonis/'
+  },
+  {
+    id: '2',
+    name: 'Francis Boadu',
+    major: 'Biology',
+    institution: 'Livingstone College',
+    gradYear: 2028,
+    photo: '/images/biology-student-success/francis-boadu-profile.jpg',
+    cardPhoto: '/images/biology-student-success/francis-boadu-profile.jpg',
+    photoPosition: '50% 45%',
+    bio: 'Francis Boadu is an undergraduate student researcher at Livingstone College with a strong interest in oncology, genomics, molecular biology, and biopharmaceutical research. His research experience includes studying CIC-DUX4 sarcoma, PFAS-induced protein synthesis, and the impact of genetic mutations on proteins.',
+    leadership: [
+      'Undergraduate Researcher',
+      'Emerging Researchers National Conference Poster Presenter'
+    ],
+    internships: [
+      'Duke University School of Medicine (Undergraduate Student Researcher)',
+      'Davidson College (Undergraduate Summer Research Assistant)'
+    ],
+    awards: [
+      'Selected to present research at the Emerging Researchers National Conference in STEM'
+    ],
+    certifications: [
+      'Advanced Biopharmaceutical Manufacturing Certification Program'
+    ],
+    achievements: [
+      'Conducted oncology research at Duke University School of Medicine focused on CIC-DUX4 sarcoma and its fusion oncoprotein.',
+      'Conducted research at Davidson College investigating the impact of point mutations on proteins.',
+      'Presented research on PFAS-induced protein synthesis and PFAS contamination in bottled water.',
+      'Developed laboratory skills in mammalian cell culture, cell-based assays, DNA extraction, PCR, biotechnology, and LC-MS.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/francis-boadu/',
+    experiences: [
+      {
+        title: 'Assessing PFAS-Induced Protein Synthesis Disruption Using GFP E. coli as a Biosensor',
+        organization: 'Livingstone College · November 2025',
+        image: '/images/biology-student-success/francis-boadu-profile.jpg',
+        imageAlt: 'Assessing PFAS-Induced Protein Synthesis Disruption research',
+        caption: 'Francis Boadu and research team investigating cellular toxicity and protein synthesis disruption in bacterial models.',
+        description: 'Francis Boadu contributed to a research project investigating the cellular toxicity of PFAS and its potential effects on protein synthesis. The team used GFP-expressing E. coli as a biosensor to observe biological responses and analyze possible cellular disruption.',
+        emphasis: true
+      },
+      {
+        title: 'Investigating PFAS in Municipal and Bottled Water',
+        organization: 'Livingstone College · 2024–2026',
+        image: '/images/biology-student-success/francis-boadu-profile.jpg',
+        imageAlt: 'Investigating PFAS in Municipal and Bottled Water research poster',
+        caption: 'Scientific research poster presentation examining persistent PFAS chemical contamination.',
+        description: 'Francis conducted research examining the presence of PFAS—persistent synthetic chemicals—in municipal and commercially bottled water. The project involved sample preparation, laboratory analysis, data interpretation, and the presentation of findings through a scientific research poster.'
+      }
+    ]
+  },
+  {
+    id: '4',
+    name: 'Sally Adenutsi',
+    major: 'Mathematics',
+    gradYear: 2029,
+    photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
+    photoPosition: '50% 20%',
+    bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
+    leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
+    internships: ['STEM Camp (Lead Mathematics Mentor)'],
+    awards: ['Global Youth Leadership Scholar', 'Cato University Travel Fellowship'],
+    certifications: ['Advanced Computational Mathematics foundations', 'Mathematics Pedagogy Certificate'],
+    achievements: [
+      'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
+      'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/sally-adenutsi-045b62363/'
+  },
+  {
     id: '7',
     name: 'Ellis Dogbe-Gakpetor',
     major: 'Business',
@@ -185,47 +279,8 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Contributed to an environmental science research project at Davidson College examining sustainable ecosystems.',
       'Developed strong analytical and field research skills through data collection and laboratory analysis.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/nancy-oppong-9850812b4/'
-  },
-  {
-    id: '4',
-    name: 'Sally Adenutsi',
-    major: 'Mathematics',
-    gradYear: 2029,
-    photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
-    photoPosition: '50% 20%',
-    bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
-    leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
-    internships: ['STEM Camp (Lead Mathematics Mentor)'],
-    awards: ['Global Youth Leadership Scholar', 'Cato University Travel Fellowship'],
-    certifications: ['Advanced Computational Mathematics foundations', 'Mathematics Pedagogy Certificate'],
-    achievements: [
-      'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
-      'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/sally-adenutsi-045b62363/'
-  },
-  {
-    id: '1',
-    name: 'Jerome Adonis',
-    major: 'Computer Information Systems',
-    gradYear: 2026,
-    photo: '/images/cis-student-success/jerome-adonis-headshot.jpg',
-    cardPhoto: '/images/cis-student-success/jerome-adonis-headshot.jpg',
-    photoPosition: '50% 15%',
-    bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
-    leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
-    internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
-    awards: ['AWS Technical Excellence Award', 'Bank of America Scholar'],
-    certifications: ['AWS Cloud Practitioner', 'AWS Solutions Architect - Associate'],
-    achievements: [
-      'Completed 3 high-profile technical internships with industry leaders.',
-      'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/jeromeadonis/'
   },
   {
     id: '24',
@@ -882,6 +937,36 @@ export const studentProjects: StudentProject[] = [
     demoText: 'View Project',
     image: '/images/cis-student-success/shalom-recovery-ai.png',
     featured: false
+  },
+  {
+    id: '7',
+    title: 'Assessing PFAS-Induced Protein Synthesis Disruption Using GFP E. coli as a Biosensor',
+    subtitle: 'Livingstone College',
+    date: 'November 2025',
+    award: 'Undergraduate Research Project',
+    description: 'Francis Boadu contributed to a research project investigating the cellular toxicity of PFAS and its potential effects on protein synthesis. The team used GFP-expressing E. coli as a biosensor to observe biological responses and analyze possible cellular disruption.',
+    technologies: ['PFAS Toxicity', 'Protein Synthesis', 'Bacterial Cell Culture', 'GFP Biosensors', 'Cellular Assay'],
+    team: ['Francis Boadu (Biology)', 'Research Team'],
+    outcomes: 'Investigated cellular toxicity and biological disruption of PFAS on protein synthesis using GFP-expressing bacterial biosensors to model biological stress responses.',
+    image: '/images/biology-student-success/francis-boadu-profile.jpg',
+    imagePosition: '50% 45%',
+    featured: false,
+    category: 'Projects'
+  },
+  {
+    id: '8',
+    title: 'Investigating PFAS in Municipal and Bottled Water',
+    subtitle: 'Livingstone College',
+    date: '2024–2026',
+    award: 'Research Project & Poster Presentation',
+    description: 'Francis conducted research examining the presence of PFAS—persistent synthetic chemicals—in municipal and commercially bottled water. The project involved sample preparation, laboratory analysis, data interpretation, and the presentation of findings through a scientific research poster.',
+    technologies: ['Water Quality', 'PFAS Contamination', 'Environmental Health', 'Sample Preparation', 'Spectrometry & Chromatography', 'Scientific Poster'],
+    team: ['Francis Boadu (Biology)'],
+    outcomes: 'Conducted rigorous sampling and laboratory analysis examining synthetic PFAS concentrations in drinking water, presenting conclusive findings via research poster sessions at regional STEM symposiums.',
+    image: '/images/biology-student-success/francis-boadu-profile.jpg',
+    imagePosition: '50% 45%',
+    featured: false,
+    category: 'Projects'
   }
 ];
 
@@ -961,7 +1046,7 @@ export const newsItems: NewsItem[] = [
     summary: 'Francis Boadu has been selected for a prestigious research fellowship at Duke University School of Medicine to support his cancer genetics investigations.',
     content: 'Senior Biology major Francis Boadu has been selected to join the Duke University School of Medicine research collaboration. This highly competitive program provides student researchers hands-on access to advanced clinical oncology research operations.\n\nFrancis, who has specialized in molecular biology and mammalian cell culture, plans to explore gene-editing pathways for cancer cell regulation. "Our department research labs gave me the keys to explore complex biological hypotheses," said Francis.',
     category: 'Milestone',
-    image: '/images/biology-student-success/francis-boadu-duke-research.png'
+    image: '/images/biology-student-success/francis-boadu-profile.jpg'
   },
   {
     id: '3',

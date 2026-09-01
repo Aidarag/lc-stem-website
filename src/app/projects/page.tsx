@@ -32,8 +32,8 @@ export default function AchievementsPage() {
       githubText: p.githubText,
       team: p.team,
       isProject: true,
-      award: undefined,
-      date: undefined,
+      award: p.award,
+      date: p.date,
     })),
     ...competitions.map((c) => {
       const isHackathon = c.title.toLowerCase().includes('hackathon') || c.title.toLowerCase().includes('bowl');

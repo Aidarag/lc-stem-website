@@ -100,7 +100,7 @@ export default function Home() {
                 {/* Avatars Stack */}
                 <div className="flex -space-x-3 overflow-hidden">
                   <Image src="/images/cis-student-success/im-aida-garba-profile.jpeg" alt="Aïda Garba (CIS)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
-                  <Image src="/images/biology-student-success/francis-boadu-duke-research.png" alt="Francis Boadu (Biology)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
+                  <Image src="/images/biology-student-success/francis-boadu-profile.jpg" alt="Francis Boadu (Biology)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
                   <Image src="/images/business-student-success/kamar-goudelock-wells-fargo-internship.jpeg" alt="Kamar Goudelock (Business)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover" />
                   <Image src="/images/math-student-success/sally-adenutsi-profile.jpeg" alt="Sally Adenutsi (Mathematics)" width={48} height={48} className="inline-block h-12 w-12 rounded-full ring-2 ring-purple-900 object-cover animate-pulse-slow" />
                 </div>

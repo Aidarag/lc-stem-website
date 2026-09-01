@@ -5,7 +5,6 @@ import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import ResponseConsole, { ConsoleTicket } from '@/components/ui/ResponseConsole';
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -21,22 +20,9 @@ function ContactFormContent() {
   }));
   
   const [submitted, setSubmitted] = useState(false);
-  const [userTickets, setUserTickets] = useState<Omit<ConsoleTicket, 'id' | 'status' | 'timestamp'>[]>([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Append to userTickets to dynamically feed the Console dashboard
-    setUserTickets((prev) => [
-      ...prev,
-      {
-        name: formData.name,
-        email: formData.email,
-        major: formData.major as ConsoleTicket['major'],
-        message: formData.message,
-      }
-    ]);
-
     setSubmitted(true);
     setFormData({
       name: '',
@@ -74,7 +60,7 @@ function ContactFormContent() {
               className="border border-purple-200 bg-purple-50 p-5 rounded-2xl font-sans text-sm text-purple-900 font-medium flex items-center gap-3 shadow-sm"
             >
               <CheckCircle2 className="h-5 w-5 text-purple-600 shrink-0 animate-bounce" />
-              <span>Thank you! Your message has been sent successfully. See your ticket register on the Response Desk Console!</span>
+              <span>Thank you! Your message has been sent successfully. Our team will get back to you shortly.</span>
             </motion.div>
           )}
 
@@ -142,7 +128,7 @@ function ContactFormContent() {
             <div className="pt-3">
               <button
                 type="submit"
-                className="btn-gradient-lime w-full rounded-full font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0B051D] py-4 shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="btn-gradient-lime w-full rounded-full font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0B051D] py-4 shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2 hover:opacity-95"
               >
                 Send Message <Send className="h-4 w-4" />
               </button>
@@ -150,45 +136,62 @@ function ContactFormContent() {
           </form>
         </ScrollReveal>
 
-        {/* Right Column: Simulated Console Hub & compacted location lists */}
-        <div className="lg:col-span-5 space-y-8">
-          {/* Simulated response console */}
-          <ScrollReveal>
-            <ResponseConsole userTickets={userTickets} />
-          </ScrollReveal>
+        {/* Right Column: Office Details & Campus Tours */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* Innovation Hub & Contact Card */}
+          <ScrollReveal className="bg-white border border-gray-200/90 rounded-3xl p-8 shadow-xl space-y-6 hover:border-purple-300 transition-all duration-300">
+            <div className="space-y-1 border-b border-gray-100 pb-4">
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
+                Department Office
+              </span>
+              <h3 className="font-serif text-2xl font-bold text-gray-900 flex items-center gap-2 pt-2">
+                <MapPin className="h-5 w-5 text-purple-600" /> Innovation Hub
+              </h3>
+            </div>
 
-          {/* Compacted Office details card */}
-          <ScrollReveal className="bg-white border border-gray-200/90 rounded-3xl p-6 shadow-xl space-y-4 hover:border-purple-300 transition-all duration-300">
-            <h3 className="font-serif text-lg font-bold text-gray-900 flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-purple-600" /> Innovation Hub
-            </h3>
-
-            <div className="space-y-4 font-sans text-xs sm:text-sm text-gray-700">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-4.5 w-4.5 text-purple-600 shrink-0 mt-0.5" />
+            <div className="space-y-5 font-sans text-sm sm:text-base text-gray-700">
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-purple-50 text-purple-600 shrink-0 mt-0.5">
+                  <MapPin className="h-5 w-5" />
+                </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Headquarters</h4>
                   <p className="text-gray-600 leading-normal font-sans">
-                    Duncan Science Building, Room 102
+                    Duncan Science Building, Room 102<br />
+                    701 W Monroe St, Salisbury, NC 28144
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 border-t border-gray-100 pt-3">
-                <Clock className="h-4.5 w-4.5 text-purple-600 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3.5 border-t border-gray-100 pt-4">
+                <div className="p-2.5 rounded-xl bg-purple-50 text-purple-600 shrink-0 mt-0.5">
+                  <Mail className="h-5 w-5" />
+                </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Office Hours</h4>
-                  <p className="text-gray-600 font-sans">
-                    Monday – Friday: 9:00 AM – 5:00 PM
-                  </p>
+                  <h4 className="font-bold text-gray-900">Direct Email</h4>
+                  <p className="text-gray-600 font-sans">stem@livingstone.edu</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 border-t border-gray-100 pt-3">
-                <Phone className="h-4.5 w-4.5 text-purple-600 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3.5 border-t border-gray-100 pt-4">
+                <div className="p-2.5 rounded-xl bg-purple-50 text-purple-600 shrink-0 mt-0.5">
+                  <Phone className="h-5 w-5" />
+                </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Direct Phone</h4>
                   <p className="text-gray-600 font-sans">(704) 216-6000 ext. 6102</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5 border-t border-gray-100 pt-4">
+                <div className="p-2.5 rounded-xl bg-purple-50 text-purple-600 shrink-0 mt-0.5">
+                  <Clock className="h-5 w-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Office Hours</h4>
+                  <p className="text-gray-600 font-sans">
+                    Monday – Friday: 9:00 AM – 5:00 PM EST
+                  </p>
                 </div>
               </div>
             </div>

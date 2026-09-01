@@ -21,11 +21,11 @@ const columns = [
     students: [
       { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-headshot.jpg' },
-      { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+      { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-profile.jpg' },
       { id: '4', name: 'Sally Adenutsi', major: 'Mathematics', img: '/images/math-student-success/sally-adenutsi-profile.jpeg' },
       { id: '24', name: 'Prosper Nasangma', major: 'Computer and Information Systems', img: '/images/cis-student-success/prosper-profile.png' },
       { id: '1', name: 'Jerome Adonis', major: 'CIS Major', img: '/images/cis-student-success/jerome-adonis-headshot.jpg' },
-      { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-duke-research.png' },
+      { id: '2', name: 'Francis Boadu', major: 'Biology Major', img: '/images/biology-student-success/francis-boadu-profile.jpg' },
     ],
   },
   {

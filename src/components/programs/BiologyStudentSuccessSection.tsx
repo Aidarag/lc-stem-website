@@ -4,6 +4,18 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const students = [
   {
+    name: 'Francis Boadu',
+    role: 'Undergraduate Student Researcher',
+    organization: 'Duke University School of Medicine · Davidson College',
+    details: 'Class of 2028 · Oncology & Biopharmaceutical Research',
+    description:
+      'Francis Boadu is an undergraduate student researcher with a focus on oncology, genomics, molecular biology, and biopharmaceutical research. He conducted research at Duke University School of Medicine investigating CIC-DUX4 sarcoma and at Davidson College investigating the impact of point mutations on proteins. He was selected to present research on PFAS-induced protein synthesis at the Emerging Researchers National (ERN) Conference in STEM.',
+    image: '/images/biology-student-success/francis-boadu-profile.jpg',
+    imageAlt: 'Portrait of Francis Boadu',
+    imagePosition: '50% 45%',
+    tags: ['Oncology Research', 'Duke Med Researcher', 'Davidson College', 'ERN Conference', 'Molecular Biology', 'Biopharma Certification'],
+  },
+  {
     name: 'Robert Osei',
     role: 'Intern',
     organization: 'Poe Center for Health Education',
