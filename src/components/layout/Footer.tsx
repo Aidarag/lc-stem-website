@@ -61,34 +61,6 @@ export default function Footer() {
             <p className="font-sans text-sm sm:text-base leading-relaxed text-slate-300 pr-2">
               Showcasing student success and engineering the innovators of tomorrow within the LC STEM student community in Salisbury, NC.
             </p>
-            
-            {/* Social Icons */}
-            <div className="flex gap-3 pt-1">
-              {[
-                {
-                  label: 'Instagram',
-                  icon: (
-                    <svg className="h-5 w-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                  ),
-                  href: 'https://www.instagram.com/livingstonecollege/'
-                },
-              ].map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  aria-label={item.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-300 hover:text-white hover:border-purple-400 hover:bg-purple-600/30 transition-all duration-200 shadow-md"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.icon}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Col 2: Quick Links (3 cols) */}
