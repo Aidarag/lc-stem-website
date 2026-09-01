@@ -4,7 +4,6 @@ export interface StudentSpotlight {
   major: 'Computer Information Systems' | 'Computer and Information Systems' | 'Mathematics' | 'Biology' | 'Business';
   institution?: string;
   gradYear?: number;
-  graduation?: string;
   photo: string;
   cardPhoto?: string;
   photoPosition?: string;
@@ -618,7 +617,6 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '31',
     name: 'Clifford Agyemang',
     major: 'Computer Information Systems',
-    graduation: 'Computer Science',
     gradYear: 2027,
     photo: '/images/cis-student-success/clifford-agyemang-profile.jpg',
     cardPhoto: '/images/cis-student-success/clifford-agyemang-headshot.jpg',
@@ -657,7 +655,6 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '29',
     name: 'Javon Howie',
     major: 'Computer Information Systems',
-    graduation: 'Computer Science',
     gradYear: 2027,
     photo: '/images/cis-student-success/javon-howie-profile.jpeg',
     cardPhoto: '/images/cis-student-success/javon-howie-headshot.jpg',
