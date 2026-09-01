@@ -80,7 +80,7 @@ function SpotlightContent() {
       student.bio.toLowerCase().includes(searchQuery.toLowerCase()) ||
       student.internships.some((i) => i.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesMajor && matchesSearch;
-  });
+  }).sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 
   return (
     <div className="w-full">

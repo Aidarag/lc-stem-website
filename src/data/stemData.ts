@@ -152,10 +152,87 @@ export const academicPrograms: AcademicProgram[] = [
 
 export const studentSpotlights: StudentSpotlight[] = [
   {
+    id: '7',
+    name: 'Ellis Dogbe-Gakpetor',
+    major: 'Business',
+    gradYear: 2027,
+    photo: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
+    photoPosition: '50% 20%',
+    bio: 'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
+    leadership: ['Business Administration SGA Rep', 'STEM Peer Tutor'],
+    internships: ['AccessPoint Health Systems (Finance Intern)'],
+    awards: ['Healthcare Finance Scholarship Recipient'],
+    certifications: ['Advanced Excel for Financial Analysts', 'Healthcare Operations Foundations'],
+    achievements: [
+      'Analyzed healthcare cost spreadsheets to identify savings in operating budgets.',
+      'Built financial tracking models for health systems operations.'
+    ],
+    featured: true
+  },
+  {
+    id: '26',
+    name: 'Nancy Oppong',
+    major: 'Biology',
+    gradYear: 2027,
+    photo: '/images/biology-student-success/nancy-oppong-profile.png',
+    photoPosition: '50% 30%',
+    bio: 'Nancy Oppong was selected as a research fellow at Davidson College, where she contributed to an environmental science research project examining sustainable ecosystems and biodiversity conservation.',
+    leadership: ['Biology Club Member', 'Environmental Science Advocate'],
+    internships: ['Davidson College (Environmental Science Research Fellow)'],
+    awards: ['Davidson College Research Fellowship'],
+    certifications: ['Environmental Science Research Methods'],
+    achievements: [
+      'Contributed to an environmental science research project at Davidson College examining sustainable ecosystems.',
+      'Developed strong analytical and field research skills through data collection and laboratory analysis.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/nancy-oppong-9850812b4/'
+  },
+  {
+    id: '4',
+    name: 'Sally Adenutsi',
+    major: 'Mathematics',
+    gradYear: 2029,
+    photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
+    photoPosition: '50% 20%',
+    bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
+    leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
+    internships: ['STEM Camp (Lead Mathematics Mentor)'],
+    awards: ['Global Youth Leadership Scholar', 'Cato University Travel Fellowship'],
+    certifications: ['Advanced Computational Mathematics foundations', 'Mathematics Pedagogy Certificate'],
+    achievements: [
+      'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
+      'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/sally-adenutsi-045b62363/'
+  },
+  {
+    id: '1',
+    name: 'Jerome Adonis',
+    major: 'Computer Information Systems',
+    gradYear: 2026,
+    photo: '/images/cis-student-success/jerome-adonis-headshot.jpg',
+    cardPhoto: '/images/cis-student-success/jerome-adonis-headshot.jpg',
+    photoPosition: '50% 15%',
+    bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
+    leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
+    internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
+    awards: ['AWS Technical Excellence Award', 'Bank of America Scholar'],
+    certifications: ['AWS Cloud Practitioner', 'AWS Solutions Architect - Associate'],
+    achievements: [
+      'Completed 3 high-profile technical internships with industry leaders.',
+      'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
+    ],
+    featured: true,
+    linkedin: 'https://www.linkedin.com/in/jeromeadonis/'
+  },
+  {
     id: '24',
     name: 'Prosper Nasangma',
     major: 'Computer and Information Systems',
     institution: 'Livingstone College',
+    gradYear: 2029,
     photo: '/images/cis-student-success/prosper-profile.png',
     cardPhoto: '/images/cis-student-success/prosper-profile-card.png',
     photoPosition: '50% 18%',
@@ -197,27 +274,8 @@ export const studentSpotlights: StudentSpotlight[] = [
         sourceLabel: 'View PFX experience on LinkedIn'
       }
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/prosper-nasangma-b6a878346'
-  },
-  {
-    id: '1',
-    name: 'Jerome Adonis',
-    major: 'Computer Information Systems',
-    gradYear: 2026,
-    photo: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
-    photoPosition: '50% 0%',
-    bio: 'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
-    leadership: ['FSO Technology Consulting Intern at EY', 'AWS Student Advocate', 'SGA Academic Representative'],
-    internships: ['AWS (Solutions Architect Intern)', 'Bank of America (Software Engineer Intern)', 'Ernst & Young LLP (FSO Tech Consulting Intern)'],
-    awards: ['AWS Technical Excellence Award', 'Bank of America Scholar'],
-    certifications: ['AWS Cloud Practitioner', 'AWS Solutions Architect - Associate'],
-    achievements: [
-      'Completed 3 high-profile technical internships with industry leaders.',
-      'Designed and presented cloud scaling architecture diagrams for enterprise AWS workloads.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/jeromeadonis/'
   },
   {
     id: '3',
@@ -235,32 +293,13 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Built custom AI prompts and analytics pipelines to optimize operations controls at Wells Fargo.',
       'Led a consulting sprint that redesigned the community outreach workflow for a Salisbury non-profit.'
     ],
-    featured: true
-  },
-  {
-    id: '4',
-    name: 'Sally Adenutsi',
-    major: 'Mathematics',
-    gradYear: 2026,
-    photo: '/images/math-student-success/sally-adenutsi-profile.jpeg',
-    photoPosition: '50% 20%',
-    bio: 'Sally Adenutsi contributed as a STEM Camp Mentor, guiding students in developing their academic and technical skills. She broadened her global perspective as a virtual Delegate at the World Bank Youth Summit and expanded her academic horizons by attending Cato University.',
-    leadership: ['World Bank Youth Summit Delegate', 'STEM Camp Coordinator', 'Math Peer Mentor'],
-    internships: ['STEM Camp (Lead Mathematics Mentor)'],
-    awards: ['Global Youth Leadership Scholar', 'Cato University Travel Fellowship'],
-    certifications: ['Advanced Computational Mathematics foundations', 'Mathematics Pedagogy Certificate'],
-    achievements: [
-      'Served as a delegate representing Livingstone College at the World Bank Youth Summit.',
-      'Organized and mentored math and coding workshops for over 50 regional K-12 students.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/sally-adenutsi-045b62363/'
+    featured: false
   },
   {
     id: '5',
     name: 'Robert Osei',
     major: 'Biology',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/biology-student-success/robert-osei-poe-center-internship.jpeg',
     photoPosition: '50% 20%',
     bio: 'Robert Osei completed a two-month remote internship with the Poe Center for Health Education in North Carolina, gaining professional experience within a health-education organization.',
@@ -279,7 +318,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '6',
     name: 'Emmanuel Amponsah',
     major: 'Business',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/business-student-success/emmanuel-amponsah-business-profile.jpeg',
     photoPosition: '50% 20%',
     bio: 'Emmanuel Amponsah gained experience in asset management and development through an internship with ANCHOR. He also served as an Equity Research Analyst with Orion Equity Research Group, building professional experience across investment research and asset-focused business operations.',
@@ -295,28 +334,10 @@ export const studentSpotlights: StudentSpotlight[] = [
     linkedin: 'https://www.linkedin.com/in/manuel-amponsah/'
   },
   {
-    id: '7',
-    name: 'Ellis Dogbe-Gakpetor',
-    major: 'Business',
-    gradYear: 2027,
-    photo: '/images/business-student-success/ellis-dogbe-gakpetor-accesspoint-profile.jpeg',
-    photoPosition: '50% 20%',
-    bio: 'Ellis Dogbe-Gakpetor serves as a Finance Intern at AccessPoint Health Systems, supporting financial operations and analysis within a healthcare organization.',
-    leadership: ['Business Administration SGA Rep', 'STEM Peer Tutor'],
-    internships: ['AccessPoint Health Systems (Finance Intern)'],
-    awards: ['Healthcare Finance Scholarship Recipient'],
-    certifications: ['Advanced Excel for Financial Analysts', 'Healthcare Operations Foundations'],
-    achievements: [
-      'Analyzed healthcare cost spreadsheets to identify savings in operating budgets.',
-      'Built financial tracking models for health systems operations.'
-    ],
-    featured: false
-  },
-  {
     id: '8',
     name: 'Jephter Ofori',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/cis-student-success/jephter-ofori-syngenta-profile.png',
     photoPosition: '50% 20%',
     bio: 'Jephter Ofori gained industry experience at Syngenta as a Product Safety Digital and Data Intern, applying data and digital tools within a professional product safety environment.',
@@ -335,7 +356,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '9',
     name: 'Emmanuel Adrabo',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2027,
     photo: '/images/cis-student-success/emmanuel-adrabo-daimler-profile.jpeg',
     photoPosition: '50% 20%',
     bio: 'Emmanuel Adrabo served as a Network Administrator Intern at Daimler Trucks North America (Mercedes-Benz), where he handled network troubleshooting and monitoring, provided user support, and assisted with switch and router support.',
@@ -354,7 +375,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '10',
     name: 'Kuwa-Salama Mbetwa',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2029,
     photo: '/images/cis-student-success/kuwa-salama-mbetwa-mathnasium-profile.jpeg',
     photoPosition: '50% 30%',
     bio: 'Kuwa-Salama Mbetwa serves as a STEM Education and Technology Associate at Mathnasium in Seattle, WA, combining technical knowledge with instruction to help students build math and STEM skills.',
@@ -392,7 +413,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '12',
     name: 'Patricia Naigaga',
     major: 'Biology',
-    gradYear: 2026,
+    gradYear: 2027,
     photo: '/images/biology-student-success/patricia-naigaga-profile.jpeg',
     photoPosition: '50% 20%',
     bio: 'Patricia Naigaga completed a Pharmacy Technician Internship at Walgreens, gaining hands-on experience in pharmaceutical dispensing, prescription processing, inventory management, and patient care coordination.',
@@ -411,7 +432,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '13',
     name: 'Naomi Nuhamin Bullo',
     major: 'Biology',
-    gradYear: 2026,
+    gradYear: 2027,
     photo: '/images/biology-student-success/naomi-nuhamin-bullo-profile.jpeg',
     photoPosition: '50% 20%',
     bio: 'Naomi Nuhamin Bullo built a diverse portfolio of biology-related experience across research and clinical settings, serving as a Davidson College Research Fellow, Atrium Health Summer Intern, and Registered Behavioral Technician at Above and Beyond.',
@@ -430,7 +451,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '14',
     name: 'Darryl Fisher',
     major: 'Biology',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/biology-student-success/darryl-fisher-syngenta-internship.jpeg',
     photoPosition: '50% 20%',
     bio: 'Darryl Fisher gained industry experience at Syngenta as a Product Safety Lab Operations Intern, contributing within a professional laboratory operations environment.',
@@ -449,7 +470,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '15',
     name: 'Francis Suapim',
     major: 'Mathematics',
-    gradYear: 2026,
+    gradYear: 2029,
     photo: '/images/math-student-success/francis-suapim-profile-v2.png',
     photoPosition: '50% 20%',
     bio: 'Francis Suapim was selected to participate in the Advanced Computing Student Collaborative (ACSC) at Chaminade University of Honolulu, Hawaii. The program focused on advanced computing, data science, and AI for societal impact. He conducted research on structural vulnerability among MSMEs in Ghana.',
@@ -467,7 +488,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '16',
     name: 'Aïda Garba',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/cis-student-success/im-aida-garba-profile.jpeg',
     photoPosition: '50% 20%',
     bio: 'Aïda Garba developed and deployed the Student Success Center Digital Timesheet system, replacing manual paper tracking with a responsive, payroll-ready validation application.',
@@ -486,7 +507,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '17',
     name: 'Yves Kwawu',
     major: 'Computer Information Systems',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/cis-student-success/micahprofile.jpeg',
     photoPosition: 'top',
     bio: 'Yves Kwawu completed an IT internship with the North Carolina Department of Transportation (NCDOT), gaining hands-on experience supporting technology operations within a state government agency.',
@@ -498,13 +519,13 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Completed an IT operations support internship at NCDOT.',
       'Configured and deployed computer hardware for department staff.'
     ],
-    featured: true
+    featured: false
   },
   {
     id: '18',
     name: 'Micah Colding',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/cis-student-success/yvesprofile.jpeg',
     photoPosition: 'center',
     bio: 'Micah Colding gained experience in cybersecurity and fraud management through an internship with TIAA, working within a financial services security environment.',
@@ -523,7 +544,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '19',
     name: 'Shambhabi Sinha',
     major: 'Business',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/business-student-success/shambhabi-sinha-profile.jpeg',
     photoPosition: 'top',
     bio: 'Shambhabi Sinha completed a Social Media Content Creator Internship at Tosot Comfort, where she developed and executed social media strategies to build brand awareness and drive audience engagement.',
@@ -542,7 +563,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '20',
     name: 'Daniel Frimpong',
     major: 'Biology',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/biology-student-success/daniel-frimpong-profile.jpeg',
     photoPosition: 'center',
     bio: 'Daniel Frimpong completed a Health Administrative Internship at Atrium Health, gaining hands-on exposure to healthcare operations, patient services, and administrative process improvements.',
@@ -561,7 +582,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '21',
     name: 'Emmanuella Nyarko',
     major: 'Biology',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/biology-student-success/emmanuella-nyarko-profile.jpeg',
     photoPosition: 'center',
     bio: 'Emmanuella Nyarko completed a Health Administrative Internship at Atrium Health, contributing to patient services coordination and supporting clinical workflow processes.',
@@ -580,7 +601,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '22',
     name: 'Swetakshi Nanda',
     major: 'Computer Information Systems',
-    gradYear: 2026,
+    gradYear: 2028,
     photo: '/images/cis-student-success/swetakshi-nanda-profile.jpeg',
     photoPosition: '50% 30%',
     bio: 'Swetakshi Nanda has built a strong profile in research, web development, and competitive technology events. She presented her research paper "AI in Environmental Education" at multiple prestigious conferences including the NC Honors Association Conference at Queens University, the IAB Conference at Howard University, I-Cube at Livingstone College, and the 3rd ICRABIF Conference. She has been interning as a Web Developer at Ase Healing Center, LLC (Delores Place) and has participated in hackathons including the BE Smart Hackathon, HBCU Battle of the Brains, and the Mastercard Data Challenge.',
@@ -592,13 +613,13 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Presented "AI in Environmental Education" research paper at 4 prestigious conferences including Queens University, Howard University, and Livingstone College.',
       'Built WealthBridge project for the Risk Management Association (RMA) and participated in BE Smart Hackathon, HBCU Battle of the Brains, and Mastercard Data Challenge.'
     ],
-    featured: true
+    featured: false
   },
   {
     id: '23',
     name: 'George Damtey',
     major: 'Computer Information Systems',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/cis-student-success/george-damtey-profile.png',
     photoPosition: '50% 30%',
     bio: 'George Damtey completed a Digital Operations Internship at TTX, a leading railcar leasing company. He gained hands-on experience in digital operations, data management, and process automation, contributing to the optimization of technology-driven workflows within the logistics and transportation industry.',
@@ -610,14 +631,14 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Contributed to digital operations optimization at TTX, a major railcar leasing company.',
       'Gained hands-on experience in process automation and technology-driven logistics workflows.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/george-damtey-ba23a7304/'
   },
   {
     id: '31',
     name: 'Clifford Agyemang',
     major: 'Computer Information Systems',
-    gradYear: 2027,
+    gradYear: 2029,
     photo: '/images/cis-student-success/clifford-agyemang-profile.jpg',
     cardPhoto: '/images/cis-student-success/clifford-agyemang-headshot.jpg',
     photoPosition: '50% 50%',
@@ -630,7 +651,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Participated in Bloomberg\'s HBCU Academy of Excellence at Bloomberg\'s New York City headquarters.',
       'Named Presidential Scholar at Livingstone College.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/clifford01/',
     experiences: [
       {
@@ -671,7 +692,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Built hands-on AWS infrastructure and cloud security projects involving IAM, VPC, EC2, S3, DynamoDB, and CloudWatch.',
       'Served as a squad leader in the U.S. Army National Guard, assuming command responsibilities.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/javonhowie/',
     experiences: [
       {
@@ -704,7 +725,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '30',
     name: 'Madalyn Jones',
     major: 'Business',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/business-student-success/madalyn-jones-profile.jpg',
     cardPhoto: '/images/business-student-success/madalyn-jones-headshot.jpg',
     photoPosition: '50% 30%',
@@ -718,7 +739,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Participated in a service trip to Belize with YBLA.',
       'Represented Livingstone College at DevCon during spring 2026.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/madalyn-jones-397554281/',
     experiences: [
       {
@@ -735,7 +756,7 @@ export const studentSpotlights: StudentSpotlight[] = [
     id: '25',
     name: 'Esinam Dedoo',
     major: 'Business',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/business-student-success/esinam-dedoo-profile.jpg',
     cardPhoto: '/images/business-student-success/esinam-dedoo-card.jpg',
     photoPosition: '50% 30%',
@@ -750,7 +771,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Completed the Stryker Finance + Marketing Fellowship with The Application | HBCU 20x20.',
       'Awarded a scholarship to attend the NASPA National Conference for College Women Student Leaders at the University of Maryland.'
     ],
-    featured: true,
+    featured: false,
     experiences: [
       {
         title: 'NASPA NCCWSL Conference',
@@ -771,29 +792,10 @@ export const studentSpotlights: StudentSpotlight[] = [
     ]
   },
   {
-    id: '26',
-    name: 'Nancy Oppong',
-    major: 'Biology',
-    gradYear: 2027,
-    photo: '/images/biology-student-success/nancy-oppong-profile.png',
-    photoPosition: '50% 30%',
-    bio: 'Nancy Oppong was selected as a research fellow at Davidson College, where she contributed to an environmental science research project examining sustainable ecosystems and biodiversity conservation.',
-    leadership: ['Biology Club Member', 'Environmental Science Advocate'],
-    internships: ['Davidson College (Environmental Science Research Fellow)'],
-    awards: ['Davidson College Research Fellowship'],
-    certifications: ['Environmental Science Research Methods'],
-    achievements: [
-      'Contributed to an environmental science research project at Davidson College examining sustainable ecosystems.',
-      'Developed strong analytical and field research skills through data collection and laboratory analysis.'
-    ],
-    featured: true,
-    linkedin: 'https://www.linkedin.com/in/nancy-oppong-9850812b4/'
-  },
-  {
     id: '27',
     name: 'Afia Owusu Agyemang',
     major: 'Biology',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/biology-student-success/afia-owusu-agyemang-profile.jpeg',
     photoPosition: '50% 55%',
     bio: 'Afia Owusu Agyemang served as a mentor for the 2025 STEM Summer Camp, guiding younger students through hands-on science activities. She also holds a leadership role as Secretary of the Livingstone College White Coat Scholars.',
@@ -805,13 +807,13 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Guided younger students through hands-on science activities as a STEM Summer Camp Mentor.',
       'Serves as Secretary of the Livingstone College White Coat Scholars pre-health organization.'
     ],
-    featured: true
+    featured: false
   },
   {
     id: '28',
     name: 'Emeglad Boakye-Yiadom',
     major: 'Biology',
-    gradYear: 2027,
+    gradYear: 2028,
     photo: '/images/biology-student-success/emeglad-boakye-yiadom-profile.png',
     photoPosition: '50% 15%',
     bio: 'Emeglad Boakye-Yiadom serves as a Healthcare Administration Intern while being active across campus as a STEM Summer Camp mentor, Billie Bear mentor, and member of the Alpha Lambda Delta honors society.',
@@ -823,7 +825,7 @@ export const studentSpotlights: StudentSpotlight[] = [
       'Active STEM Summer Camp mentor supporting incoming students and campus initiatives.',
       'Participates in the HBCU Energy Pathway program expanding exposure to energy-sector opportunities.'
     ],
-    featured: true,
+    featured: false,
     linkedin: 'https://www.linkedin.com/in/emeglad-boakye-yiadom-54496838a/'
   }
 ];
@@ -950,7 +952,7 @@ export const newsItems: NewsItem[] = [
     summary: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon by designing a next-gen disaster communications router.',
     content: 'A team of Computer Information Systems majors clinched the first-place trophy at the Microsoft HBCU Hackathon in Charlotte, North Carolina. Facing competition from over twenty prominent HBCUs, the LC STEM team built "NetBeacon", a hardware-software solution enabling emergency communication during power grid failure.\n\nThe team, led by Jerome Adonis, utilized low-power Bluetooth mesh networks and Next.js to deploy a lightweight routing dashboard. In addition to a $10,000 cash prize, Microsoft offered full-time internship placements to all three team members.',
     category: 'Competition',
-    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg'
+    image: '/images/cis-student-success/jerome-adonis-headshot.jpg'
   },
   {
     id: '2',

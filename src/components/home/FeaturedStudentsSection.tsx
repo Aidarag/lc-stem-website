@@ -10,8 +10,8 @@ interface FeaturedStudentsSectionProps {
 }
 
 export default function FeaturedStudentsSection({ featuredStudents }: FeaturedStudentsSectionProps) {
-  // Select top 4 featured students
-  const selectedIds = ['24', '1', '4', '16'];
+  // Select 4 featured students across all 4 departments: Ellis (Business), Nancy (Biology), Sally (Math), Jerome (CIS)
+  const selectedIds = ['7', '26', '4', '1'];
   const displayStudents = selectedIds
     .map((id) => featuredStudents.find((student) => student.id === id))
     .filter((student): student is StudentSpotlight => Boolean(student));
@@ -97,17 +97,6 @@ export default function FeaturedStudentsSection({ featuredStudents }: FeaturedSt
               </Link>
             </div>
           ))}
-        </div>
-
-        {/* View More CTA Button */}
-        <div className="mt-14 flex justify-center">
-          <Link
-            href="/spotlight"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-purple-600 bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-300 group"
-          >
-            <span>View More Students</span>
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </section>

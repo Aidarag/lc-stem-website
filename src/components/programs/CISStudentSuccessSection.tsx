@@ -9,9 +9,9 @@ const students = [
     organizations: ['AWS', 'Bank of America', 'Ernst & Young LLP'],
     description:
       'Jerome Adonis has built a diverse technology and consulting background across three industry internships: as a Solutions Architect Intern at AWS, a Software Engineer at Bank of America, and an FSO Technology Consulting Intern at Ernst & Young LLP.',
-    image: '/images/cis-student-success/jerome-adonis-aws-profile.jpeg',
-    imageAlt: 'Professional portrait of Jerome Adonis wearing a suit and tie',
-    imagePosition: '50% 0%',
+    image: '/images/cis-student-success/jerome-adonis-headshot.jpg',
+    imageAlt: 'Professional portrait of Jerome Adonis wearing glasses and a suit',
+    imagePosition: '50% 15%',
     tags: ['Cloud Architecture', 'Software Engineering', 'Technology Consulting', 'Financial Services'],
     icon: Cloud,
   },

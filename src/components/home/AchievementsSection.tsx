@@ -37,18 +37,38 @@ export default function AchievementsSection({ featuredProject }: AchievementsSec
         {/* Full Width Featured Project Showcase */}
         <div className="w-full">
           <ScrollReveal className="w-full glass-card-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[500px]">
-            {/* Image on Left (50% width on desktop) */}
-            <div className="relative h-[300px] sm:h-[400px] lg:h-auto lg:w-1/2 border-b lg:border-b-0 lg:border-r border-white/10 bg-[#12072B] shrink-0">
-              <Image
-                src={featuredProject.image}
-                alt={featuredProject.title}
-                fill
-                quality={featuredProject.imageQuality}
-                unoptimized={featuredProject.imageUnoptimized}
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute top-4 left-4 border border-purple-400/40 bg-purple-600 text-[#e3fc51] px-4 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
+            {/* Image on Left (50% width on desktop) — Full image display so all people are visible */}
+            <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] lg:w-1/2 border-b lg:border-b-0 lg:border-r border-white/10 bg-[#0d061e] shrink-0 flex items-center justify-center p-3 sm:p-5 lg:p-6 overflow-hidden">
+              {/* Ambient blur backdrop for aesthetic depth */}
+              <div className="absolute inset-0 z-0 opacity-20 filter blur-2xl scale-110 pointer-events-none">
+                <Image
+                  src={featuredProject.image}
+                  alt=""
+                  fill
+                  quality={30}
+                  unoptimized={featuredProject.imageUnoptimized}
+                  className="object-cover"
+                  aria-hidden="true"
+                />
+              </div>
+
+              {/* Crisp foreground image — 100% full view, zero cropping */}
+              <div className="relative z-10 w-full h-full min-h-[280px] sm:min-h-[380px] lg:min-h-[440px] flex items-center justify-center">
+                <div className="relative w-full h-full aspect-[4/3] max-h-[520px] rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-black/40">
+                  <Image
+                    src={featuredProject.image}
+                    alt={featuredProject.title}
+                    fill
+                    quality={featuredProject.imageQuality || 100}
+                    unoptimized={featuredProject.imageUnoptimized ?? true}
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="absolute top-4 left-4 z-20 border border-purple-400/40 bg-purple-600 text-[#e3fc51] backdrop-blur-md px-4 py-1.5 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider shadow-md">
                 Featured Achievement
               </div>
             </div>
