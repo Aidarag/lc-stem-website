@@ -47,6 +47,7 @@ export interface StudentProject {
   githubText?: string;
   image: string;
   imagePosition?: string;
+  imageFit?: 'cover' | 'contain';
   imageQuality?: number;
   imageUnoptimized?: boolean;
   featured: boolean;

@@ -22,6 +22,7 @@ export default function AchievementsPage() {
       description: p.description,
       image: p.image,
       imagePosition: p.imagePosition,
+      imageFit: p.imageFit,
       imageQuality: p.imageQuality,
       imageUnoptimized: p.imageUnoptimized,
       technologies: p.technologies,
