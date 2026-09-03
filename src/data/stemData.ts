@@ -65,6 +65,7 @@ export interface Competition {
   students: string[];
   image: string;
   imagePosition?: string;
+  imageFit?: 'cover' | 'contain';
   imageQuality?: number;
   imageUnoptimized?: boolean;
   topics?: string[];
@@ -971,6 +972,21 @@ export const studentProjects: StudentProject[] = [
 ];
 
 export const competitions: Competition[] = [
+  {
+    id: '9',
+    title: '2nd Place — Future of Tech Innovation Challenge',
+    subtitle: '27 HBCUs Competed · Livingstone College Finished Runner-Up',
+    description: 'Darryl Fisher, Shamhabi Sinha, Francis Boadu, Yves Kwawu, and Jerome Adonis represented Livingstone College on the national stage at the Future of Tech Innovation Challenge, going head-to-head with 27 HBCUs and walking away with 2nd place. The team delivered a polished, end-to-end solution that combined strong technical execution with sharp business thinking — impressing judges in a field packed with top HBCU talent.',
+    date: '2026',
+    award: '2nd Place',
+    students: ['Darryl Fisher', 'Shamhabi Sinha', 'Francis Boadu', 'Yves Kwawu', 'Jerome Adonis'],
+    image: '/images/achievements/future-of-tech-innovation-challenge.jpg',
+    imagePosition: 'center 55%',
+    imageFit: 'contain',
+    topics: ['Innovation', 'Technology', 'Team Strategy', 'Cross-Disciplinary Collaboration', 'HBCU Excellence'],
+    outcomes: 'Earned 2nd place out of 27 competing HBCUs at the Future of Tech Innovation Challenge — a testament to Livingstone College\'s ability to compete and win against the nation\'s top historically Black institutions.',
+    category: 'Hackathon'
+  },
   {
     id: '8',
     title: '2nd Place — indigoLife Business Symposium & Pitch Competition',

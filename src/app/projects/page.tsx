@@ -47,6 +47,7 @@ export default function AchievementsPage() {
         imagePosition: c.imagePosition,
         imageQuality: c.imageQuality,
         imageUnoptimized: c.imageUnoptimized,
+        imageFit: c.imageFit,
         date: c.date,
         award: c.award,
         team: c.students,
@@ -199,7 +200,7 @@ export default function AchievementsPage() {
                 fill
                 quality={featuredAchievement.imageQuality}
                 unoptimized={featuredAchievement.imageUnoptimized}
-                className="object-cover"
+                className={featuredAchievement.imageFit === 'contain' ? 'object-contain' : 'object-cover'}
                 style={{ objectPosition: featuredAchievement.imagePosition || 'center' }}
                 sizes="(max-w-1024px) 100vw, 50vw"
                 priority
@@ -276,7 +277,7 @@ export default function AchievementsPage() {
                         fill
                         quality={achievement.imageQuality}
                         unoptimized={achievement.imageUnoptimized}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className={`${achievement.imageFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
                         style={{ objectPosition: achievement.imagePosition || 'center' }}
                         sizes="(max-w-768px) 100vw, 40vw"
                       />
